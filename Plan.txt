@@ -1,49 +1,35 @@
 ToDo:
 
 - Collect all necessary Data /
-- Remove unnecessary data and format remaining data 
-- Compile data into one file fo reach catagory
+    - Remove unnecessary data and format remaining data 
+    - Compile data into one file fo reach catagory
 
-- Set up abilty to generate new pokemon
 - Store pokemon (pickle for storage)
-- Local party storage
-- Ability to add and remove from the Store/ betwene stores
+    - Local party storage (should be like the main storage but smaller)
+    - Ability to add and remove from the Store/ betwene stores (should hopefully get added alongside the previous items)
 
-- Ability to level up pokemon
-- Add typing
-- Ability to replace old moves
-- Make sure can only learn 'allowed' moves
+- Set up abilty to generate pokemon
+    - Ability to level up pokemon
+    - Add typing (as in Grass/Fire/Water etc, not on a keyboard)
+    - Ability to replace old moves
+    - Make sure can only learn 'allowed' moves
 
-- Add Money
+- Add Money 
 - Add Items
 - Add battling
 - Add shop
 
-- Wild pokemon
-- Add trainers 
+
 - Add random events 
+    - Wild pokemon
+    - Add trainers 
+
 
 - Final Polishing for AI mask
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- Maybe add to discord, if time allows
+- Maybe add discord functionality, if time allows
 
 
