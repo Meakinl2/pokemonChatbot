@@ -1,9 +1,16 @@
-import os
-import pickle
+import os, csv, pickle, math
+from random import randint
 from ProjectDataCleaning.fileControl import *
 
+# Pokemon Levelling is quite complicated apparently, I kind of knew that before, but still....
+
+# Stats are based on this formula and I think it is redone every levelup, based on experience
+def calulateStat(base,level,IV,EV,isHP,natureModifier):
+    stat = ((2 * base + IV + (EV/4)) * level) / 100
+
+ 
 class pokemon:
-    def __init__(self, speciesID):
+    def __init__(self, speciesID, levelRange):
         # Load in Data from the data file
         pokemonInfoFile = selectFile(["DataTables"],"pokemonBaseStats.txt")
         pokemonInfo = readFile(pokemonInfoFile)
@@ -13,8 +20,7 @@ class pokemon:
         self.species = speciesInfo[1]
         self.nickname = speciesInfo[1]
 
-        # Setup starting stats for pokemon, will only run on initial creation
-        # Will add some slight variation 
+        # Copying Base stats out of the speciesInfo
         self.types = [speciesInfo[2],speciesInfo[3]]
         self.baseHP = speciesInfo[5]
         self.baseATK = speciesInfo[6]
@@ -44,6 +50,6 @@ class pokemon:
     def changeNickname(self, newNickname):
         self.nickname = newNickname
 
-
-myPokemon = pokemon(1)
-print(f"{myPokemon.species} has HP:{myPokemon.baseHP}, ATK:{myPokemon.baseATK}, DEF:{myPokemon.baseDEF}, SPA:{myPokemon.baseSPA}, SPD:{myPokemon.baseSPD}, SPE{myPokemon.baseSPE}")
+for i in range(0,100):
+    myPokemon = pokemon(1)
+    print(f"{myPokemon.species} has HP:{myPokemon.baseHP}, ATK:{myPokemon.baseATK}, DEF:{myPokemon.baseDEF}, SPA:{myPokemon.baseSPA}, SPD:{myPokemon.baseSPD}, SPE{myPokemon.baseSPE}")
