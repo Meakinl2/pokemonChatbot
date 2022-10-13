@@ -1,8 +1,6 @@
 # As there is only a few documents each function will be specific to each document, just to make it a bit easier 
 # Previous Comment is in fact a lie
 
-import os
-import csv
 from fileControl import *
 
 # Removes the coloumns that are unneeded
@@ -29,7 +27,7 @@ def run1(fileName, keepLines):
    writeFile(cleanFile, cleanedLines)
    print("Done.")
 
-run1("evolutions.txt", [0,1,3])
+# run1("evolutions.txt", [0,1,3])
 
 # Because the code insists on adding random empty lines, which were not present when I had to run it through codio
 # Why this added even more lines I do not know
@@ -49,3 +47,18 @@ def run2(fileName):
    writeFile(file, lines)
    
 # run2("evolutions.txt")
+
+# Adds empty elements to csv files to stop Index Errors
+def padLines(folders,filename,numPad):
+   file = selectFile(folders,filename)
+   lines = readFile(file)
+   padLines = []
+
+   for line in lines:
+      while len(line) < numPad:
+         line.append("")
+      padLines.append(line)
+
+   writeFile(file,padLines)
+
+padLines(["DataTables"], "pokemonBaseStats.txt",15)

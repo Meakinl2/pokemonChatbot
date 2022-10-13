@@ -101,12 +101,9 @@ levelingBounds = {
     100: 1250000,
 }
 
-# Hesistant to delete, but will make a better method for use in battles
 typeMatching = {
     # StrongTowards, WeakTowards, StrongAgainst, WeakAgainst, Nullifies, NullifiedBy
     # (2x damage to),(0.5x damages to),(0.5x damage from),(2x damage from),(0x damage from),(0x damage to)
-    # It would proabaly be more efficent to assign each an integer and have a differnt dictionary to change between the two
-    # I could do a list of list recording the damage from each to each, I'll do that after this then
     "Normal": [[],["Rock","Steel"],[],["Fighting"],[],["Ghost"]],
     "Fire": [["Grass","Ice","Bug","Steel"],["Fire","Water","Rock","Dragon"],["Fire","Grass","Ice","Bug","Steel","Fairy"],["Water","Ground","Rock"],[],[]],
     "Water": [["Fire","Ground","Rock"],["Water","Grass","Dragon"],["Fire","Water","Ice","Steel"],["Grass","Electric"],[],[]],

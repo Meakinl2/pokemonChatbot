@@ -2,6 +2,7 @@
 # Might not work as ajoining functions may also have been rewritten
 # A lot of the inital ones are because I discovered the csv library
 
+from ProjectDataCleaning.fileControl import *
 
 # From ProjectDataCleaning\fileControl.py
 
@@ -50,3 +51,14 @@ def cleanData(rawLineStrings, keepItems):
       cleanLineStrings.append(cleanString)
    
    return cleanLineStrings
+
+# From createPokemon.py
+
+# A fucntion whose entire purpose was to check the typing table was filled out and working correctly. It was.
+def checkTypingTable():
+    file = selectFile(["DataTables"],"typeDamageMult.txt")
+    typingInfo = readFile(file)
+    for type1 in range(1,18):
+        for type2 in range(1,18):
+            print(f"{typingInfo[type1][0]} does {typingInfo[type1][type2]}x damage to {typingInfo[0][type2]}")
+            # print(f"{typingInfo[type2][0]} does {typingInfo[type2][type1]}x damage to {typingInfo[0][type1]}")

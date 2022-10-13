@@ -1,4 +1,5 @@
-import os, csv, pickle, math, random
+import os, csv, pickle, math
+from random import randint
 from dictonaries import *
 from ProjectDataCleaning.fileControl import *
 
@@ -18,10 +19,11 @@ def calculateStat(base,level,IV,EV,isHP,natureModifier):
 
 
 # I'm not actually sure if this is how IVs are generated,but it makes sense this way
+# That is to say I know they ar eat least partial random, but I'm unsure if they are in some way centrally weighted
 def generateIVS():
     IVS = []
     for each in range(6):
-        IV = random.randint(0,31)
+        IV = randint(0,31)
         IVS.append(IV)
     return IVS
 
@@ -31,43 +33,55 @@ def generateIVS():
 # Context determines whether or not specific things should happen (such as giving trainer pokemon EVs)
 class pokemon:
     def __init__(self,speciesID,minLvl,maxLvl,context):
-        # Load in Data from the data file
+        # Get the basic stats, set required things as they are required to be
+        self.copyBaseValues(speciesID)
+        self.nickname = self.species
+        self.allowedEvolve = True
+        
+        # Generate all semi-random attributes
+        self.level = randint(minLvl,maxLvl)
+        self.experience = levelingBounds[self.level]
+        self.IVs = generateIVS()
+        self.EVs = [0,0,0,0,0,0]
+        self.natureModifier = [1,1,1,1,1,1]
+        
+        # Apply all context specfic attribute alterations
+        if context == "Trainer":
+            self.setTrainerEVs()
+
+        # Sets "adjusted" stats and give the pokemon its starting moveset
+        self.calculateAdjustedStats()
+        # self.actualStats = self.adjustedStats()
+        self.determineStartMoveset()
+    
+    # Copying all relevant information from baseStats table
+    # Used initaily and upon evolution to update relevant attributes
+    def copyBaseValues(self, speciesID):
         pokemonInfoFile = selectFile(["DataTables"],"pokemonBaseStats.txt")
         pokemonInfo = readFile(pokemonInfoFile)
         speciesInfo = pokemonInfo[speciesID]
         
-        # Set Species and Nickname, select random level between specifiedBounds, give appropriate experience for level
         self.species = speciesInfo[1]
-        self.nickname = speciesInfo[1]
-        self.level = random.randint(minLvl,maxLvl)
-        self.experience = levelingBounds[self.level]
 
-        # Copying Base stats out of the speciesInfo
-        # Thats's: HP, ATK, DEF, SP.A, SP.D, SPE
-        self.baseStats = [speciesInfo[5],speciesInfo[6],speciesInfo[7],speciesInfo[8],speciesInfo[9],speciesInfo[10]]
-        self.IVs = generateIVS()
-        self.EVs = [0,0,0,0,0,0]
-        self.natureModifier = [1,1,1,1,1,1]
+        try: 
+            self.evolveTo = int(speciesInfo[13])
+            self.evolveAtLevel = int(speciesInfo[14])
+        except:
+            self.evolveTo = ""
+            self.evolveAtLevel = 1000
+
+        self.baseStats = [int(speciesInfo[5]),int(speciesInfo[6]),int(speciesInfo[7]),int(speciesInfo[8]),int(speciesInfo[9]),int(speciesInfo[10])]
         self.types = [speciesInfo[2],speciesInfo[3]]
+        
         if speciesInfo[11] == "true":
             self.isLegendary = True
         else:
             self.isLegendary = False
 
-        if context == "Trainer":
-            self.setTrainerEVs()
-
-        # Sets "adjusted" stats and give the pokemon its startin moveset
-        self.calculateAdjustedStats()
-        self.actualStats = self.adjustedStats()
-        self.determineStartMoveset()
-    
-
     # Just increase the pokemons experience by a given amount and runs levelUp check
     def addExperience(self,newExperience):
         self.experience += newExperience
         self.levelUp()
-        self.calculateAdjustedStats()
         
 
     # Calculate stats adjusted for Lvl, IVs, EVs and nature
@@ -92,16 +106,24 @@ class pokemon:
                 fullyLeveled = True
             else:
                 self.level += 1
+                self.calculateAdjustedStats()
                 print(f"{self.nickname} has Leveled Up.")
                 print(f"{self.nickname} is now Level {self.level}")
-                self.shouldEvolve()
+                print(f"HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
+                self.evolve()
         
 
-
     # Following levelUp, checks if the pokemon should levelUp
-    def shouldEvolve(self):
-        pass
-
+    def evolve(self):
+        if self.level >= self.evolveAtLevel and self.allowedEvolve:
+            print(f"{self.nickname} is evolving!")
+            initalSpecies = self.species
+            self.copyBaseValues(self.evolveTo)
+            print(f"{self.nickname} evolved in {self.species}")
+            if self.nickname == initalSpecies:
+                self.nickname = self.species
+            self.calculateAdjustedStats()
+            
 
     # Trainer pokemon are given EVs based on their difficulty to make them more challenging than wild pokemon
     def setTrainerEVs(self):
@@ -128,10 +150,10 @@ class pokemon:
 # Generates random Test pokemon to check pokemon generation is working
 def generateTestPokemon(amount,minLvl,maxLvl,):
     for i in range(0,20):
-        myPokemon = pokemon(random.randint(1,721),1,100,"Wild")
+        myPokemon = pokemon(randint(1,721),1,100,"Wild")
         print(f"Generated Pokemon {i  +  1}")
         print(f"Species: {myPokemon.species}")
-        print(f"Typing: {myPokemon.types[0]}    {myPokemon.types[1]} ")
+        print(f"Typing: {myPokemon.types[0]}  {myPokemon.types[1]} ")
         print(f"Lvl: {myPokemon.level} from Exp: {myPokemon.experience} ")
         print(f"Base Stats: HP:{myPokemon.baseStats[0]}  ATK:{myPokemon.baseStats[1]} DEF:{myPokemon.baseStats[2]} SPA:{myPokemon.baseStats[3]} SPD:{myPokemon.baseStats[4]} SPE:{myPokemon.baseStats[5]}")
         print(f"IVs: HP:{myPokemon.IVs[0]} ATK:{myPokemon.IVs[1]} DEF:{myPokemon.IVs[2]} SPA:{myPokemon.IVs[3]} SPD:{myPokemon.IVs[4]} SPE:{myPokemon.IVs[5]})")
@@ -141,19 +163,10 @@ def generateTestPokemon(amount,minLvl,maxLvl,):
 
 # Allows adding experience amounts to check the pokemon is levelin up appropriatley
 def testLeveling():
-    myPokemon = pokemon(1,1,1,"Wild")
+    myPokemon = pokemon(randint(1,721),1,1,"Wild")
     while True:  
         experienceAdd  = int(input("Add Experience: \n> "))
         myPokemon.experience += experienceAdd
         myPokemon.levelUp()
-        print(f"Adjusted Stats: HP:{myPokemon.adjustedStats[0]} ATK:{myPokemon.adjustedStats[1]} DEF:{myPokemon.adjustedStats[2]} SPA:{myPokemon.adjustedStats[3]} SPD:{myPokemon.adjustedStats[4]} SPE:{myPokemon.adjustedStats[5]}")
 
-def checkTypingTable():
-    file = selectFile(["DataTables"],"typeDamageMult.txt")
-    typingInfo = readFile(file)
-    for type1 in range(1,18):
-        for type2 in range(1,18):
-            print(f"{typingInfo[type1][0]} does {typingInfo[type1][type2]}x damage to {typingInfo[0][type2]}")
-            # print(f"{typingInfo[type2][0]} does {typingInfo[type2][type1]}x damage to {typingInfo[0][type1]}")
-
-checkTypingTable()
+testLeveling()
