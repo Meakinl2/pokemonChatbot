@@ -1,4 +1,4 @@
-levellingBounds = {
+levelingBounds = {
     1: 0,
     2: 10,
     3: 33,
