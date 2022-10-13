@@ -19,13 +19,17 @@ def cleanData(rawLines, keepItems):
 # Just execute the correct functions in the correct order, completely useless except specifically here
 # I will concede that this function is in fact, quite a mess. But what can you do
 def run1(fileName, keepLines): 
+   print("Reading Lines...")
    file = selectFile(["ProjectDataCleaning","rawData"], fileName)
    rawLines = readFile(file)
+   print("Cleaning File...")
    cleanedLines = cleanData(rawLines, keepLines)
+   print("Writing to File...")
    cleanFile = selectFile(["ProjectDataCleaning","cleanedData"], fileName)
    writeFile(cleanFile, cleanedLines)
+   print("Done.")
 
-run1("pokemon.txt", [0,1,2,3,4,5,6,7,8,9,10,12])
+run1("evolutions.txt", [0,1,3])
 
 # Because the code insists on adding random empty lines, which were not present when I had to run it through codio
 # Why this added even more lines I do not know
