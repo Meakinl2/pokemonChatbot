@@ -101,7 +101,7 @@ levelingBounds = {
     100: 1250000,
 }
 
-typeMatching = {
+type_matching = {
     # StrongTowards, WeakTowards, StrongAgainst, WeakAgainst, Nullifies, NullifiedBy
     # (2x damage to),(0.5x damages to),(0.5x damage from),(2x damage from),(0x damage from),(0x damage to)
     "Normal": [[],["Rock","Steel"],[],["Fighting"],[],["Ghost"]],
@@ -123,4 +123,83 @@ typeMatching = {
     "Steel": [["Ice","Rock","Fairy"],["Fire","Water","Electric","Steel"],["Normal","Grass","Ice","Flying","Psychic","Bug","Rock","Dragon","Steel","Fairy"],["Fire","Fighting","Ground"],["Poison"],[]],
     "Fairy": [["Fighting","Dragon","Dark"],["Fire","Posion","Steel"],["Fighting","Bug","Dark"],["Poison","Steel"],["Dragon"],[]],
 }
+
+# Natures raise one stat by 10% and lower another by the same
+# Name, Raise Stat, Lowers Stat
+pokemon_natures = {
+    1: ["Hardy",2,2],
+    2: ["Bold",2,3],
+    3: ["Modest",2,4],
+    4: ["Calm",2,5],
+    5: ["Timid",2,6],
+    6: ["Lonely",3,2],
+    7: ["Docile",3,3],
+    8: ["Mild",3,4],
+    9: ["Gentle",3,5],
+    10: ["Hasty",3,6,],
+    11: ["Adamant",4,2],
+    12: ["Impish",4,3],
+    13: ["Bashful",4,4],
+    14: ["Careful",4,5],
+    15: ["Rash",5,4],
+    16: ["Jolly",4,6],
+    17: ["Naughty",5,2],
+    18: ["Lax",5,3],
+    19: ["Quirky",5,5],
+    20: ["Naive",5,6],
+    21: ["Brave",6,2],
+    22: ["Relaxed",6,3],
+    23: ["Quiet",6,4],
+    24: ["Sassy",6,5],
+    25: ["Serious",6,6]
+}
+move_damage_classes = {
+    "1": "Status",
+    "2": "Physical",
+    "3": "Special"
+}
+
+move_meta_catergories = {
+    "0": "damage",
+    "1": "ailment",
+    "2": "net-good-stats",
+    "3": "heal",
+    "4": "damage+ailment",
+    "5": "swagger",
+    "6": "damage+lower",
+    "7": "damage+raise",
+    "8": "damage+heal",
+    "9": "ohko",
+    "10": "whole-field-effect",
+    "11": "field-effect",
+    "12": "force-switch",
+    "13": "unique"
+}
+
+# Why there are gaps I don't know, this is just the data that I could find
+move_meta_ailment_name = {
+    "-1": "????",
+    "0": "None",
+    "1": "Paralysis",
+    "2": "Sleep",
+    "3": "Freeze",
+    "4": "Burn",
+    "5": "Poison",
+    "6": "Confusion",
+    "7": "Attraction",
+    "8": "Trap",
+    "9": "Nightmare",
+    "12": "Torment",
+    "13": "Disable",
+    "14": "Yawn",
+    "15": "Heal Block",
+    "17": "No type immuntity",
+    "18": "Leech Seed",
+    "19": "Embargo",
+    "20": "Perish Song",
+    "21": "Ingrain",
+    "24": "Silence",
+    "42": "Tar Shot"
+}
+
 
