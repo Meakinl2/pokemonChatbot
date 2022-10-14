@@ -27,7 +27,7 @@ def run1(fileName, keepLines):
    writeFile(cleanFile, cleanedLines)
    print("Done.")
 
-# run1("evolutions.txt", [0,1,3])
+run1("moves.txt", [0,1,3,4,5,6,7,8,9,10,11])
 
 # Because the code insists on adding random empty lines, which were not present when I had to run it through codio
 # Why this added even more lines I do not know
@@ -61,4 +61,4 @@ def padLines(folders,filename,numPad):
 
    writeFile(file,padLines)
 
-padLines(["DataTables"], "pokemonBaseStats.txt",15)
+# padLines(["DataTables"], "pokemonBaseStats.txt",15)

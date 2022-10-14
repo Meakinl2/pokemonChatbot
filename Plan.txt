@@ -6,30 +6,43 @@ ToDo:
 
 - Store pokemon (pickle for storage)
     - Local party storage (should be like the main storage but smaller)
-    - Ability to add and remove from the Store/ betwene stores (should hopefully get added alongside the previous items)
+    - Transfer between main and party storage 
 
 - Set up abilty to generate pokemon
-    - Ability to level up pokemon
-    - Add typing (as in Grass/Fire/Water etc, not on a keyboard)
-    - Ability to replace old moves
+    - Base stats /
+    - IVs, EVs, nature /
+    - Add typing (as in Grass/Fire/Water etc, not on a keyboard) /
+    - Calculate Adjusted stats/
+    - Assigned moves
     - Make sure can only learn 'allowed' moves
 
-- Add Money 
-- Add Items
-- Add battling
-- Add shop
+- Can capture pokemon
+    - Random chance
+    - Higher Levels are more difficult
+    
+- Pokemon growth/change
+    - Gain Experience/
+    - Level up/
+    - Evolve/
+    - Replace old moves
 
+- Add battling
+    - Can attack
+    - Turns
+    - Victory/Defeat conditions
+    - switch out pokemon
 
 - Add random events 
     - Wild pokemon
     - Add trainers 
 
 
+- Add Money 
+- Add Items
+- Add shop
+
+
 - Final Polishing for AI mask
-
-
-
-
 - Maybe add discord functionality, if time allows
 
 

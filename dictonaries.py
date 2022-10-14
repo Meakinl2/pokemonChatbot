@@ -1,3 +1,6 @@
+# Contains various dictonaries that are needed regularly throughout the course of play.
+
+# Contains the minimum experience for each level. There are six different growth rates in pokemon, here there is one.
 levelingBounds = {
     1: 0,
     2: 10,
@@ -101,6 +104,27 @@ levelingBounds = {
     100: 1250000,
 }
 
+typeIDs = {
+    1: "Normal",
+    2: "Fire",
+    3: "Water",
+    4: "Grass",
+    5: "Electric",
+    6: "Ice",
+    7: "Fighting",
+    8: "Poison",
+    9: "Ground",
+    10: "Flying",
+    11: "Psychic",
+    12: "Bug",
+    13: "Rock",
+    14: "Ghost",
+    15: "Dragon",
+    16: "Dark",
+    17: "Steel",
+    18: "Fairy"
+}
+
 type_matching = {
     # StrongTowards, WeakTowards, StrongAgainst, WeakAgainst, Nullifies, NullifiedBy
     # (2x damage to),(0.5x damages to),(0.5x damage from),(2x damage from),(0x damage from),(0x damage to)
@@ -124,7 +148,8 @@ type_matching = {
     "Fairy": [["Fighting","Dragon","Dark"],["Fire","Posion","Steel"],["Fighting","Bug","Dark"],["Poison","Steel"],["Dragon"],[]],
 }
 
-# Natures raise one stat by 10% and lower another by the same
+# Natures raise one stat by 10% and also lowers another by 10%
+# HP is never affected by a pokemons nature,so there are 25 to reflect every combination of ATK,DEF,SP.A,SP.D,SPE
 # Name, Raise Stat, Lowers Stat
 pokemon_natures = {
     1: ["Hardy",2,2],
@@ -153,6 +178,7 @@ pokemon_natures = {
     24: ["Sassy",6,5],
     25: ["Serious",6,6]
 }
+
 move_damage_classes = {
     "1": "Status",
     "2": "Physical",
@@ -201,5 +227,10 @@ move_meta_ailment_name = {
     "24": "Silence",
     "42": "Tar Shot"
 }
+
+# Theres a lot more to weather than I first thought. Might add at a later point.
+weather = {}
+
+print(move_meta_ailment_name["Trap"])
 
 

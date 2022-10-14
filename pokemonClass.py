@@ -2,32 +2,7 @@ import os, csv, pickle, math
 from random import randint
 from dictonaries import *
 from ProjectDataCleaning.fileControl import *
-
-# Pokemon Levelling is quite complicated apparently, I kind of knew that before, but still....
-# Convoluted seems now a better word, leveling is quite simple
-
-# Stats are based on this formula and I think it is redone every levelup, based on experience
-# Level: 1-100; IV: 0 - 31 per Stat; EV: 0 - 255 per stat, 510 across all stats cumulatively (Wild Pokemon have none)
-# Nature Modifier for health should always be just one and will be either 0.9,1 or 1.1 for all other stats
-def calculateStat(base,level,IV,EV,isHP,natureModifier):
-    stat = ((2 * base + IV + (EV//4)) * level) // 100
-    if isHP:
-        stat += (level + 5)
-    stat += 5
-    stat *= natureModifier
-    stat = int(stat // 1)
-    return stat
-
-
-# I'm not actually sure if this is how IVs are generated,but it makes sense this way
-# That is to say I know they ar eat least partial random, but I'm unsure if they are in some way centrally weighted
-def generateIVS():
-    IVS = []
-    for each in range(6):
-        IV = randint(0,31)
-        IVS.append(IV)
-    return IVS
-
+from PokemonFormulae import *
 
 # Defines the basic design for each pokemon, unsure quite how much this will control at this point
 # Is inital passed the SpeciesID number(from Pokedex) and the range the pokemon should be in
@@ -43,8 +18,10 @@ class pokemon:
         self.level = randint(minLvl,maxLvl)
         self.experience = levelingBounds[self.level]
         self.EVs = [0,0,0,0,0,0]
-        self.IVs = generateIVS() 
-        self.assignRandomNature()
+        self.IVS = []
+        for each in range(6):
+            IV = randint(0,31)
+            self.IVS.append(IV)
 
         # Apply all context specfic attribute alterations
         if context == "Trainer":
@@ -92,12 +69,6 @@ class pokemon:
         print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
     
 
-    # Just increase the pokemons experience by a given amount and runs levelUp check
-    def addExperience(self,newExperience):
-        self.experience += newExperience
-        self.levelUp()
-
-
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
         natureID = randint(1,25)
@@ -118,6 +89,12 @@ class pokemon:
             self.adjustedStats.append(lvlAdjustedStat)
             statID += 1
             isHP = False
+
+
+    # Just increase the pokemons experience by a given amount and runs levelUp check
+    def addExperience(self,newExperience):
+        self.experience += newExperience
+        self.levelUp()
 
 
     # Runs whenever experience gained , to detetmine if levelUp should occur
@@ -177,7 +154,7 @@ class pokemon:
                 self.levelUp()
             except:
                 break
-    # End of pokemon class
+
 
 
 # Test Functions to check stuff is working correctly

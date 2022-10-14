@@ -54,4 +54,4 @@ def combineFiles(file1, file2, keep1, keep2):
     writeFile(file1Path, newLines)
 
 
-combineFiles("pokemon.txt","evolutionChains.txt",[0,1,2,3,4,5,6,7,8,9,10,11],[2,3])
+combineFiles("moves.txt","move_meta.txt",[0,1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10,11,12])
