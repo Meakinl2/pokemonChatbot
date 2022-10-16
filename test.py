@@ -30,9 +30,32 @@ while not fullData:
             speciesData.append(statsFileLines[line])
         else:
             fullData = True
-            for item in speciesData:
-                print(item)
     except IndexError:
         pass
+
+# This is arguably redundant, but I prefer it without the "-"
+for i in range(0,len(speciesData)):
+    try:
+        speciesData[i].remove("-")
+    except ValueError:
+        pass
+
+species = speciesData[0][1]
+types = [speciesData[7][1]]
+try:
+    types.append(speciesData[7][3])
+except IndexError:
+    pass
+baseStats = speciesData[2][2].split(".")
+evYield = speciesData[3][2].split(".")
+naturalMoves = []
+
+print(f"Species ID: {speciesID}")
+print(f"Species: {species}")
+print(f"Type: {types[0]}   {types[1]}")
+print(f"Base Stats: {baseStats}")
+print(f"EV Yield: {evYield}")
+
+
 
 

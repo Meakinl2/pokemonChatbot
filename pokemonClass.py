@@ -24,18 +24,20 @@ class move:
 class pokemon:
     def __init__(self,speciesID,minLvl,maxLvl,context):
         # Get the basic stats, set required things as they are required to be
-        self.copyBaseValues(speciesID)
+        print(f"Species ID: {speciesID}")
+        self.copyBaseValues(str(speciesID))
         self.nickname = self.species
         self.allowedEvolve = True
         
         # Generate all semi-random attributes
         self.level = randint(minLvl,maxLvl)
         self.experience = levelingBounds[self.level]
+        self.assignRandomNature()
         self.EVs = [0,0,0,0,0,0]
-        self.IVS = []
+        self.IVs = []
         for each in range(6):
             IV = randint(0,31)
-            self.IVS.append(IV)
+            self.IVs.append(IV)
 
         # Apply all context specfic attribute alterations
         if context == "Trainer":
@@ -49,22 +51,63 @@ class pokemon:
 
     def copyBaseValues(self,speciesID):
         # Open File and splits each line into a list at " "s
-        statsFilePath = selectFile(["DataTables"],"full_pokemonData.txt")
-        statsFile = readFile(statsFilePath, " ")
-        
-        
-        
+        statsFilePath = selectFile(["DataTables"],"full_pokemon_data.txt")
+        statsFileLines = readFile(statsFilePath, " ")
 
-    # Prints pokemons stats to terminal.
-    def printStats(self):
-        print(f"Species: {self.species} of nature {self.nature}")
-        print(f"Typing: {self.types[0]}  {self.types[1]} ")
-        print(f"Lvl: {self.level} from Exp: {self.experience} ")
-        print(f"Base Stats: HP:{self.baseStats[0]}  ATK:{self.baseStats[1]} DEF:{self.baseStats[2]} SPA:{self.baseStats[3]} SPD:{self.baseStats[4]} SPE:{self.baseStats[5]}")
-        print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
-        print(f"EVs: HP:{self.EVs[0]} ATK:{self.EVs[1]} DEF:{self.EVs[2]} SPA:{self.EVs[3]} SPD:{self.EVs[4]} SPE:{self.EVs[5]}")
-        print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
-    
+        speciesData = []
+        line = 0
+        print("1")
+        # Goes through every line in the document to find the start of the correct entry
+        # It is suprisingly fast for 63323 lines
+        foundSpecies = False
+        while not foundSpecies:
+            # New Data has some slight gaps, this if statement will only really be used during testing
+            if line > 63424:
+                break
+
+            try:
+                if statsFileLines[line][0] == speciesID:
+                    speciesData.append(statsFileLines[line])
+                    foundSpecies = True
+            except IndexError:
+                pass
+            line += 1 
+        print("2")
+
+        # Read from the starting line to the end line displayed as "======". 
+        fullData = False
+        while not fullData:
+            line += 1
+            try:
+                if statsFileLines[line][0] == '======':
+                    fullData = True
+                else:
+                    speciesData.append(statsFileLines[line])
+            except IndexError:
+                line += 1
+                print("Why")
+                pass
+        print("3")
+        
+        # This is arguably redundant, but I prefer it without the "-"
+        for i in range(0,len(speciesData)):
+            try:
+                speciesData[i].remove("-")
+            except ValueError:
+                pass
+
+        self.species = speciesData[0][1]
+        self.types = [speciesData[6][1]]
+        try:
+            self.types.append(speciesData[6][3])
+        except IndexError:
+            self.types.append("")
+        self.baseStats = speciesData[1][2].split(".")
+        self.evYield = speciesData[2][2].split(".")
+        self.naturalMoves = []
+        print("4")
+        
+   
 
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
@@ -87,6 +130,16 @@ class pokemon:
             statID += 1
             isHP = False
 
+    # Prints pokemons stats to terminal.
+    def printStats(self):
+        print(f"Species: {self.species} of nature {self.nature}")
+        print(f"Typing: {self.types[0]}  {self.types[1]} ")
+        print(f"Lvl: {self.level} from Exp: {self.experience} ")
+        print(f"Base Stats: HP:{self.baseStats[0]}  ATK:{self.baseStats[1]} DEF:{self.baseStats[2]} SPA:{self.baseStats[3]} SPD:{self.baseStats[4]} SPE:{self.baseStats[5]}")
+        print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
+        print(f"EVs: HP:{self.EVs[0]} ATK:{self.EVs[1]} DEF:{self.EVs[2]} SPA:{self.EVs[3]} SPD:{self.EVs[4]} SPE:{self.EVs[5]}")
+        print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
+    
 
     # Just increase the pokemons experience by a given amount and runs levelUp check
     def addExperience(self,newExperience):
@@ -157,11 +210,15 @@ class pokemon:
 # Test Functions to check stuff is working correctly
 # Generates random Test pokemon to check pokemon generation is working
 def generateTestPokemon(amount,minLvl,maxLvl):
+    available_species_path = selectFile(["DataTables"],"available_species.txt")
+    availableSpecies = readFile(available_species_path," ")
     for i in range(0,amount):
-        mypokemon = pokemon(randint(1,721),minLvl,maxLvl,"Wild")
+        item  = randint(0,len(availableSpecies))
+        chosenSpecies = int(availableSpecies[item][0])
+        mypokemon = pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
         print(f"Generated Pokemon {i  +  1}")
         mypokemon.printStats()
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-# generateTestPokemon(1000,1,1)
+generateTestPokemon(10,1,1)

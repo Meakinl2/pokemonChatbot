@@ -53,5 +53,30 @@ def combineFiles(file1, file2, keep1, keep2):
     
     writeFile(file1Path, newLines)
 
+# With the new data, some species are missing from the information. This compiles a list of all available species that can be used
 
-combineFiles("moves.txt","move_meta.txt",[0,1,2,3,4,5,6,7,8,9,10],[1,2,3,4,5,6,7,8,9,10,11,12])
+def  compileSpecies():
+    pokemon_data_file = selectFile(["DataTables"],"full_pokemon_data.txt")
+    species_file = selectFile(["DataTables"],"available_species.txt")
+
+    availableSpecies = []
+    pokemonData = readFile(pokemon_data_file," ")
+
+    finished = False
+    newSpecies  = False
+    i = 0
+    while not finished:
+        try: 
+            if pokemonData[i][0] == "======":
+                i += 1
+                newLine = []
+                newLine.append(pokemonData[i][0])
+                availableSpecies.append(newLine)
+                i += 1
+        except IndexError:
+            pass
+        i += 1
+        if i >= 64000:
+            finished = True
+
+    writeFile(species_file,availableSpecies)

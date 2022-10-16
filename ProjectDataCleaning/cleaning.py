@@ -27,7 +27,7 @@ def run1(fileName, keepLines):
    writeFile(cleanFile, cleanedLines)
    print("Done.")
 
-run1("moves.txt", [0,1,3,4,5,6,7,8,9,10,11])
+# run1("moves.txt", [0,1,3,4,5,6,7,8,9,10,11])
 
 # Because the code insists on adding random empty lines, which were not present when I had to run it through codio
 # Why this added even more lines I do not know
@@ -62,3 +62,24 @@ def padLines(folders,filename,numPad):
    writeFile(file,padLines)
 
 # padLines(["DataTables"], "pokemonBaseStats.txt",15)
+
+# File contains the various pokedex entries, but they are in the way, so they must go.
+def removePokedexLines():
+   dataFile = selectFile(["DataTables"],"full_pokemon_data.txt")
+   lines = readFile(dataFile," ")
+   running = True
+   i = 0
+   while running:
+      try: 
+         if "Dex:" in lines[i]:
+            lines.remove(lines[i])
+         else:
+            i += 1
+      except IndexError:
+         i += 1
+      if i >= 64000:
+         running = False
+   
+   writeFile(dataFile, lines)
+
+   
