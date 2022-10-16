@@ -231,6 +231,5 @@ move_meta_ailment_name = {
 # Theres a lot more to weather than I first thought. Might add at a later point.
 weather = {}
 
-print(move_meta_ailment_name["Trap"])
 
 

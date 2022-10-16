@@ -1,0 +1,20 @@
+Code:
+
+Offical Python Documentation
+For information on builtin functions and libraries
+https://www.python.org/doc/
+
+
+Information/Data: 
+
+GitHub - PokeApi/PokeApi
+Contains a considerable amount of Gen 1-6  information
+https://github.com/PokeAPI/pokeapi
+
+GitHub - itsjavi/swordshield-data
+Large amount of move data in csv form
+https://github.com/itsjavi/swordshield-data
+
+Bulbapedia in general
+Contains lots of very detailed information on how various things work 
+https://bulbapedia.bulbagarden.net/wiki/Main_Page

@@ -4,6 +4,20 @@ from dictonaries import *
 from ProjectDataCleaning.fileControl import *
 from PokemonFormulae import *
 
+
+# Saves having to open the move file everytime any move is used.
+class move:
+    def __init__(self,moveID):
+        movesFile  = selectFile(["DataTables"], "moveInformation.txt")
+        moveInformation = ""
+        self.name = ""
+        self.typing = []
+        self.power = 0
+        self.accuracy = 0
+        self.pp = 0
+
+
+
 # Defines the basic design for each pokemon, unsure quite how much this will control at this point
 # Is inital passed the SpeciesID number(from Pokedex) and the range the pokemon should be in
 # Context determines whether or not specific things should happen (such as giving trainer pokemon EVs)
@@ -33,30 +47,13 @@ class pokemon:
         self.determineStartMoveset()
     
 
-    # Copying all relevant information from baseStats table
-    # Used initaily and upon evolution to update relevant attributes
-    def copyBaseValues(self, speciesID):
-        pokemonInfoFile = selectFile(["DataTables"],"pokemonBaseStats.txt")
-        pokemonInfo = readFile(pokemonInfoFile)
-        speciesInfo = pokemonInfo[speciesID]
+    def copyBaseValues(self,speciesID):
+        # Open File and splits each line into a list at " "s
+        statsFilePath = selectFile(["DataTables"],"full_pokemonData.txt")
+        statsFile = readFile(statsFilePath, " ")
         
-        self.species = speciesInfo[1]
-
-        try: 
-            self.evolveTo = int(speciesInfo[13])
-            self.evolveAtLevel = int(speciesInfo[14])
-        except:
-            self.evolveTo = ""
-            self.evolveAtLevel = 1000
-
-        self.baseStats = [int(speciesInfo[5]),int(speciesInfo[6]),int(speciesInfo[7]),int(speciesInfo[8]),int(speciesInfo[9]),int(speciesInfo[10])]
-        self.types = [speciesInfo[2],speciesInfo[3]]
         
-        if speciesInfo[11] == "true":
-            self.isLegendary = True
-        else:
-            self.isLegendary = False
-
+        
 
     # Prints pokemons stats to terminal.
     def printStats(self):
@@ -72,7 +69,7 @@ class pokemon:
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
         natureID = randint(1,25)
-        natureInfo =  pokemon_natures[natureID]
+        natureInfo = pokemon_natures[natureID]
         self.nature = natureInfo[0]
         self.natureMultipliers = [1,1,1,1,1,1]
         self.natureMultipliers[natureInfo[1] - 1] = 1.1
@@ -167,4 +164,4 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-generateTestPokemon(1000,1,1)
+# generateTestPokemon(1000,1,1)

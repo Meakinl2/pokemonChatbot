@@ -4,6 +4,8 @@
 
 from ProjectDataCleaning.fileControl import *
 
+# -----------------------------------------------------------------------------------------------------
+
 # From ProjectDataCleaning\fileControl.py
 
 # Redone as csv library used to make some steps redundant
@@ -24,6 +26,8 @@ def writeFile(filePath, fileLines):
    for item in fileLines:
       item = item[:-1]
       file.writelines(item + "\n")
+
+# -----------------------------------------------------------------------------------------------------
 
 # From ProjectDataCleaning\cleaning.py
 
@@ -52,13 +56,44 @@ def cleanData(rawLineStrings, keepItems):
    
    return cleanLineStrings
 
+# -----------------------------------------------------------------------------------------------------
+
 # From createPokemon.py
 
 # A fucntion whose entire purpose was to check the typing table was filled out and working correctly. It was.
 def checkTypingTable():
-    file = selectFile(["DataTables"],"typeDamageMult.txt")
-    typingInfo = readFile(file)
-    for type1 in range(1,18):
-        for type2 in range(1,18):
-            print(f"{typingInfo[type1][0]} does {typingInfo[type1][type2]}x damage to {typingInfo[0][type2]}")
-            # print(f"{typingInfo[type2][0]} does {typingInfo[type2][type1]}x damage to {typingInfo[0][type1]}")
+   file = selectFile(["DataTables"],"typeDamageMult.txt")
+   typingInfo = readFile(file)
+   for type1 in range(1,18):
+      for type2 in range(1,18):
+         print(f"{typingInfo[type1][0]} does {typingInfo[type1][type2]}x damage to {typingInfo[0][type2]}")
+         # print(f"{typingInfo[type2][0]} does {typingInfo[type2][type1]}x damage to {typingInfo[0][type1]}")
+
+
+# The original function for retrieving basic pokemon information upon creation from file DataTables\PokemonBaseStats.txt
+# Upon discovery of the itsjavi github though, more complete data wsas found and was used to replace this old one
+# Copying all relevant information from baseStats table
+# Used initaily and upon evolution to update relevant attributes
+def copyBaseValues(self, speciesID):
+   pokemonInfoFile = selectFile(["DataTables"],"pokemonBaseStats.txt")
+   pokemonInfo = readFile(pokemonInfoFile)
+   speciesInfo = pokemonInfo[speciesID]
+      
+   self.species = speciesInfo[1]
+
+   try: 
+      self.evolveTo = int(speciesInfo[13])
+      self.evolveAtLevel = int(speciesInfo[14])
+   except:
+      self.evolveTo = ""
+      self.evolveAtLevel = 1000
+
+   self.baseStats = [int(speciesInfo[5]),int(speciesInfo[6]),int(speciesInfo[7]),int(speciesInfo[8]),int(speciesInfo[9]),int(speciesInfo[10])]
+   self.types = [speciesInfo[2],speciesInfo[3]]
+      
+   if speciesInfo[11] == "true":
+      self.isLegendary = True
+   else:
+      self.isLegendary = False
+
+# -----------------------------------------------------------------------------------------------------

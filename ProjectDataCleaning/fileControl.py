@@ -12,9 +12,9 @@ def selectFile(folders, fileName):
 
 
 # Opens and reads a given file, so that the data can be manipulated
-def readFile(filePath):
+def readFile(filePath, delim):
    with open(filePath, "r") as csvFile:
-        csvReader = csv.reader(csvFile, delimiter = ",")
+        csvReader = csv.reader(csvFile, delimiter = delim)
         fileLines = list(csvReader)
         csvFile.close()
         return fileLines
