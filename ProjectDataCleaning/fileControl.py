@@ -26,3 +26,8 @@ def writeFile(filePath, fileLines):
         csvWriter = csv.writer(csvFile, delimiter = ",")
         csvWriter.writerows(fileLines)
         csvFile.close()
+
+# file = selectFile(["DataTables"],"full_pokemon_data.txt")
+# lines = readFile(file, ",")
+# for line in lines:
+#    print(line)

@@ -52,7 +52,7 @@ class pokemon:
     def copyBaseValues(self,speciesID):
         # Open File and splits each line into a list at " "s
         statsFilePath = selectFile(["DataTables"],"full_pokemon_data.txt")
-        statsFileLines = readFile(statsFilePath, " ")
+        statsFileLines = readFile(statsFilePath, ",")
 
         speciesData = []
         line = 0
@@ -62,9 +62,6 @@ class pokemon:
         foundSpecies = False
         while not foundSpecies:
             # New Data has some slight gaps, this if statement will only really be used during testing
-            if line > 63424:
-                break
-
             try:
                 if statsFileLines[line][0] == speciesID:
                     speciesData.append(statsFileLines[line])
@@ -79,8 +76,9 @@ class pokemon:
         while not fullData:
             line += 1
             try:
-                if statsFileLines[line][0] == '======':
+                if statsFileLines[line] == ['======']:
                     fullData = True
+                    
                 else:
                     speciesData.append(statsFileLines[line])
             except IndexError:
@@ -214,11 +212,11 @@ def generateTestPokemon(amount,minLvl,maxLvl):
     availableSpecies = readFile(available_species_path," ")
     for i in range(0,amount):
         item  = randint(0,len(availableSpecies))
-        chosenSpecies = int(availableSpecies[item][0])
+        chosenSpecies = availableSpecies[item][0]
         mypokemon = pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
         print(f"Generated Pokemon {i  +  1}")
         mypokemon.printStats()
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-generateTestPokemon(10,1,1)
+generateTestPokemon(1000,1,1)

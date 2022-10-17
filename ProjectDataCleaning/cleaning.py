@@ -64,14 +64,15 @@ def padLines(folders,filename,numPad):
 # padLines(["DataTables"], "pokemonBaseStats.txt",15)
 
 # File contains the various pokedex entries, but they are in the way, so they must go.
-def removePokedexLines():
+# Slightly altered to allow removal of other unnecessary lines
+def removeLines():
    dataFile = selectFile(["DataTables"],"full_pokemon_data.txt")
-   lines = readFile(dataFile," ")
+   lines = readFile(dataFile,",")
    running = True
    i = 0
    while running:
       try: 
-         if "Dex:" in lines[i]:
+         if 'Dynamax!' in lines[i]:
             lines.remove(lines[i])
          else:
             i += 1
@@ -82,4 +83,5 @@ def removePokedexLines():
    
    writeFile(dataFile, lines)
 
-   
+removeLines()
+
