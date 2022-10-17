@@ -48,7 +48,7 @@ class pokemon:
         # self.actualStats = self.adjustedStats()
         self.determineStartMoveset()
     
-
+    # Should probably break sections into different functions, just to make it a bit cleaner
     def copyBaseValues(self,speciesID):
         # Open File and splits each line into a list at " "s
         statsFilePath = selectFile(["DataTables"],"full_pokemon_data.txt")
@@ -56,7 +56,6 @@ class pokemon:
 
         speciesData = []
         line = 0
-        print("1")
         # Goes through every line in the document to find the start of the correct entry
         # It is suprisingly fast for 63323 lines
         foundSpecies = False
@@ -69,7 +68,6 @@ class pokemon:
             except IndexError:
                 pass
             line += 1 
-        print("2")
 
         # Read from the starting line to the end line displayed as "======". 
         fullData = False
@@ -78,14 +76,11 @@ class pokemon:
             try:
                 if statsFileLines[line] == ['======']:
                     fullData = True
-                    
                 else:
                     speciesData.append(statsFileLines[line])
             except IndexError:
                 line += 1
-                print("Why")
                 pass
-        print("3")
         
         # This is arguably redundant, but I prefer it without the "-"
         for i in range(0,len(speciesData)):
@@ -102,11 +97,34 @@ class pokemon:
             self.types.append("")
         self.baseStats = speciesData[1][2].split(".")
         self.evYield = speciesData[2][2].split(".")
-        self.naturalMoves = []
-        print("4")
+        
+        # Then we find and assign the pokemons naturally learnt moves.
+        self.leveledMoves = []
+        collectingMoves = True
+        foundStart = False
+        foundEnd = False
+        i = 0
+        while collectingMoves: 
+            if foundStart :
+                newMove = []
+                moveName = ""
+                newMove.append(speciesData[i][0])
+                for j in range(1,len(speciesData[i])):
+                    moveName = moveName + speciesData[i][j]
+                newMove.append(moveName)
+                self.leveledMoves.append(newMove)
+                
+            if speciesData[i] == ['Level', 'Up', 'Moves:']:
+                foundStart = True
+
+            i += 1
+            if speciesData[i] == ['TMs:'] or speciesData[i] == ["Egg","Moves:"]:
+                collectingMoves = False
+
+            
+
         
    
-
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
         natureID = randint(1,25)
@@ -135,9 +153,13 @@ class pokemon:
         print(f"Lvl: {self.level} from Exp: {self.experience} ")
         print(f"Base Stats: HP:{self.baseStats[0]}  ATK:{self.baseStats[1]} DEF:{self.baseStats[2]} SPA:{self.baseStats[3]} SPD:{self.baseStats[4]} SPE:{self.baseStats[5]}")
         print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
-        print(f"EVs: HP:{self.EVs[0]} ATK:{self.EVs[1]} DEF:{self.EVs[2]} SPA:{self.EVs[3]} SPD:{self.EVs[4]} SPE:{self.EVs[5]}")
+        print(f"EV Yield: HP:{self.evYield[0]} ATK:{self.evYield[1]} DEF:{self.evYield[2]} SPA:{self.evYield[3]} SPD:{self.evYield[4]} SPE:{self.evYield[5]}")
         print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
-    
+        print("Learns Naturally, Moves:")
+        # print(self.leveledMoves)
+        for i in range(0,len(self.leveledMoves)):
+            print(f"- {self.leveledMoves[i][1]} at Lvl.{self.leveledMoves[i][0]}")
+
 
     # Just increase the pokemons experience by a given amount and runs levelUp check
     def addExperience(self,newExperience):
@@ -219,4 +241,4 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-generateTestPokemon(1000,1,1)
+generateTestPokemon(1,1,1)
