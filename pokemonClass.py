@@ -102,15 +102,14 @@ class pokemon:
         self.leveledMoves = []
         collectingMoves = True
         foundStart = False
-        foundEnd = False
         i = 0
         while collectingMoves: 
-            if foundStart :
+            if foundStart:
                 newMove = []
                 moveName = ""
                 newMove.append(speciesData[i][0])
                 for j in range(1,len(speciesData[i])):
-                    moveName = moveName + speciesData[i][j]
+                    moveName = moveName + speciesData[i][j] + " "
                 newMove.append(moveName)
                 self.leveledMoves.append(newMove)
                 
@@ -121,10 +120,32 @@ class pokemon:
             if speciesData[i] == ['TMs:'] or speciesData[i] == ["Egg","Moves:"]:
                 collectingMoves = False
 
+        # Then we do somethings very similar, but for all possible learnt moves
+        self.allowedMoves = []
+        collectingMoves = True
+        foundStart = False
+        i = 0
+        while collectingMoves:
+            if speciesData[i] == "TRs:":
+                i += 1
+
+            if foundStart:
+                newMove = []
+                moveName = ""
+                newMove.append(speciesData[i][0])
+                for j in range(1,len(speciesData[i])):
+                    moveName = moveName + speciesData[i][j] + " "
+                newMove.append(moveName)
+                self.allowedMoves.append(newMove)
             
+            if speciesData[i] == ['TMs:']:
+                foundStart = True
+
+            i += 1
+            if speciesData[i] == ['Armor','Tutors:']:
+                collectingMoves = False
 
         
-   
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
         natureID = randint(1,25)
@@ -156,9 +177,11 @@ class pokemon:
         print(f"EV Yield: HP:{self.evYield[0]} ATK:{self.evYield[1]} DEF:{self.evYield[2]} SPA:{self.evYield[3]} SPD:{self.evYield[4]} SPE:{self.evYield[5]}")
         print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
         print("Learns Naturally, Moves:")
-        # print(self.leveledMoves)
         for i in range(0,len(self.leveledMoves)):
             print(f"- {self.leveledMoves[i][1]} at Lvl.{self.leveledMoves[i][0]}")
+        print("Allowed Moves: ")
+        for i in range(0,len(self.allowedMoves)):
+            print(f"- {self.allowedMoves[i][0]}: {self.allowedMoves[i][1]}")
 
 
     # Just increase the pokemons experience by a given amount and runs levelUp check
@@ -233,7 +256,7 @@ def generateTestPokemon(amount,minLvl,maxLvl):
     available_species_path = selectFile(["DataTables"],"available_species.txt")
     availableSpecies = readFile(available_species_path," ")
     for i in range(0,amount):
-        item  = randint(0,len(availableSpecies))
+        item  = randint(0,len(availableSpecies)-1)
         chosenSpecies = availableSpecies[item][0]
         mypokemon = pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
         print(f"Generated Pokemon {i  +  1}")
