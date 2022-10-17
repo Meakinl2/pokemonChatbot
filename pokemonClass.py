@@ -126,7 +126,7 @@ class pokemon:
         foundStart = False
         i = 0
         while collectingMoves:
-            if speciesData[i] == "TRs:":
+            if speciesData[i] == ["TRs:"]:
                 i += 1
 
             if foundStart:
@@ -176,12 +176,14 @@ class pokemon:
         print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
         print(f"EV Yield: HP:{self.evYield[0]} ATK:{self.evYield[1]} DEF:{self.evYield[2]} SPA:{self.evYield[3]} SPD:{self.evYield[4]} SPE:{self.evYield[5]}")
         print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
+        print(f"Knows Moves: {self.knownMoves}")
         print("Learns Naturally, Moves:")
         for i in range(0,len(self.leveledMoves)):
-            print(f"- {self.leveledMoves[i][1]} at Lvl.{self.leveledMoves[i][0]}")
+            print(f"- {self.leveledMoves[i][1]} at Lvl {self.leveledMoves[i][0]}")
         print("Allowed Moves: ")
         for i in range(0,len(self.allowedMoves)):
             print(f"- {self.allowedMoves[i][0]}: {self.allowedMoves[i][1]}")
+        
 
 
     # Just increase the pokemons experience by a given amount and runs levelUp check
@@ -226,7 +228,21 @@ class pokemon:
     
     # Determines the moves a pokemon should start with based on the allowed moves
     def determineStartMoveset(self):
-        pass
+        availableStartMoves = []
+        for i in range(0,len(self.leveledMoves)):
+            if int(self.leveledMoves[i][0]) <= self.level:
+                availableStartMoves.append(self.leveledMoves[i][1])
+        print(f"Available Start Moves: {availableStartMoves}")
+        self.knownMoves = []
+        
+        # Assigns a maximum  of four moves, only if there are that many moves available.
+        for i in range(4):
+            try:
+                chosenMove = randint(0,len(availableStartMoves) - 1)
+                self.knownMoves.append(availableStartMoves[chosenMove])
+                availableStartMoves.remove(availableStartMoves[chosenMove])
+            except ValueError:
+                pass
 
 
     # Calculates a pokemons actual stats following modifers such as buffs/debuffs and held items
@@ -248,9 +264,8 @@ class pokemon:
             except:
                 break
 
+    # End of Pokemon class
 
-
-# Test Functions to check stuff is working correctly
 # Generates random Test pokemon to check pokemon generation is working
 def generateTestPokemon(amount,minLvl,maxLvl):
     available_species_path = selectFile(["DataTables"],"available_species.txt")
@@ -264,4 +279,4 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-generateTestPokemon(1,1,1)
+generateTestPokemon(10,1,30)

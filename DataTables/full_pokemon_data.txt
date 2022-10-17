@@ -13122,7 +13122,6 @@ Egg,Group:,Grass
 Hatch,Cycles:,20
 Height:,00.40m,,Weight:,005.8kg,,Color:,Green
 Level,Up,Moves:
--,00,Petal,Blizzard
 -,01,Petal,Blizzard
 -,01,Quiver,Dance
 -,01,Mega,Drain
