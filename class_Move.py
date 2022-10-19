@@ -1,7 +1,6 @@
 from ProjectDataCleaning.fileControl import *
 from dictonaries import *
 
-
 # Assigns all realted information to a move, for a given pokemon.
 class Move:
     def __init__(self,moveName):

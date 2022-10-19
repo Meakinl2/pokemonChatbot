@@ -6,7 +6,8 @@ from dictonaries import *
 # My own functions, from other files
 from class_Move import Move
 from ProjectDataCleaning.fileControl import *
-from PokemonFormulae import *
+from pokemon_formulae import *
+import user_inputs
 
 
 # Defines the basic design for each pokemon, unsure quite how much this will control at this point
@@ -76,7 +77,7 @@ class Pokemon:
             except IndexError:
                 line += 1
                 pass
-        print("1")
+
         self.species = self.speciesData[0][1]
         self.types = [self.speciesData[6][1]]
         try:
@@ -85,7 +86,6 @@ class Pokemon:
             self.types.append("")
         self.baseStats = self.speciesData[1][2].split(".")
         self.evYield = self.speciesData[2][2].split(".")
-        print("3")
         
 
     # Find and assign moves learnt by leveling up.
@@ -154,7 +154,7 @@ class Pokemon:
         print(f"Available Start Moves: {availableStartMoves}")
         self.knownMoves = []
         
-        # Assigns a maximum  of four moves, only if there are that many moves available.
+        # Assigns a maximum  of four moves, only if there are that many moves available
         for i in range(4):
             try:
                 chosenMove = randint(0,len(availableStartMoves) - 1)
@@ -163,13 +163,14 @@ class Pokemon:
             except ValueError:
                 pass
 
+
+    # Replaces a previously known move with a new one, only necessary if pokemon knows 4 moves already
     def assignNewMove(self,oldMove,newMove):
         print(f"{self.nickname} has forgotten the move {oldMove.name}")
         moveIndex = self.knownMoves.index(oldMove)
         self.knownMoves[moveIndex] = Move(newMove)
         print(f"{self.nickname} has learnt the move {newMove}")
 
-        
 
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
@@ -233,7 +234,20 @@ class Pokemon:
                 print(f"{self.nickname} has Leveled Up.")
                 print(f"{self.nickname} is now Level {self.level}")
                 print(f"HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
-                
+                self.levelLearnMove()
+
+    # Checks if pokemon can learn a new move. And calls to ask user
+    def levelLearnMove(self):
+        for item in self.leveledMoves:
+            if int(item[0]) == self.level and len(self.knownMoves) < 4:
+                newMove = item[1]
+                self.knownMoves.append(Move(newMove))
+                print(f"{self.nickname} has learnt {newMove}.")
+
+            elif int(item[0]) == self.level and len(self.knownMoves) >= 4:
+                newMove = item[1]
+                user_inputs.learnLevelMove(self,newMove)
+
 
     # Following levelUp, checks if the pokemon should levelUp
     def evolve(self):
@@ -254,12 +268,16 @@ class Pokemon:
     # Allows adding experience amounts to check the pokemon is leveling up appropriatley
     def testLeveling(self):
         while True:  
-            try:
-                experienceAdd  = int(input("Add Experience: \n> "))
-                self.experience += experienceAdd
-                self.levelUp()
-            except:
-                break
+            validInput = False
+            while not validInput:
+                try:
+                    experienceAdd = int(input("Add Experience: \n> "))
+                    validInput = True
+                except:
+                    pass
+            
+            self.experience += experienceAdd
+            self.levelUp()
 
     # End of Pokemon class
 
@@ -274,11 +292,11 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print(f"Generated Pokemon {i  +  1}")
         mypokemon.printStats()
         print("-----------------------------------------------")
-        # mypokemon.testLeveling()
+        mypokemon.testLeveling()
         
 # generateTestPokemon(1,1,30)
 
 myPokemon = Pokemon("001",1,1,"Wild")
 myPokemon.printStats()
-myPokemon.assignNewMove(myPokemon.knownMoves[0],"Ice Beam")
-myPokemon.printStats()
+myPokemon.testLeveling()
+# myPokemon.printStats()

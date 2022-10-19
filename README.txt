@@ -1,3 +1,17 @@
+Mohit Lathia and Lewis Meakin 
+Activity Led Computer Science Coursework Year 1 Semester 1
+Project Brief: Create a chatbot in Python
+
+We have created a simple text-based pokemon game where in a player enters what they would like to happen,
+following which the message is interpreted by the chatbot which then executes appropriate functions.
+
+In terms of divison of labour, Lewis mainly worked on the underlying game and all the respective mechanics, 
+while Mohit worked on the Chatbot which sort of sits on top of the game as a seperate layer.
+Both parts could work seperately from one another, but probably wouldn't make a whole lot of sense.
+
+------------------------------------------------------------------------------------------------------------------------
+References :
+
 Code:
 
 Offical Python Documentation
@@ -36,6 +50,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
 IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES 
 (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) 
-HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ------------------------------------------------------------------------------------------------------------------------
