@@ -96,4 +96,17 @@ def copyBaseValues(self, speciesID):
    else:
       self.isLegendary = False
 
+
+# The original fuction for evolving before I had full evolution information
+# Evolves Pokemon
+def evolve(self):
+        if self.level >= self.evolveAtLevel and self.allowedEvolve:
+            print(f"{self.nickname} is evolving!")
+            initalSpecies = self.species
+            self.copyBaseValues(self.evolveTo)
+            print(f"{self.nickname} evolved in {self.species}")
+            if self.nickname == initalSpecies:
+                self.nickname = self.species
+            self.calculateAdjustedStats()
+
 # -----------------------------------------------------------------------------------------------------

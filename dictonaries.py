@@ -105,7 +105,7 @@ levelingBounds = {
 }
 
 # Integer IDs for the different types from the PokeAPI data
-typeIDs = {
+type_IDs = {
     1: "Normal",
     2: "Fighting",
     3: "Flying",
@@ -181,26 +181,26 @@ pokemon_natures = {
 }
 
 move_damage_classes = {
-    "1": "Status",
-    "2": "Physical",
-    "3": "Special"
+    1: "Status",
+    2: "Physical",
+    3: "Special"
 }
 
 move_meta_catergories = {
-    "0": "damage",
-    "1": "ailment",
-    "2": "net-good-stats",
-    "3": "heal",
-    "4": "damage+ailment",
-    "5": "swagger",
-    "6": "damage+lower",
-    "7": "damage+raise",
-    "8": "damage+heal",
-    "9": "ohko",
-    "10": "whole-field-effect",
-    "11": "field-effect",
-    "12": "force-switch",
-    "13": "unique"
+    0: "damage",
+    1: "ailment",
+    2: "net-good-stats",
+    3: "heal",
+    4: "damage+ailment",
+    5: "swagger",
+    6: "damage+lower",
+    7: "damage+raise",
+    8: "damage+heal",
+    9: "ohko",
+    10: "whole-field-effect",
+    11: "field-effect",
+    12: "force-switch",
+    13: "unique"
 }
 
 # Why there are gaps I don't know, this is just the data that I could find

@@ -2,7 +2,7 @@
 # I assume this will be slower, but it'll be easier to keep track of for the time being.
 import os
 import csv
-from fileControl import *
+from ProjectDataCleaning.fileControl import *
 
 # Specificaly for rearranging the evolutions data
 # Had to write on Codio as the Uni PC did not have a python intepreter for some reason

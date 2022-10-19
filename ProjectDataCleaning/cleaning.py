@@ -1,7 +1,7 @@
 # As there is only a few documents each function will be specific to each document, just to make it a bit easier 
 # Previous Comment is in fact a lie
 
-from fileControl import *
+from ProjectDataCleaning.fileControl import *
 
 # Removes the coloumns that are unneeded
 def cleanData(rawLines, keepItems):

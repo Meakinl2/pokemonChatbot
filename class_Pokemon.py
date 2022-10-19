@@ -1,32 +1,24 @@
-import os, csv, pickle, math
+# Importing necessary functions
+# Built in python libraries
 from random import randint
 from dictonaries import *
+
+# My own functions, from other files
+from class_Move import Move
 from ProjectDataCleaning.fileControl import *
 from PokemonFormulae import *
-
-
-# Saves having to open the move file everytime any move is used.
-class move:
-    def __init__(self,moveName):
-        movesFile  = selectFile(["DataTables"], "moveInformation.txt")
-        moveInformation = readFile()
-        self.name = ""
-        self.typing = []
-        self.power = 0
-        self.accuracy = 0
-        self.pp = 0
-
 
 
 # Defines the basic design for each pokemon, unsure quite how much this will control at this point
 # Is inital passed the SpeciesID number(from Pokedex) and the range the pokemon should be in
 # Context determines whether or not specific things should happen (such as giving trainer pokemon EVs)
-class pokemon:
+class Pokemon:
     def __init__(self,speciesID,minLvl,maxLvl,context):
         # Get the basic stats, set required things as they are required to be
         print(f"Species ID: {speciesID}")
         self.copyBaseValues(str(speciesID))
         self.nickname = self.species
+        self.heldItem = ""
         self.allowedEvolve = True
         
         # Generate all semi-random attributes
@@ -49,6 +41,7 @@ class pokemon:
         self.assignAllowedMoves()
         self.determineStartMoveset()
     
+
     # Should probably break sections into different functions, just to make it a bit cleaner
     def copyBaseValues(self,speciesID):
         # Open File and splits each line into a list at " "s
@@ -82,13 +75,6 @@ class pokemon:
             except IndexError:
                 line += 1
                 pass
-        
-        # This is arguably redundant, but I prefer it without the "-"
-        for i in range(0,len(self.speciesData)):
-            try:
-                self.speciesData[i].remove("-")
-            except ValueError:
-                pass
 
         self.species = self.speciesData[0][1]
         self.types = [self.speciesData[6][1]]
@@ -112,7 +98,10 @@ class pokemon:
                 moveName = ""
                 newMove.append(self.speciesData[i][0])
                 for j in range(1,len(self.speciesData[i])):
-                    moveName = moveName + self.speciesData[i][j] + " "
+                    if j == 1:
+                        moveName = self.speciesData[i][j]
+                    else:
+                        moveName = moveName + " " + self.speciesData[i][j]
                 newMove.append(moveName)
                 self.leveledMoves.append(newMove)
                 
@@ -167,15 +156,22 @@ class pokemon:
         for i in range(4):
             try:
                 chosenMove = randint(0,len(availableStartMoves) - 1)
-                self.knownMoves.append(availableStartMoves[chosenMove])
-                availableStartMoves.remove(availableStartMoves[chosenMove])
+                print(chosenMove)
+                
             except ValueError:
-                pass
+                print(ValueError)
+
+            try:
+                self.knownMoves.append(Move(availableStartMoves[chosenMove]))
+                availableStartMoves.remove(availableStartMoves[chosenMove])
+
+            except ValueError:
+                print(ValueError)
 
 
     def assignNewMove(self,oldMove,newMove):
         print(f"{self.nickname} wants to learn {newMove}. Should they forget an old move?")
-        
+
         
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
@@ -198,6 +194,7 @@ class pokemon:
             statID += 1
             isHP = False
 
+
     # Prints pokemons stats to terminal.
     def printStats(self):
         print(f"Species: {self.species} of nature {self.nature}")
@@ -207,7 +204,9 @@ class pokemon:
         print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
         print(f"EV Yield: HP:{self.evYield[0]} ATK:{self.evYield[1]} DEF:{self.evYield[2]} SPA:{self.evYield[3]} SPD:{self.evYield[4]} SPE:{self.evYield[5]}")
         print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
-        print(f"Knows Moves: {self.knownMoves}")
+        print("Knows Moves:")
+        for i in range(0,len(self.knownMoves)):
+            print(f"- {self.knownMoves[i].name}")
         print("Learns Naturally, Moves:")
         for i in range(0,len(self.leveledMoves)):
             print(f"- {self.leveledMoves[i][1]} at Lvl {self.leveledMoves[i][0]}")
@@ -215,7 +214,6 @@ class pokemon:
         for i in range(0,len(self.allowedMoves)):
             print(f"- {self.allowedMoves[i][0]}: {self.allowedMoves[i][1]}")
         
-
 
     # Just increase the pokemons experience by a given amount and runs levelUp check
     def addExperience(self,newExperience):
@@ -237,37 +235,23 @@ class pokemon:
                 print(f"{self.nickname} has Leveled Up.")
                 print(f"{self.nickname} is now Level {self.level}")
                 print(f"HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
-                self.evolve()
-        
+                
 
     # Following levelUp, checks if the pokemon should levelUp
     def evolve(self):
-        if self.level >= self.evolveAtLevel and self.allowedEvolve:
-            print(f"{self.nickname} is evolving!")
-            initalSpecies = self.species
-            self.copyBaseValues(self.evolveTo)
-            print(f"{self.nickname} evolved in {self.species}")
-            if self.nickname == initalSpecies:
-                self.nickname = self.species
-            self.calculateAdjustedStats()
+        pass
             
 
     # Trainer pokemon are given EVs based on their difficulty to make them more challenging than wild pokemon
     def setTrainerEVs(self):
         pass
 
-    
-    
 
-
-    # Calculates a pokemons actual stats following modifers such as buffs/debuffs and held items
-    def determineActualStats(self):
-        pass
-    
-
+    # Changes nickname, in fairness way shorter than I expected for some reason
     def changeNickname(self, newNickname):
         self.nickname = newNickname
     
+
     # Test Functions, will be removed later.
     # Allows adding experience amounts to check the pokemon is leveling up appropriatley
     def testLeveling(self):
@@ -288,10 +272,10 @@ def generateTestPokemon(amount,minLvl,maxLvl):
     for i in range(0,amount):
         item  = randint(0,len(availableSpecies)-1)
         chosenSpecies = availableSpecies[item][0]
-        mypokemon = pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
+        mypokemon = Pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
         print(f"Generated Pokemon {i  +  1}")
         mypokemon.printStats()
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-# generateTestPokemon(1,1,30)
+generateTestPokemon(1,1,30)

@@ -3,7 +3,7 @@
 # They will however suffice as a basic system to allow me to move on to other aspects of the game
 
 from random import randint
-from fileControl import *
+from ProjectDataCleaning.fileControl import *
 
 # Creates a file that provides a list of all species on the same evolution chain.
 # This does have the issue of repeats where some pokemon have multiple evolutions, 
