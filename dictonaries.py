@@ -104,24 +104,25 @@ levelingBounds = {
     100: 1250000,
 }
 
+# Integer IDs for the different types from the PokeAPI data
 typeIDs = {
     1: "Normal",
-    2: "Fire",
-    3: "Water",
-    4: "Grass",
-    5: "Electric",
-    6: "Ice",
-    7: "Fighting",
-    8: "Poison",
-    9: "Ground",
-    10: "Flying",
-    11: "Psychic",
-    12: "Bug",
-    13: "Rock",
-    14: "Ghost",
-    15: "Dragon",
-    16: "Dark",
-    17: "Steel",
+    2: "Fighting",
+    3: "Flying",
+    4: "Poison",
+    5: "Ground",
+    6: "Rock",
+    7: "Bug",
+    8: "Ghost",
+    9: "Steel",
+    10: "Fire",
+    11: "Water",
+    12: "Grass",
+    13: "Electric",
+    14: "Psychic",
+    15: "Ice",
+    16: "Dragon",
+    17: "Dark",
     18: "Fairy"
 }
 

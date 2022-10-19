@@ -83,5 +83,49 @@ def removeLines():
    
    writeFile(dataFile, lines)
 
-removeLines()
 
+# Reformat move names form DataTable\moveInformation.txt
+def reformatNames():
+   filePath = selectFile(["DataTables"],"moveInformation.txt")
+   fileLines = readFile(filePath, ",")
+   for i in range(1,len(fileLines)):
+      line = fileLines[i][1]
+      line = line.split("-")
+      for j in range(len(line)):
+         if j == 0:
+            newLine = line[0][0].upper() + line[0][1:len(line[0])]
+            print(newLine)
+         else:
+            try:
+               newLine = newLine + " " + line[j][0].upper() + line[j][1:len(line[1])]
+               print(newLine)
+            except IndexError:
+               pass
+      fileLines[i][1] = newLine
+
+   for line in fileLines:
+      print(line)
+   
+   writeFile(filePath,fileLines)
+
+# To remove dashes from the full_pokemon_data.txt file
+def removeCharacter(filePath,character):
+   fileLines = readFile(filePath, ",")
+   print(fileLines)
+   i = 0
+   running = True
+   while running:
+      try:
+         if character in fileLines[i]:
+            fileLines[i].remove(character)
+         else:
+            i += 1
+      except IndexError:
+         i += 1
+         pass
+      if i > 64000:
+         running = False
+   writeFile(filePath,fileLines)
+
+filePath = selectFile(["DataTables"],"full_pokemon_data.txt")
+removeCharacter(filePath, "-")

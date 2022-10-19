@@ -7,9 +7,9 @@ from PokemonFormulae import *
 
 # Saves having to open the move file everytime any move is used.
 class move:
-    def __init__(self,moveID):
+    def __init__(self,moveName):
         movesFile  = selectFile(["DataTables"], "moveInformation.txt")
-        moveInformation = ""
+        moveInformation = readFile()
         self.name = ""
         self.typing = []
         self.power = 0
@@ -45,7 +45,8 @@ class pokemon:
 
         # Sets "adjusted" stats and give the pokemon its starting moveset
         self.calculateAdjustedStats()
-        # self.actualStats = self.adjustedStats()
+        self.assignLeveledMoves()
+        self.assignAllowedMoves()
         self.determineStartMoveset()
     
     # Should probably break sections into different functions, just to make it a bit cleaner
@@ -54,7 +55,7 @@ class pokemon:
         statsFilePath = selectFile(["DataTables"],"full_pokemon_data.txt")
         statsFileLines = readFile(statsFilePath, ",")
 
-        speciesData = []
+        self.speciesData = []
         line = 0
         # Goes through every line in the document to find the start of the correct entry
         # It is suprisingly fast for 63323 lines
@@ -63,7 +64,7 @@ class pokemon:
             # New Data has some slight gaps, this if statement will only really be used during testing
             try:
                 if statsFileLines[line][0] == speciesID:
-                    speciesData.append(statsFileLines[line])
+                    self.speciesData.append(statsFileLines[line])
                     foundSpecies = True
             except IndexError:
                 pass
@@ -77,28 +78,30 @@ class pokemon:
                 if statsFileLines[line] == ['======']:
                     fullData = True
                 else:
-                    speciesData.append(statsFileLines[line])
+                    self.speciesData.append(statsFileLines[line])
             except IndexError:
                 line += 1
                 pass
         
         # This is arguably redundant, but I prefer it without the "-"
-        for i in range(0,len(speciesData)):
+        for i in range(0,len(self.speciesData)):
             try:
-                speciesData[i].remove("-")
+                self.speciesData[i].remove("-")
             except ValueError:
                 pass
 
-        self.species = speciesData[0][1]
-        self.types = [speciesData[6][1]]
+        self.species = self.speciesData[0][1]
+        self.types = [self.speciesData[6][1]]
         try:
-            self.types.append(speciesData[6][3])
+            self.types.append(self.speciesData[6][3])
         except IndexError:
             self.types.append("")
-        self.baseStats = speciesData[1][2].split(".")
-        self.evYield = speciesData[2][2].split(".")
+        self.baseStats = self.speciesData[1][2].split(".")
+        self.evYield = self.speciesData[2][2].split(".")
         
-        # Then we find and assign the pokemons naturally learnt moves.
+
+    # Find and assign moves learnt by leveling up.
+    def assignLeveledMoves(self):
         self.leveledMoves = []
         collectingMoves = True
         foundStart = False
@@ -107,44 +110,72 @@ class pokemon:
             if foundStart:
                 newMove = []
                 moveName = ""
-                newMove.append(speciesData[i][0])
-                for j in range(1,len(speciesData[i])):
-                    moveName = moveName + speciesData[i][j] + " "
+                newMove.append(self.speciesData[i][0])
+                for j in range(1,len(self.speciesData[i])):
+                    moveName = moveName + self.speciesData[i][j] + " "
                 newMove.append(moveName)
                 self.leveledMoves.append(newMove)
                 
-            if speciesData[i] == ['Level', 'Up', 'Moves:']:
+            if self.speciesData[i] == ['Level', 'Up', 'Moves:']:
                 foundStart = True
 
             i += 1
-            if speciesData[i] == ['TMs:'] or speciesData[i] == ["Egg","Moves:"]:
+            if self.speciesData[i] == ['TMs:'] or self.speciesData[i] == ["Egg","Moves:"]:
                 collectingMoves = False
 
-        # Then we do somethings very similar, but for all possible learnt moves
+
+    # Then we do somethings very similar, but for all possible learnt moves
+    def assignAllowedMoves(self):
         self.allowedMoves = []
         collectingMoves = True
         foundStart = False
         i = 0
         while collectingMoves:
-            if speciesData[i] == ["TRs:"]:
+            if self.speciesData[i] == ["TRs:"]:
                 i += 1
 
             if foundStart:
                 newMove = []
                 moveName = ""
-                newMove.append(speciesData[i][0])
-                for j in range(1,len(speciesData[i])):
-                    moveName = moveName + speciesData[i][j] + " "
+                newMove.append(self.speciesData[i][0])
+                for j in range(1,len(self.speciesData[i])):
+                    if j == 1:
+                        moveName = self.speciesData[i][j]
+                    else:
+                        moveName = moveName + " " + self.speciesData[i][j]
                 newMove.append(moveName)
                 self.allowedMoves.append(newMove)
             
-            if speciesData[i] == ['TMs:']:
+            if self.speciesData[i] == ['TMs:']:
                 foundStart = True
 
             i += 1
-            if speciesData[i] == ['Armor','Tutors:']:
+            if self.speciesData[i] == ['Armor','Tutors:']:
                 collectingMoves = False
+                
 
+    # Determines the moves a pokemon should start with based on the allowed moves
+    def determineStartMoveset(self):
+        availableStartMoves = []
+        for i in range(0,len(self.leveledMoves)):
+            if int(self.leveledMoves[i][0]) <= self.level:
+                availableStartMoves.append(self.leveledMoves[i][1])
+        print(f"Available Start Moves: {availableStartMoves}")
+        self.knownMoves = []
+        
+        # Assigns a maximum  of four moves, only if there are that many moves available.
+        for i in range(4):
+            try:
+                chosenMove = randint(0,len(availableStartMoves) - 1)
+                self.knownMoves.append(availableStartMoves[chosenMove])
+                availableStartMoves.remove(availableStartMoves[chosenMove])
+            except ValueError:
+                pass
+
+
+    def assignNewMove(self,oldMove,newMove):
+        print(f"{self.nickname} wants to learn {newMove}. Should they forget an old move?")
+        
         
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
@@ -226,23 +257,7 @@ class pokemon:
         pass
 
     
-    # Determines the moves a pokemon should start with based on the allowed moves
-    def determineStartMoveset(self):
-        availableStartMoves = []
-        for i in range(0,len(self.leveledMoves)):
-            if int(self.leveledMoves[i][0]) <= self.level:
-                availableStartMoves.append(self.leveledMoves[i][1])
-        print(f"Available Start Moves: {availableStartMoves}")
-        self.knownMoves = []
-        
-        # Assigns a maximum  of four moves, only if there are that many moves available.
-        for i in range(4):
-            try:
-                chosenMove = randint(0,len(availableStartMoves) - 1)
-                self.knownMoves.append(availableStartMoves[chosenMove])
-                availableStartMoves.remove(availableStartMoves[chosenMove])
-            except ValueError:
-                pass
+    
 
 
     # Calculates a pokemons actual stats following modifers such as buffs/debuffs and held items
@@ -279,4 +294,4 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-generateTestPokemon(10,1,30)
+# generateTestPokemon(1,1,30)
