@@ -269,12 +269,19 @@ class Pokemon:
     def testLeveling(self):
         while True:  
             validInput = False
-            while not validInput:
+            while not validInput:  
+                user_input = input("Add Experience: \n> ")
+                if user_input == "exit":
+                    break
+                
                 try:
-                    experienceAdd = int(input("Add Experience: \n> "))
+                    experienceAdd = int(user_input)
                     validInput = True
-                except:
-                    pass
+                except TypeError:
+                    print("Invalid Value as Integer.")
+            
+            if user_input == "exit":
+                    break
             
             self.experience += experienceAdd
             self.levelUp()

@@ -17,6 +17,9 @@ def calculateStat(base,level,IV,EV,isHP,natureModifier):
 # The base damage of an attack is determined by a constant formula based on the intrinsic attributes of both pokemon and the move used
 # Several external factors are then applied, there are quite a few of them
 def calculateDamage(attacker, defender, move):
-    baseDamage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[2]//defender.actualStats[1])//20 + 2
-    finalDamage = baseDamage
+    if move.damageClass == "Physical":
+        baseDamage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[2]//defender.actualStats[1])//20 + 2
+        finalDamage = baseDamage
+    if move.damageClass == "Special":
+        baseDamage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[2]//defender.actualStats[1])//20 + 2
     return 
