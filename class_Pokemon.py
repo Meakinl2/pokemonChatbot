@@ -20,7 +20,7 @@ class Pokemon:
         self.nickname = self.species
         self.heldItem = ""
         self.allowedEvolve = True
-        
+
         # Generate all semi-random attributes
         self.level = randint(minLvl,maxLvl)
         self.experience = levelingBounds[self.level]
@@ -47,7 +47,7 @@ class Pokemon:
         # Open File and splits each line into a list at " "s
         statsFilePath = selectFile(["DataTables"],"full_pokemon_data.txt")
         statsFileLines = readFile(statsFilePath, ",")
-
+        
         self.speciesData = []
         line = 0
         # Goes through every line in the document to find the start of the correct entry
@@ -60,9 +60,10 @@ class Pokemon:
                     self.speciesData.append(statsFileLines[line])
                     foundSpecies = True
             except IndexError:
+                print(IndexError)
                 pass
             line += 1 
-
+        
         # Read from the starting line to the end line displayed as "======". 
         fullData = False
         while not fullData:
@@ -75,7 +76,7 @@ class Pokemon:
             except IndexError:
                 line += 1
                 pass
-
+        print("1")
         self.species = self.speciesData[0][1]
         self.types = [self.speciesData[6][1]]
         try:
@@ -84,6 +85,7 @@ class Pokemon:
             self.types.append("")
         self.baseStats = self.speciesData[1][2].split(".")
         self.evYield = self.speciesData[2][2].split(".")
+        print("3")
         
 
     # Find and assign moves learnt by leveling up.
@@ -156,23 +158,19 @@ class Pokemon:
         for i in range(4):
             try:
                 chosenMove = randint(0,len(availableStartMoves) - 1)
-                print(chosenMove)
-                
-            except ValueError:
-                print(ValueError)
-
-            try:
                 self.knownMoves.append(Move(availableStartMoves[chosenMove]))
                 availableStartMoves.remove(availableStartMoves[chosenMove])
-
             except ValueError:
-                print(ValueError)
-
+                pass
 
     def assignNewMove(self,oldMove,newMove):
-        print(f"{self.nickname} wants to learn {newMove}. Should they forget an old move?")
+        print(f"{self.nickname} has forgotten the move {oldMove.name}")
+        moveIndex = self.knownMoves.index(oldMove)
+        self.knownMoves[moveIndex] = Move(newMove)
+        print(f"{self.nickname} has learnt the move {newMove}")
 
         
+
     # Picks a random nature and assigns correct multipliers from the pokemon_natures dictonary
     def assignRandomNature(self):
         natureID = randint(1,25)
@@ -278,4 +276,9 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print("-----------------------------------------------")
         # mypokemon.testLeveling()
         
-generateTestPokemon(1,1,30)
+# generateTestPokemon(1,1,30)
+
+myPokemon = Pokemon("001",1,1,"Wild")
+myPokemon.printStats()
+myPokemon.assignNewMove(myPokemon.knownMoves[0],"Ice Beam")
+myPokemon.printStats()

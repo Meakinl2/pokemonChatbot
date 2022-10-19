@@ -1,6 +1,8 @@
 from ProjectDataCleaning.fileControl import *
 from dictonaries import *
 
+
+# Assigns all realted information to a move, for a given pokemon.
 class Move:
     def __init__(self,moveName):
         movesFile  = selectFile(["DataTables"],"moveInformation.txt")
@@ -16,6 +18,7 @@ class Move:
         self.priority = int(moveInformation[6])
         self.damageClass = move_damage_classes[int(moveInformation[8])]
 
+        # Some boxes are blank in the table and so this assign appropriate integer values in their place
         try: 
             self.power = int(moveInformation[3])
         except ValueError:
