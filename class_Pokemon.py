@@ -16,11 +16,11 @@ import user_inputs
 class Pokemon:
     def __init__(self,speciesID,minLvl,maxLvl,context):
         # Get the basic stats, set required things as they are required to be
-        print(f"Species ID: {speciesID}")
         self.copyBaseValues(str(speciesID))
         self.nickname = self.species
         self.heldItem = ""
         self.allowedEvolve = True
+        self.inParty = False
 
         # Generate all semi-random attributes
         self.level = randint(minLvl,maxLvl)
@@ -36,12 +36,22 @@ class Pokemon:
         if context == "Trainer":
             self.setTrainerEVs()
 
+
+        # The following relate only to a pokemmon in the currently used party
+        self.battleStatStages = [0,0]
+        self.baseStatStages = [0,0,0,0,0,0]
+
+
         # Sets "adjusted" stats and give the pokemon its starting moveset
         self.calculateAdjustedStats()
         self.assignLeveledMoves()
         self.assignAllowedMoves()
         self.determineStartMoveset()
-    
+
+        # Actual Stats are a pokemons stats following the effects of items and move buffs/debuffs
+        # They are only altered during the course of battle, so are initally the same as adjusted stats
+        self.actualStats = self.adjustedStats
+
 
     # Should probably break sections into different functions, just to make it a bit cleaner
     def copyBaseValues(self,speciesID):
@@ -151,7 +161,6 @@ class Pokemon:
         for i in range(0,len(self.leveledMoves)):
             if int(self.leveledMoves[i][0]) <= self.level:
                 availableStartMoves.append(self.leveledMoves[i][1])
-        print(f"Available Start Moves: {availableStartMoves}")
         self.knownMoves = []
         
         # Assigns a maximum  of four moves, only if there are that many moves available
@@ -188,7 +197,7 @@ class Pokemon:
         isHP = True
         statID = 0
         for each in self.baseStats:
-            lvlAdjustedStat = calculateStat(int(self.baseStats[statID]),self.level,self.IVs[statID],self.EVs[statID],isHP,self.natureMultipliers[statID])
+            lvlAdjustedStat = calculateStat(int(self.baseStats[statID]),self.level,self.IVs[statID],self.EVs[statID],isHP,self.natureMultipliers[statID],self.baseStatStages[statID])
             self.adjustedStats.append(lvlAdjustedStat)
             statID += 1
             isHP = False
@@ -218,7 +227,6 @@ class Pokemon:
     def addExperience(self,newExperience):
         self.experience += newExperience
         self.levelUp()
-
 
     # Runs whenever experience gained , to detetmine if levelUp should occur
     def levelUp(self):
@@ -257,12 +265,7 @@ class Pokemon:
     # Trainer pokemon are given EVs based on their difficulty to make them more challenging than wild pokemon
     def setTrainerEVs(self):
         pass
-
-
-    # Changes nickname, in fairness way shorter than I expected for some reason
-    def changeNickname(self, newNickname):
-        self.nickname = newNickname
-    
+  
 
     # Test Functions, will be removed later.
     # Allows adding experience amounts to check the pokemon is leveling up appropriatley
@@ -303,7 +306,7 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         
 # generateTestPokemon(1,1,30)
 
-myPokemon = Pokemon("001",1,1,"Wild")
-myPokemon.printStats()
-myPokemon.testLeveling()
+# myPokemon = Pokemon("001",1,1,"Wild")
+# myPokemon.printStats()
+# myPokemon.testLeveling()
 # myPokemon.printStats()

@@ -1,5 +1,13 @@
 # Contains various dictonaries that are needed regularly throughout the course of play.
 
+# Available starting pokemon
+starting_pokemon = {
+    "bulbasaur": "001",
+    "charmander": "004",
+    "squirtle": "007"
+}
+
+
 # Contains the minimum experience for each level. There are six different growth rates in pokemon, here there is one.
 levelingBounds = {
     1: 0,
@@ -104,6 +112,40 @@ levelingBounds = {
     100: 1250000,
 }
 
+# Multipliers to the main 6 stats for each stage
+# Yes, the fractions could be simplified, but this makes it clearer how the rates were determines
+statStageMultiplers = {
+    -6: 2/8,
+    -5: 2/7,
+    -4: 2/6,
+    -3: 2/5,
+    -2: 2/4,
+    -1: 2/3,
+    0: 2/2,
+    1: 3/2,
+    2: 4/2,
+    3: 5/2,
+    4: 6/2,
+    5: 7/2,
+    6: 8/2
+}
+
+# Multiplier to evasion and acccuracy based on stage
+battleStageMultipliers = {
+    -6: 3/9,
+    -5: 3/8,
+    -4: 3/7,
+    -3: 3/6,
+    -2: 3/5,
+    -1: 3/4,
+    0: 3/3,
+    1: 4/3,
+    2: 5/3,
+    3: 6/3,
+    4: 7/3,
+    5: 8/3,
+    6: 9/3
+}
 # Integer IDs for the different types from the PokeAPI data
 type_IDs = {
     1: "Normal",

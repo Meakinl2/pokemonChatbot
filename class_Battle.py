@@ -1,15 +1,30 @@
 from ProjectDataCleaning.fileControl import *
 from dictonaries import *
+from pokemon_formulae import *
 
 # Not sure if this will be good as a class or not, but it seems like it'll work from my most unexperienced 
 class battle:
-    def __init__(self):
+    def __init__(self,player,opponent,battleType):
+        playerTeam = player.party
+        opponentTeam = opponent.party
+    
+
+    def askTurn():
         pass
+
         
-    # Damage is a base calculation multiplied by external multipliers such as criticals and typing bonuses
-    def calculateDamage(attacker,defender):
-        pass
-
-
     def executeTurn():
         pass
+
+
+    def victoryOrDefeat():
+        pass
+
+
+    def victory():
+        pass
+
+
+    def defeat():
+        pass
+
