@@ -1,5 +1,6 @@
 import os
 import pickle 
+
 from ProjectDataCleaning.fileControl import *
 from class_Pokemon import Pokemon
 import user_inputs
@@ -14,10 +15,10 @@ class Player:
 
         user_inputs.pickPlayerName(self)
         starterID, nickname = user_inputs.pickStartingPokemon(self)
-        self.party.append(Pokemon(starterID,5,5,"Player"))
+        self.party.append(Pokemon(starterID,5,5,"Player",self.uniqueID))
         self.party[0].nickname = nickname
+        self.party[0].picklePokemonObject()
 
-        self.picklePlayerObject()
 
 
     # Creates the Unique ID for identifing a specific Player class instance
@@ -29,14 +30,12 @@ class Player:
     # Creates a new Folder in the pokemon Storage Folder for all of pokemon belonging to this player instance
     def createStorageFolder(self):
         playerPokemonStorage = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage",self.uniqueID)
-        fullCodeFilePath = os.path.join(playerPokemonStorage, "pokemon_instance_codes.txt")
-        print(fullCodeFilePath)
         if not os.path.exists(playerPokemonStorage):
             os.makedirs(playerPokemonStorage)
-            with open(fullCodeFilePath,"x") as file:
-                file.close()
+            
 
     # Pickles pokemon data to the relevant file adn directory
+    # This also saves all data for the pokemon in the the players party, which is rather handy
     def picklePlayerObject(self):
         playerPicklePath = os.path.join(format(os.getcwd()),"SavedObjects","PlayerInstances",self.uniqueID)
         if not os.path.exists(playerPicklePath):
@@ -47,9 +46,15 @@ class Player:
             pickleFile.close()
         
 
-    def reorderParty():
-        pass
+    # Swaps the position of two pokemon in the party, mainly so position 0 can be the party leader
+    def reorderParty(self,swapFrom,swapTo):
+        index1 = self.party.index(swapFrom)
+        index2 = self.party.index(swapTo)
+        temp = self.party[index1]
+        self.party[index1] = self.party[index2]
+        self.party[index2] = temp
 
+        
 
     def moveToParty(self):
         pass
@@ -58,15 +63,17 @@ class Player:
     def moveToStorage(self):
         pass
         
-
+    # Adds a new pokemon to the players party or to their storage if party is full
+    # Also changes relevant attributes and datasets to refelct this
     def captureNewPokemon(self,pokemon):
         pokemon.owner = self.uniqueID
+        pokemon.context = "Player"
         if len(self.party) < 6:
-            pokemon.context = "Player"
             self.party.append(pokemon)
-        else:
-            pass
-            
+        pokemonInstancesPath = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage","pokemon_instance_codes.txt")
+        pokemon.uniqueID = generateUniqueReference(pokemonInstancesPath)
+        pokemon.picklePokemonObject()
+
 
     def printStats(self):
         print(f"Name: {self.name}")
@@ -77,13 +84,7 @@ class Player:
             print(f" - {pokemon.nickname} the Lvl {pokemon.level} {pokemon.species} ")
 
 
-
-
     # Test Functions
 
 
     # End of Player class
-
-
-player = Player()
-player.printStats()

@@ -1,12 +1,14 @@
 # Importing necessary functions and classes
 # Built in python libraries
+import pickle
 from random import randint
-from dictonaries import *
+
 
 # My own functions adn classes
 from class_Move import Move
 from ProjectDataCleaning.fileControl import *
 from pokemon_formulae import *
+from dictonaries import *
 import user_inputs
 
 
@@ -14,10 +16,13 @@ import user_inputs
 # Is inital passed the SpeciesID number(from Pokedex) and the range the pokemon should be in
 # Context determines whether or not specific things should happen (such as giving trainer pokemon EVs)
 class Pokemon:
-    def __init__(self,speciesID,minLvl,maxLvl,context):
+    def __init__(self,speciesID,minLvl,maxLvl,context,owner = ""):
         # Get the basic stats, set required things as they are required to be
+        # Unique ID only if pokemon Data needs to be saved (ie. when caught by a player)
+        self.uniqueID = ""
         self.context = context
-        self.owner = ""
+        self.owner = owner
+
         self.copyBaseValues(str(speciesID))
         self.nickname = self.species
         self.heldItem = ""
@@ -35,9 +40,15 @@ class Pokemon:
             self.IVs.append(IV)
 
         # Apply all context specfic attribute alterations
+        if context == "Wild":
+            pass
+        
         if context == "Trainer":
             self.setTrainerEVs()
 
+        if context == "Player":
+            pokemonInstancesPath = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage","pokemon_instance_codes.txt")
+            self.uniqueID = generateUniqueReference(pokemonInstancesPath)
 
         # The following relate only to a pokemmon in the currently used party
         self.battleStatStages = [0,0]
@@ -54,10 +65,18 @@ class Pokemon:
         # They are only altered during the course of battle, so are initally the same as adjusted stats
         self.actualStats = self.adjustedStats
 
+
     # Pickles the pokemon to save all it's attributes
     # This will only really be called by the parent Player class.
-    def picklePokemonObject(self,storage_path):
-        pass
+    def picklePokemonObject(self):
+        storage_path = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage",self.owner,self.uniqueID)
+        if not os.path.exists(storage_path):
+            with open(storage_path,"x") as file:
+                file.close()
+        with open(storage_path,"wb") as pickleFile:
+            pickle.dump(self,pickleFile)
+            pickleFile.close()
+
 
     # Should probably break sections into different functions, just to make it a bit cleaner
     def copyBaseValues(self,speciesID):

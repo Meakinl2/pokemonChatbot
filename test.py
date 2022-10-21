@@ -2,20 +2,32 @@
 # It just makes them a bit easier to work with an cuts down on general clutter. Although I don't really use it all that much.
 
 from ProjectDataCleaning.fileControl import *
-import random
-import os
+import os,random,pickle
+from class_Player import *
 
-with open(os.path.join(format(os.getcwd()),"test.txt"),"r") as file:
-    fileLines = file.readlines()
+# player = Player()
+# player.picklePlayerObject()
 
+# print("Created New Player")
 
-testLines = ["testline1","testline2","testline3","testline4"]
-fileLines.append(testLines)
+pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"WJD6K0E4TT")
+with open(pickleFilePath, "rb") as pickleFile:
+    pickleInfo = pickleFile.read()
+    pickleFile.close()
+    
+player = pickle.loads(pickleInfo)
 
-with open(os.path.join(format(os.getcwd()),"test.txt"),"w") as file:
-    for line in fileLines:
-        file.writelines(line)
-    file.close()
+pokemon = Pokemon("001",5,5,"Wild")
+player.captureNewPokemon(pokemon)
+
+player.printStats()
+player.party[0].printStats()
+player.party[1].printStats()
+
+with open(pickleFilePath, "wb") as pickleFile:
+    pickle.dump(player,pickleFile)
+    pickleFile.close()
+
 
 
 
