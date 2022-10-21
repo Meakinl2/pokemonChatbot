@@ -1,9 +1,9 @@
-# Importing necessary functions
+# Importing necessary functions and classes
 # Built in python libraries
 from random import randint
 from dictonaries import *
 
-# My own functions, from other files
+# My own functions adn classes
 from class_Move import Move
 from ProjectDataCleaning.fileControl import *
 from pokemon_formulae import *
@@ -16,6 +16,8 @@ import user_inputs
 class Pokemon:
     def __init__(self,speciesID,minLvl,maxLvl,context):
         # Get the basic stats, set required things as they are required to be
+        self.context = context
+        self.owner = ""
         self.copyBaseValues(str(speciesID))
         self.nickname = self.species
         self.heldItem = ""
@@ -52,6 +54,10 @@ class Pokemon:
         # They are only altered during the course of battle, so are initally the same as adjusted stats
         self.actualStats = self.adjustedStats
 
+    # Pickles the pokemon to save all it's attributes
+    # This will only really be called by the parent Player class.
+    def picklePokemonObject(self,storage_path):
+        pass
 
     # Should probably break sections into different functions, just to make it a bit cleaner
     def copyBaseValues(self,speciesID):
@@ -304,9 +310,4 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print("-----------------------------------------------")
         mypokemon.testLeveling()
         
-# generateTestPokemon(1,1,30)
 
-# myPokemon = Pokemon("001",1,1,"Wild")
-# myPokemon.printStats()
-# myPokemon.testLeveling()
-# myPokemon.printStats()

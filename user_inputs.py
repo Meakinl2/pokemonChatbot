@@ -89,4 +89,4 @@ I assure you they will grow to be among the powerful Pokémon to ever live. """)
             else:
                 nickname = input("You should probably try again then. \n> ")
 
-    return starting_pokemon[starter], nickname
+    return starting_pokemon[starter.lower()], nickname
