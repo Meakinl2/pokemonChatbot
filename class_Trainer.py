@@ -10,7 +10,6 @@ from ProjectDataCleaning.fileControl import *
 from class_Pokemon import Pokemon
 from dictonaries import *
 
-
 class Trainer:
     def __init__(self,opponent):
         self.title = "Trainer"
@@ -40,21 +39,36 @@ class Trainer:
         self.baseLvl = sqrt(totalPlayerScore / self.partySize) // 1
 
 
+    # Generate a random party for the trainer, that is relatively well balanced level-wise with the player
     def generateParty(self):
         available_species_path = selectFile(["DataTables"],"available_species.txt")
         availableSpecies = readFile(available_species_path," ")
 
         minLvl = int(self.baseLvl - 3 - (self.baseLvl * 0.1) // 1)
         maxLvl = int(self.baseLvl + 3 + (self.baseLvl * 0.1) // 1)
-        print(f"Level Range: {minLvl} - {maxLvl}")
         for i in range(self.partySize):
             item = randint(0,len(availableSpecies)-1)
             chosenSpecies = availableSpecies[item][0]
             self.party.append(Pokemon(chosenSpecies,minLvl,maxLvl,"Trainer"))
 
-    def printStats(self):
+    def battleTurn(self,opponentParty):
+        pass
+
+
+    # Just print relevant information about the trainers attributes
+    def printPartyStats(self):
         print(f"{self.title} {self.name}")
         print("Party: ")
         for pokemon in self.party:
-            print(f" - Lvl {pokemon.level} {pokemon.species}")
+            stats = pokemon.actualStats
+            moves = pokemon.knownMoves
+            print("--------------------------------------------------")
+            print(f" > Lvl {pokemon.level} {pokemon.species}")
+            print(f"   Typing: {pokemon.types[0]} {pokemon.types[1]}")
+            print(f"   Health: {pokemon.actualStats[0]}/{pokemon.adjustedStats[0]}")
+            print(f"   Stats: ATK:{stats[1]} DEF:{stats[2]} SPA:{stats[3]} SPD:{stats[4]} SPE:{stats[5]}")
+            print(f"   Available Moves: ")
+            for move in moves:
+                print(f"     - {move.name}")
+            
     

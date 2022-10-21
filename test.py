@@ -16,7 +16,7 @@ player = pickle.loads(pickleInfo)
 
 
 trainer = Trainer(player)
-trainer.printStats()
+trainer.printPartyStats()
 
 
 
