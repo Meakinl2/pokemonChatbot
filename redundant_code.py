@@ -60,16 +60,6 @@ def cleanData(rawLineStrings, keepItems):
 
 # From createPokemon.py
 
-# A fucntion whose entire purpose was to check the typing table was filled out and working correctly. It was.
-def checkTypingTable():
-   file = selectFile(["DataTables"],"typeDamageMult.txt")
-   typingInfo = readFile(file)
-   for type1 in range(1,18):
-      for type2 in range(1,18):
-         print(f"{typingInfo[type1][0]} does {typingInfo[type1][type2]}x damage to {typingInfo[0][type2]}")
-         # print(f"{typingInfo[type2][0]} does {typingInfo[type2][type1]}x damage to {typingInfo[0][type1]}")
-
-
 # The original function for retrieving basic pokemon information upon creation from file DataTables\PokemonBaseStats.txt
 # Upon discovery of the itsjavi github though, more complete data wsas found and was used to replace this old one
 # Copying all relevant information from baseStats table
@@ -108,5 +98,38 @@ def evolve(self):
             if self.nickname == initalSpecies:
                 self.nickname = self.species
             self.calculateAdjustedStats()
+
+# -----------------------------------------------------------------------------------------------------
+
+# Code that was purely for testing or changing things to make testing easier
+
+# A fucntion whose entire purpose was to check the typing table was filled out and working correctly. It was.
+def checkTypingTable():
+   file = selectFile(["DataTables"],"typeDamageMult.txt")
+   typingInfo = readFile(file)
+   for type1 in range(1,18):
+      for type2 in range(1,18):
+         print(f"{typingInfo[type1][0]} does {typingInfo[type1][type2]}x damage to {typingInfo[0][type2]}")
+         # print(f"{typingInfo[type2][0]} does {typingInfo[type2][type1]}x damage to {typingInfo[0][type1]}")
+
+
+# Just  a bit of code to bulk out my test player to test some functions.
+pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"WJD6K0E4TT")
+with open(pickleFilePath, "rb") as pickleFile:
+    pickleInfo = pickleFile.read()
+    pickleFile.close()
+    
+player = pickle.loads(pickleInfo)
+
+pokemon = Pokemon("007",5,5,"Wild")
+player.captureNewPokemon(pokemon)
+
+player.printStats()
+player.party[0].printStats()
+player.party[1].printStats()
+
+with open(pickleFilePath, "wb") as pickleFile:
+    pickle.dump(player,pickleFile)
+    pickleFile.close()
 
 # -----------------------------------------------------------------------------------------------------

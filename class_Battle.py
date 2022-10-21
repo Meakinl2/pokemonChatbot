@@ -1,6 +1,6 @@
 from ProjectDataCleaning.fileControl import *
 from dictonaries import *
-from pokemon_formulae import *
+from formulae import *
 
 # Not sure if this will be good as a class or not, but it seems like it'll work from my most unexperienced 
 class battle:

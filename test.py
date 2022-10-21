@@ -3,12 +3,9 @@
 
 from ProjectDataCleaning.fileControl import *
 import os,random,pickle
-from class_Player import *
+from class_Player import Player
+from class_Trainer import Trainer
 
-# player = Player()
-# player.picklePlayerObject()
-
-# print("Created New Player")
 
 pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"WJD6K0E4TT")
 with open(pickleFilePath, "rb") as pickleFile:
@@ -17,18 +14,9 @@ with open(pickleFilePath, "rb") as pickleFile:
     
 player = pickle.loads(pickleInfo)
 
-pokemon = Pokemon("001",5,5,"Wild")
-player.captureNewPokemon(pokemon)
 
-player.printStats()
-player.party[0].printStats()
-player.party[1].printStats()
-
-with open(pickleFilePath, "wb") as pickleFile:
-    pickle.dump(player,pickleFile)
-    pickleFile.close()
-
-
+trainer = Trainer(player)
+trainer.printStats()
 
 
 

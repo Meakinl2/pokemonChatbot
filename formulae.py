@@ -1,4 +1,5 @@
 # This file contains all of the default pokemon formula for calcultaing various values.
+from math import sqrt
 from dictonaries import *
 
 # Stats are based on this formula and I think it is redone every levelup, based on experience
@@ -17,7 +18,7 @@ def calculateStat(base,level,IV,EV,isHP,natureModifier,stage):
 
 # The base damage of an attack is determined by a constant formula based on the intrinsic attributes of both pokemon and the move used
 # Several external factors are then applied, there are quite a few of them
-def calculateDamage(attacker, defender, move):
+def calculateDamage(attacker,defender,move):
     if move.damageClass == "Physical":
         baseDamage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[2]//defender.actualStats[1])//20 + 2
         finalDamage = baseDamage
@@ -25,3 +26,4 @@ def calculateDamage(attacker, defender, move):
         baseDamage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[4]//defender.actualStats[5])//20 + 2
         finalDamage = baseDamage
     return finalDamage
+

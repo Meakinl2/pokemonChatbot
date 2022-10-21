@@ -20,7 +20,6 @@ class Player:
         self.party[0].picklePokemonObject()
 
 
-
     # Creates the Unique ID for identifing a specific Player class instance
     def createUniqueID(self):
         playerCodesPath = os.path.join(format(os.getcwd()),"SavedObjects","PlayerInstances","player_instance_codes.txt")
@@ -55,13 +54,13 @@ class Player:
         self.party[index2] = temp
 
         
-
     def moveToParty(self):
         pass
 
 
     def moveToStorage(self):
         pass
+    
         
     # Adds a new pokemon to the players party or to their storage if party is full
     # Also changes relevant attributes and datasets to refelct this

@@ -10,13 +10,20 @@ class Move:
             if moveName in line:
                 moveInformation = line
 
-        self.name = moveName
-        self.moveID = moveInformation[0]
-        self.typing = type_IDs[int(moveInformation[2])]
-        self.pp = int(moveInformation[4])
-        self.priority = int(moveInformation[6])
-        self.damageClass = move_damage_classes[int(moveInformation[8])]
-        self.baseCritStage = int(moveInformation[19])
+
+        # As I am using two different sources for moves and pokemon, sometimes names don't quite line up
+        # I will look for a better solution, but this will help for now.
+        try: 
+            self.name = moveName
+            self.moveID = moveInformation[0]
+            self.typing = type_IDs[int(moveInformation[2])]
+            self.pp = int(moveInformation[4])
+            self.priority = int(moveInformation[6])
+            self.damageClass = move_damage_classes[int(moveInformation[8])]
+            self.baseCritStage = int(moveInformation[19])
+        except UnboundLocalError:
+                print(f"Error. {moveName} could not be found.")
+                exit()
 
         # Some boxes are blank in the table and so this assign appropriate integer values in their place
         try: 

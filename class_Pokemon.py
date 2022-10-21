@@ -7,7 +7,7 @@ from random import randint
 # My own functions adn classes
 from class_Move import Move
 from ProjectDataCleaning.fileControl import *
-from pokemon_formulae import *
+from formulae import *
 from dictonaries import *
 import user_inputs
 
@@ -321,7 +321,7 @@ def generateTestPokemon(amount,minLvl,maxLvl):
     available_species_path = selectFile(["DataTables"],"available_species.txt")
     availableSpecies = readFile(available_species_path," ")
     for i in range(0,amount):
-        item  = randint(0,len(availableSpecies)-1)
+        item = randint(0,len(availableSpecies)-1)
         chosenSpecies = availableSpecies[item][0]
         mypokemon = Pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
         print(f"Generated Pokemon {i  +  1}")
