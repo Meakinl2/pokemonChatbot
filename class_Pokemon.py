@@ -50,11 +50,6 @@ class Pokemon:
             pokemonInstancesPath = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage","pokemon_instance_codes.txt")
             self.uniqueID = generateUniqueReference(pokemonInstancesPath)
 
-        # The following relate only to a pokemmon in the currently used party
-        self.battleStatStages = [0,0]
-        self.baseStatStages = [0,0,0,0,0,0]
-
-
         # Sets "adjusted" stats and give the pokemon its starting moveset
         self.calculateAdjustedStats()
         self.assignLeveledMoves()
@@ -63,9 +58,19 @@ class Pokemon:
 
         # Actual Stats are a pokemons stats following the effects of items and move buffs/debuffs
         # They are only altered during the course of battle, so are initally the same as adjusted stats
+        self.resetBattleValues()
+
+    # ---------------------------------------------------------------------------------
+
+    # "Admin" Functions
+
+    def resetBattleValues(self):
+        self.effects = []
+        self.battleStatStages = [0,0]
+        self.baseStatStages = [0,0,0,0,0,0]
         self.actualStats = self.adjustedStats
 
-
+        
     # Pickles the pokemon to save all it's attributes
     # This will only really be called by the parent Player class.
     def picklePokemonObject(self):
@@ -77,6 +82,9 @@ class Pokemon:
             pickle.dump(self,pickleFile)
             pickleFile.close()
 
+    # ---------------------------------------------------------------------------------
+
+    # Pokemon setup Functions
 
     # Should probably break sections into different functions, just to make it a bit cleaner
     def copyBaseValues(self,speciesID):
@@ -214,7 +222,14 @@ class Pokemon:
         self.natureMultipliers = [1,1,1,1,1,1]
         self.natureMultipliers[natureInfo[1] - 1] = 1.1
         self.natureMultipliers[natureInfo[2] - 1] = 0.9
+
+    # Trainer pokemon are given EVs based on their difficulty to make them more challenging than wild pokemon
+    def setTrainerEVs(self):
+        pass
         
+    # ---------------------------------------------------------------------------------
+
+    # Gameplay Mechanics Functions
 
     # Calculate stats adjusted for Lvl, IVs, EVs and nature
     def calculateAdjustedStats(self):
@@ -222,31 +237,10 @@ class Pokemon:
         isHP = True
         statID = 0
         for each in self.baseStats:
-            lvlAdjustedStat = calculateStat(int(self.baseStats[statID]),self.level,self.IVs[statID],self.EVs[statID],isHP,self.natureMultipliers[statID],self.baseStatStages[statID])
+            lvlAdjustedStat = calculateStat(int(self.baseStats[statID]),self.level,self.IVs[statID],self.EVs[statID],isHP,self.natureMultipliers[statID])
             self.adjustedStats.append(lvlAdjustedStat)
             statID += 1
             isHP = False
-
-
-    # Prints pokemons stats to terminal.
-    def printStats(self):
-        print(f"Species: {self.species} of nature {self.nature}")
-        print(f"Typing: {self.types[0]}  {self.types[1]} ")
-        print(f"Lvl: {self.level} from Exp: {self.experience} ")
-        print(f"Base Stats: HP:{self.baseStats[0]}  ATK:{self.baseStats[1]} DEF:{self.baseStats[2]} SPA:{self.baseStats[3]} SPD:{self.baseStats[4]} SPE:{self.baseStats[5]}")
-        print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
-        print(f"EV Yield: HP:{self.evYield[0]} ATK:{self.evYield[1]} DEF:{self.evYield[2]} SPA:{self.evYield[3]} SPD:{self.evYield[4]} SPE:{self.evYield[5]}")
-        print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
-        print("Knows Moves:")
-        for i in range(0,len(self.knownMoves)):
-            print(f"- {self.knownMoves[i].name}")
-        print("Learns Naturally, Moves:")
-        for i in range(0,len(self.leveledMoves)):
-            print(f"- {self.leveledMoves[i][1]} at Lvl {self.leveledMoves[i][0]}")
-        print("Allowed Moves: ")
-        for i in range(0,len(self.allowedMoves)):
-            print(f"- {self.allowedMoves[i][0]}: {self.allowedMoves[i][1]}")
-        
 
     # Just increase the pokemons experience by a given amount and runs levelUp check
     def addExperience(self,newExperience):
@@ -286,13 +280,33 @@ class Pokemon:
     def evolve(self):
         pass
             
+    # ---------------------------------------------------------------------------------
 
-    # Trainer pokemon are given EVs based on their difficulty to make them more challenging than wild pokemon
-    def setTrainerEVs(self):
-        pass
-  
+
+    # Prints pokemons stats to terminal.
+    def printStats(self):
+        print(f"Species: {self.species} of nature {self.nature}")
+        print(f"Typing: {self.types[0]}  {self.types[1]} ")
+        print(f"Lvl: {self.level} from Exp: {self.experience} ")
+        print(f"Base Stats: HP:{self.baseStats[0]}  ATK:{self.baseStats[1]} DEF:{self.baseStats[2]} SPA:{self.baseStats[3]} SPD:{self.baseStats[4]} SPE:{self.baseStats[5]}")
+        print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
+        print(f"EV Yield: HP:{self.evYield[0]} ATK:{self.evYield[1]} DEF:{self.evYield[2]} SPA:{self.evYield[3]} SPD:{self.evYield[4]} SPE:{self.evYield[5]}")
+        print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
+        print("Knows Moves:")
+        for i in range(0,len(self.knownMoves)):
+            print(f"- {self.knownMoves[i].name}")
+        print("Learns Naturally, Moves:")
+        for i in range(0,len(self.leveledMoves)):
+            print(f"- {self.leveledMoves[i][1]} at Lvl {self.leveledMoves[i][0]}")
+        print("Allowed Moves: ")
+        for i in range(0,len(self.allowedMoves)):
+            print(f"- {self.allowedMoves[i][0]}: {self.allowedMoves[i][1]}")
+        
+
+    # ---------------------------------------------------------------------------------
 
     # Test Functions, will be removed later.
+
     # Allows adding experience amounts to check the pokemon is leveling up appropriatley
     def testLeveling(self):
         while True:  
@@ -313,6 +327,8 @@ class Pokemon:
             
             self.experience += experienceAdd
             self.levelUp()
+            
+    # ---------------------------------------------------------------------------------
 
     # End of Pokemon class
 
@@ -329,4 +345,3 @@ def generateTestPokemon(amount,minLvl,maxLvl):
         print("-----------------------------------------------")
         mypokemon.testLeveling()
         
-

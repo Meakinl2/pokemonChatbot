@@ -14,46 +14,47 @@ class Trainer:
     def __init__(self,opponent):
         self.title = "Trainer"
         self.name = "Dummy"
-        self.opponent = opponent
         self.party = []
 
-        self.determinePartySize()
-        self.trainerPokemonLevel()
-        self.generateParty()
+        self.generateParty(opponent)
 
+    # ---------------------------------------------------------------------------------
+
+    # Generating Tainer and their party
     
     # Makes Trainer party length similar to that of the opponent that is being faced
-    def determinePartySize(self):
-        self.partySize = len(self.opponent.party) + randint(-1,1)
-        if self.partySize > 6:
-            self.partySize = 6
-        if self.partySize < 1:
-            self.partySize = 1
-
+    def generateParty(self,opponent):
+        partySize = len(opponent.party) + randint(-1,1)
+        if partySize > 6:
+            partySize = 6
+        if partySize < 1:
+            partySize = 1
 
     # Makes trainers pokemon a level that should make the fight relatively fair, definetley room for improvent though
-    def trainerPokemonLevel(self):
         totalPlayerScore =  0
-        for pokemon in self.opponent.party:
+        for pokemon in opponent.party:
             totalPlayerScore += pokemon.level ** 2
-        self.baseLvl = sqrt(totalPlayerScore / self.partySize) // 1
-
+        baseLvl = sqrt(totalPlayerScore / partySize) // 1
 
     # Generate a random party for the trainer, that is relatively well balanced level-wise with the player
-    def generateParty(self):
         available_species_path = selectFile(["DataTables"],"available_species.txt")
         availableSpecies = readFile(available_species_path," ")
 
-        minLvl = int(self.baseLvl - 3 - (self.baseLvl * 0.1) // 1)
-        maxLvl = int(self.baseLvl + 3 + (self.baseLvl * 0.1) // 1)
-        for i in range(self.partySize):
+        minLvl = int(baseLvl - 3 - (baseLvl * 0.1) // 1)
+        maxLvl = int(baseLvl + 3 + (baseLvl * 0.1) // 1)
+        for i in range(partySize):
             item = randint(0,len(availableSpecies)-1)
             chosenSpecies = availableSpecies[item][0]
             self.party.append(Pokemon(chosenSpecies,minLvl,maxLvl,"Trainer"))
 
+    # ---------------------------------------------------------------------------------
+
+    # Gameplay Functions (pretty much just battles though)
+
     def battleTurn(self,opponentParty):
         pass
 
+    # ---------------------------------------------------------------------------------
 
     # Just print relevant information about the trainers attributes
     def printPartyStats(self):
@@ -71,4 +72,6 @@ class Trainer:
             for move in moves:
                 print(f"     - {move.name}")
             
-    
+    # ---------------------------------------------------------------------------------
+
+    # End of Trainer Class

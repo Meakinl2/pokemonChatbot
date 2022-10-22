@@ -19,6 +19,9 @@ class Player:
         self.party[0].nickname = nickname
         self.party[0].picklePokemonObject()
 
+    # ---------------------------------------------------------------------------------
+
+    # "Behind the Scenes" Admin functions
 
     # Creates the Unique ID for identifing a specific Player class instance
     def createUniqueID(self):
@@ -43,7 +46,10 @@ class Player:
         with open(playerPicklePath,"wb") as pickleFile:
             pickle.dump(self,pickleFile)
             pickleFile.close()
-        
+    
+    # ---------------------------------------------------------------------------------
+
+    # In-Game Player Admin functions
 
     # Swaps the position of two pokemon in the party, mainly so position 0 can be the party leader
     def reorderParty(self,swapFrom,swapTo):
@@ -53,15 +59,27 @@ class Player:
         self.party[index1] = self.party[index2]
         self.party[index2] = temp
 
-        
-    def moveToParty(self):
-        pass
-
-
-    def moveToStorage(self):
-        pass
     
-        
+    # Moves pokemon into the current party from the pokemon storage
+    def moveToParty(self,pokemonID):
+        storage_path = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage",self.uniqueID,pokemonID)
+        with open(storage_path,"rb") as pokemonFile:
+            pokemonInfo =  pokemonFile.read()
+            pokemonFile.close()
+        pokemon = pickle.loads(pokemonInfo)
+        self.party.append(pokemon)
+
+
+    # Reset relevant values and move pokemon out of party to pokemon storage
+    def moveToStorage(self,pokemonObj):
+        pokemonObj.resetBattleValues()
+        pokemonObj.picklePokemonObject()
+        self.party.remove(pokemonObj)
+
+    # ---------------------------------------------------------------------------------
+
+    # Gameplay Mechanics Functions
+
     # Adds a new pokemon to the players party or to their storage if party is full
     # Also changes relevant attributes and datasets to refelct this
     def captureNewPokemon(self,pokemon):
@@ -74,6 +92,13 @@ class Player:
         pokemon.picklePokemonObject()
 
 
+    # Chooses and processes the move the player will make on any given battle turn
+    def chooseBattleAction(self):
+        pass
+
+
+    # ---------------------------------------------------------------------------------
+
     def printStats(self):
         print(f"Name: {self.name}")
         print(f"Unique ID: {self.uniqueID}")
@@ -82,6 +107,7 @@ class Player:
         for pokemon in self.party:
             print(f" - {pokemon.nickname} the Lvl {pokemon.level} {pokemon.species} ")
 
+    # ---------------------------------------------------------------------------------
 
     # Test Functions
 
