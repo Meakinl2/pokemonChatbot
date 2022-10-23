@@ -50,6 +50,7 @@ class Trainer:
     # ---------------------------------------------------------------------------------
 
     # Gameplay Functions (pretty much just battles though)
+    # This'll be the trainers AI, I doubt it'll be too much, just some simple rules.
 
     def battleTurn(self,opponentParty):
         pass

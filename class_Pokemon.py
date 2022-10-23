@@ -66,6 +66,7 @@ class Pokemon:
 
     def resetBattleValues(self):
         self.effects = []
+        self.isFainted = False
         self.battleStatStages = [0,0]
         self.baseStatStages = [0,0,0,0,0,0]
         self.actualStats = self.adjustedStats

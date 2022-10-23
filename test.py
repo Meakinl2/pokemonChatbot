@@ -5,6 +5,7 @@ from ProjectDataCleaning.fileControl import *
 import os,random,pickle
 from class_Player import Player
 from class_Trainer import Trainer
+from class_Battle import Battle
 
 
 pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"WJD6K0E4TT")
@@ -14,9 +15,12 @@ with open(pickleFilePath, "rb") as pickleFile:
     
 player = pickle.loads(pickleInfo)
 
+for pokemon in player.party:
+    pokemon.resetBattleValues()
 
 trainer = Trainer(player)
-trainer.printPartyStats()
+
+Battle(player,trainer,"1v1")
 
 
 

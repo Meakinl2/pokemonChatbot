@@ -10,7 +10,7 @@ class Player:
         self.createUniqueID()
         self.createStorageFolder()
         self.money = 0
-        self.inventory = {}
+        self.inventory = []
         self.party = []
 
         user_inputs.pickPlayerName(self)
@@ -94,7 +94,7 @@ class Player:
 
     # Chooses and processes the move the player will make on any given battle turn
     def chooseBattleAction(self):
-        pass
+        user_inputs.userBattleTurn()
 
 
     # ---------------------------------------------------------------------------------
