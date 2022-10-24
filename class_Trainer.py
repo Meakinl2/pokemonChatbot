@@ -52,8 +52,8 @@ class Trainer:
     # Gameplay Functions (pretty much just battles though)
     # This'll be the trainers AI, I doubt it'll be too much, just some simple rules.
 
-    def battleTurn(self,opponentParty):
-        pass
+    def battleTurn(self,pokemon,activePokemon,oppActivePokemon):
+        return ["Opponent","Move", 0,"Player",0]
 
     # ---------------------------------------------------------------------------------
 

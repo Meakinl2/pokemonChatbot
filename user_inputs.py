@@ -93,42 +93,63 @@ I assure you they will grow to be among the powerful Pokémon to ever live. """)
 # Battle-related inputs
 
 # Takes input from the user to return a list with information for the  
-def userBattleMain(player,opponent,playerPokemon,playerActive,opponentActive):
+def userBattleMain(player,playerPokemon,playerInPlay,opponent,opponentInPlay):
     validInput = False
-    
+    playerActive = []
+    for index in playerInPlay:
+        playerActive.append(player.party[index])
+
+    opponentActive = []
+    for index in opponentInPlay:
+        opponentActive.append(opponent.party[index])
+
     while not validInput:
-        turnAction = []
-        print(" 1. Move \n 2. Item \n 3. Switch \n 4. Flee")
+        turnAction = ["Player"]
+        print(f"Choose an action for {playerPokemon.nickname}:")
+        print(" 1. Move \n 2. Item \n 3. Switch \n 4. Check \n 5. Flee")
         user_input = input(" > ")
 
+        # If user wants to use a move
         if user_input.lower() in ["1","move"]:
             turnAction.append("Move")
             moveIndex = userBattleMove(player,playerPokemon)
             turnAction.append(moveIndex)
+            turnAction.append("Opponent")
             pokemonIndex = userBattleSelectPokemon(opponentActive,playerPokemon.knownMoves[moveIndex].name)
             turnAction.append(pokemonIndex)
             print(f"You want to use {playerPokemon.knownMoves[moveIndex].name} against {opponentActive[pokemonIndex].nickname}? ")
             validInput = yes_or_no()
 
+        # If user wants to use an item
         elif user_input.lower() in ["2","item"]:
             turnAction.append("Item")
             item = userBattleItem(player.inventory)
             
             if item != "":
-                turnAction.append(item)
+                turnAction.append(item,"Player")
                 pokemonIndex = userBattleSelectPokemon(player.party,item)
                 turnAction.append(pokemonIndex)
                 print(f"You want to use {item} on {player.party[pokemonIndex].nickname}?")
                 validInput = yes_or_no()
 
+        # If user wants to switch to a different Pokemon
         elif user_input.lower() in ["3","switch"]:
             turnAction.append("Switch")
-            pokemonIndex = userBattleSelectPokemon(player.party,"switch")
+            pokemonIndex = userBattleSelectPokemon(player.party)
             turnAction.append(pokemonIndex)
             print(f"Switch out {playerPokemon.nickname} and switch in {player.party[pokemonIndex].nickname}?")
             validInput = yes_or_no()
 
-        elif user_input.lower() in ["4","flee"]:
+        # If user wants to check the stats of a pokemon on the battlefield
+        elif user_input.lower() in ["4","check"]:
+            turnAction.append("Check")
+            checkablePokemon = playerActive + opponentActive
+            pokemonIndex = userBattleSelectPokemon(checkablePokemon)
+            turnAction.append(pokemonIndex)
+            checkablePokemon[pokemonIndex].printBattleStats()
+
+        # If user want to flee from the battle
+        elif user_input.lower() in ["5","flee"]:
             turnAction.append("Flee")
             print("You want to run away? Are you sure?")
             validInput = yes_or_no()
@@ -141,12 +162,12 @@ def userBattleMain(player,opponent,playerPokemon,playerActive,opponentActive):
 
 # To pick a move to use from the available moveset
 def userBattleMove(player,playerPokemon):
-    print(f"{playerPokemon.nickname} has availale, moves: ")
+    print(f"{playerPokemon.nickname} has available, moves: ")
     validInput = False
 
     while not validInput:
         for i in range(0,len(playerPokemon.knownMoves)):
-            print(f" {i + 1}. {playerPokemon.knownMoves[i].name} ")
+            print(f" {i + 1}. {playerPokemon.knownMoves[i].name} Power: {playerPokemon.knownMoves[i].power} PP: {playerPokemon.knownMoves[i].pp} ")
 
         print(f"What move should {playerPokemon.nickname} use?")
         user_input = input(" > ")
@@ -155,6 +176,7 @@ def userBattleMove(player,playerPokemon):
             if int(user_input) in range(1,len(playerPokemon.knownMoves) + 1):
                 moveIndex = int(user_input) - 1
                 validInput = True
+
             else:
                 print(f"Sorry {player.name}, but {playerPokemon.name} doesn't have a move with at that index.")
 
@@ -192,16 +214,16 @@ def userBattleItem(Inventory):
 
         
 # To select a pokemon, for either a move, an item or for switching in
-def userBattleSelectPokemon(affectablePokemon,action):
+def userBattleSelectPokemon(affectablePokemon,action = ""):
     validInput = False
 
     while not validInput:
-        print("Affectable Pokemon: ")
+        print("Affectable Pokémon: ")
         for i in range(len(affectablePokemon)) :
             print(f" - {i + 1}. {affectablePokemon[i].nickname}")
 
         if action != "switch":
-            print(f"On which pokemon do you want to use {action}? ")
+            print(f"On which Pokémon do you want to use {action}? ")
         else:
             print(f"Who should switch in?")
         user_input = input(" > ")
@@ -212,7 +234,7 @@ def userBattleSelectPokemon(affectablePokemon,action):
                 validInput = True
 
             else:
-                print("There is pokemon at the given index. Please re-enter.")
+                print("There isn't a Pokémon at the given index. Please re-enter.")
 
         except ValueError:
             print(f"Sorry, but I don't know what it is you mean. Could you try again, please?")

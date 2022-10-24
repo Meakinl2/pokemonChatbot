@@ -70,6 +70,7 @@ class Pokemon:
         self.battleStatStages = [0,0]
         self.baseStatStages = [0,0,0,0,0,0]
         self.actualStats = self.adjustedStats
+        self.turnAction = []
 
         
     # Pickles the pokemon to save all it's attributes
@@ -302,7 +303,12 @@ class Pokemon:
         print("Allowed Moves: ")
         for i in range(0,len(self.allowedMoves)):
             print(f"- {self.allowedMoves[i][0]}: {self.allowedMoves[i][1]}")
-        
+
+    def printBattleStats(self):
+        print(f"Lvl. {self.level} {self.species}")
+        print(f"Health: {self.actualStats[0]}/{self.adjustedStats[0]}")
+        print(f"ATK: {self.actualStats[1]} DEF: {self.actualStats[2]} SPA: {self.actualStats[3]} SPD: {self.actualStats[4]} SPE: {self.actualStats[5]}")
+        print(f"Type: {self.types[0]}  {self.types[1]}")
 
     # ---------------------------------------------------------------------------------
 

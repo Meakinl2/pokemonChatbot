@@ -23,4 +23,3 @@ trainer = Trainer(player)
 Battle(player,trainer,"1v1")
 
 
-
