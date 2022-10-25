@@ -93,8 +93,9 @@ I assure you they will grow to be among the powerful Pokémon to ever live. """)
 # Battle-related inputs
 
 # Takes input from the user to return a list with information for the  
-def userBattleMain(player,playerPokemon,playerInPlay,opponent,opponentInPlay):
+def userBattleMain(player,playerPokemonIndex,playerInPlay,opponent,opponentInPlay):
     validInput = False
+    playerPokemon = player.party[playerPokemonIndex]
     playerActive = []
     for index in playerInPlay:
         playerActive.append(player.party[index])
@@ -104,7 +105,7 @@ def userBattleMain(player,playerPokemon,playerInPlay,opponent,opponentInPlay):
         opponentActive.append(opponent.party[index])
 
     while not validInput:
-        turnAction = ["Player"]
+        turnAction = ["Player",playerPokemonIndex]
         print(f"Choose an action for {playerPokemon.nickname}:")
         print(" 1. Move \n 2. Item \n 3. Switch \n 4. Check \n 5. Flee")
         user_input = input(" > ")

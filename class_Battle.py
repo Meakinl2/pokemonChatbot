@@ -36,7 +36,7 @@ class Battle:
         battleOngoing = True
         while battleOngoing:
             for i in range(len(self.playerActive)):
-                self.player.party[self.playerActive[i]].turnAction = user_inputs.userBattleMain(self.player,self.player.party[self.playerActive[i]],self.playerActive,self.opponent,self.opponentActive)
+                self.player.party[self.playerActive[i]].turnAction = user_inputs.userBattleMain(self.player,self.playerActive[i],self.playerActive,self.opponent,self.opponentActive)
 
             for i in range(len(self.opponentActive)):
                 self.opponent.party[self.opponentActive[i]].turnAction = self.opponent.battleTurn(self.opponent.party[self.opponentActive[i]],self.opponentActive,self.playerActive)
@@ -46,14 +46,14 @@ class Battle:
             for i in range(len(self.actionQueue)):
                 pokemon = self.actionQueue[i][0]
                 action = self.actionQueue[i][0].turnAction
-                if action[1] == "Move":
+                if action[2] == "Move":
                     self.useMove(pokemon,action)
-                elif action[1] == "Item":
+                elif action[2] == "Item":
                     self.useItem(pokemon,action)
-                elif action[1] == "Switch":
+                elif action[2] == "Switch":
                     self.switchOut(pokemon,action)
-                elif action[1] == "Flee":
-                    self.checkFleeBattle()
+                elif action[2] == "Flee":
+                    self.checkFleeBattle(pokemon,action)
 
             self.victoryOrDefeat()
 
@@ -70,17 +70,17 @@ class Battle:
 
         for index in self.opponentActive:
             allActiveActions.append(self.opponent.party[index])
-
+  
         for pokemon in allActiveActions:
-            
-            if pokemon.turnAction[1] == "Move":
-                priority = pokemon.knownMoves[pokemon.turnAction[2]].priority
+            if pokemon.turnAction[2] == "Move":
+                priority = pokemon.knownMoves[pokemon.turnAction[3]].priority
                 priority += pokemon.actualStats[5]
 
             else:
-                priority = 1000 + priorityLevels[pokemon.turnAction[1]]
+                priority = 1000 + priorityLevels[pokemon.turnAction[2]]
             action = [pokemon,priority]
             self.actionQueue.append(action)
+        
         
         
         # Reorders moves based on priority, it is bubble sort and it is very inefficent, but there will be six items max, so it's good enough
@@ -101,12 +101,29 @@ class Battle:
     # Use a named move an inflicts relavant effects
     def useMove(self,pokemon,action):
         print(self.actionQueue[0][0].turnAction)
-        if action[3] == "Player":
-            target = self.player.party[self.playerActive[action[4]]]
-        elif action[3] == "Opponent":
-            target = self.opponent.party[self.opponentActive[action[4]]]        
+        if action[4] == "Player":
+            target = self.player.party[self.playerActive[action[5]]]
+        elif action[4] == "Opponent":
+            target = self.opponent.party[self.opponentActive[action[5]]]
         
-        print(f"{pokemon.nickname} used {pokemon.knownMoves[action[2]].name} on {target.nickname}.")
+        move = pokemon.knownMoves[action[3]]
+        moveDamage,appliedMultipliers = calculateDamage(pokemon,target,move)
+
+        
+        print(f"{pokemon.nickname} used {pokemon.knownMoves[action[3]].name} on {target.nickname}.")
+        if "Nullified" in appliedMultipliers:
+            print("It had no effect.")
+        elif "Supereffective" in appliedMultipliers and "Ineffective" not in appliedMultipliers:
+            print("It was Supereffective.")
+        elif "Uneffective" in appliedMultipliers and "Supereffective" not in appliedMultipliers:
+            print("It wasn't very effective.")
+
+        if "Critical" in appliedMultipliers:
+            print("It was a Critical Hit.")
+
+        #  To keep in line with regular pokemon
+        if moveDamage ==  0 and "Nullified"  not in appliedMultipliers:
+            moveDamage = 1
 
 
     # Use a specified item and inflict 
@@ -119,7 +136,8 @@ class Battle:
         print(self.actionQueue[0][0].turnAction)
         print("Switch")
 
-    def checkFleeBattle(self):
+    def checkFleeBattle(self,pokemon,action):
+        print(f"{pokemon.nickname} attempts to flee.")
 
         print("Flee")
 

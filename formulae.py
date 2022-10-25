@@ -1,5 +1,5 @@
-# This file contains all of the default pokemon formula for calcultaing various values.
 from math import sqrt
+import random
 from dictonaries import *
 
 # Stats are based on this formula and I think it is redone every levelup, based on experience
@@ -19,11 +19,42 @@ def calculateStat(base,level,IV,EV,isHP,natureModifier,stage = 1):
 # The base damage of an attack is determined by a constant formula based on the intrinsic attributes of both pokemon and the move used
 # Several external factors are then applied, there are quite a few of them
 def calculateDamage(attacker,defender,move):
+    print(move.damageClass)
     if move.damageClass == "Physical":
-        baseDamage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[2]//defender.actualStats[1])//20 + 2
-        finalDamage = baseDamage
-    if move.damageClass == "Special":
-        baseDamage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[4]//defender.actualStats[5])//20 + 2
-        finalDamage = baseDamage
-    return finalDamage
+        damage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[2]//defender.actualStats[1])//20 + 2
+    elif move.damageClass == "Special":
+        damage = (((2 * attacker.level)//5 + 2) * move.power * attacker.actualStats[4]//defender.actualStats[5])//20 + 2
+    elif move.damageClass == "Status":
+        damage = 0
+
+    damageMultipliers = []
+    appliedMultipliers = []
+
+    # Typing related damage multipliers
+    for i in range(2):
+
+        if defender.types[i] in type_matching[move.typing][0]:
+            damageMultipliers.append(2)
+            appliedMultipliers.append("Supereffective")
+        elif defender.types[i] in type_matching[move.typing][1]:
+            damageMultipliers.append(0.5)
+            appliedMultipliers.append("Ineffective")
+        elif defender.types[i] in type_matching[move.typing][5]:
+            damageMultipliers.append(0)
+            appliedMultipliers.append("Nullified")
+
+    # Randomly applies critical hits
+    if random.randint(1,16) == 1:
+        damageMultipliers.append(2)
+        appliedMultipliers.append("Critical")
+    else:
+        print("Not Critical")
+
+    for multiplier in damageMultipliers:
+        damage *= multiplier
+
+    print(appliedMultipliers)
+    print(damage)
+
+    return int(damage // 1),appliedMultipliers
 

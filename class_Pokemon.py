@@ -236,7 +236,7 @@ class Pokemon:
     # Calculate stats adjusted for Lvl, IVs, EVs and nature
     def calculateAdjustedStats(self):
         self.adjustedStats = []
-        isHP = True
+        isHP = True 
         statID = 0
         for each in self.baseStats:
             lvlAdjustedStat = calculateStat(int(self.baseStats[statID]),self.level,self.IVs[statID],self.EVs[statID],isHP,self.natureMultipliers[statID])

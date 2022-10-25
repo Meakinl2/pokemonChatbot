@@ -146,6 +146,13 @@ battleStageMultipliers = {
     5: 8/3,
     6: 9/3
 }
+critStage = {
+    1: 1/16,
+    2: 1/8,
+    3: 1/4,
+    4: 1/3,
+    5: 1/2
+}
 # Integer IDs for the different types from the PokeAPI data
 type_IDs = {
     1: "Normal",

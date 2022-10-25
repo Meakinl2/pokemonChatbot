@@ -53,7 +53,7 @@ class Trainer:
     # This'll be the trainers AI, I doubt it'll be too much, just some simple rules.
 
     def battleTurn(self,pokemon,activePokemon,oppActivePokemon):
-        return ["Opponent","Move", 0,"Player",0]
+        return ["Opponent",0 ,"Move", 0,"Player",0]
 
     # ---------------------------------------------------------------------------------
 
