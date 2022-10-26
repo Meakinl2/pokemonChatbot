@@ -239,6 +239,10 @@ def userBattleSelectPokemon(affectablePokemon,action = ""):
 
         except ValueError:
             print(f"Sorry, but I don't know what it is you mean. Could you try again, please?")
+        
+        if action == "switch" and affectablePokemon[pokemonIndex].isFainted:
+            print(f"{affectablePokemon[pokemonIndex].nickname} is passed out and cannot be switched to.")
+            validInput = "False"
 
     return pokemonIndex
 

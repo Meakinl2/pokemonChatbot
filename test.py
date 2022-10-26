@@ -8,7 +8,7 @@ from class_Trainer import Trainer
 from class_Battle import Battle
 
 
-pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"WJD6K0E4TT")
+pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"YEBBV0IIZ2")
 with open(pickleFilePath, "rb") as pickleFile:
     pickleInfo = pickleFile.read()
     pickleFile.close()

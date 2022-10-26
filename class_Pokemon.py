@@ -69,7 +69,9 @@ class Pokemon:
         self.isFainted = False
         self.battleStatStages = [0,0]
         self.baseStatStages = [0,0,0,0,0,0]
-        self.actualStats = self.adjustedStats
+        self.actualStats = []
+        for value in self.adjustedStats:
+            self.actualStats.append(value)
         self.turnAction = []
 
         

@@ -26,7 +26,7 @@ Level,Up,Moves:
 24,Sweet,Scent
 27,Synthesis
 30,Worry,Seed
-33,Double Edge
+33,Double-Edge
 36,Solar,Beam
 Egg,Moves:
 Skull,Bash
@@ -100,7 +100,7 @@ Level,Up,Moves:
 30,Sweet,Scent
 35,Synthesis
 40,Worry,Seed
-45,Double Edge
+45,Double-Edge
 50,Solar,Beam
 TMs:
 TM10,Magical,Leaf
@@ -170,7 +170,7 @@ Level,Up,Moves:
 30,Sweet,Scent
 37,Synthesis
 44,Worry,Seed
-51,Double Edge
+51,Double-Edge
 58,Solar,Beam
 TMs:
 TM08,Hyper,Beam
@@ -267,7 +267,7 @@ TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -343,7 +343,7 @@ TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -428,7 +428,7 @@ TM30,Steel,Wing
 TM31,Attract
 TM34,Sunny,Day
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -821,7 +821,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM74,Venoshock
 TM76,Round
 TM78,Acrobatics
@@ -1814,7 +1814,7 @@ Level,Up,Moves:
 Egg,Moves:
 Counter
 Flail
-Mud Slap
+Mud-Slap
 Night,Slash
 Metal,Claw
 Hone,Claws
@@ -1853,7 +1853,7 @@ TR27,Sleep,Talk
 TR31,Iron,Tail
 TR52,Gyro,Ball
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR67,Earth,Power
 TR76,Stealth,Rock
 TR85,Work,Up
@@ -1940,7 +1940,7 @@ TR31,Iron,Tail
 TR46,Iron,Defense
 TR52,Gyro,Ball
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR74,Iron,Head
 TR76,Stealth,Rock
 TR85,Work,Up
@@ -2023,7 +2023,7 @@ TR27,Sleep,Talk
 TR31,Iron,Tail
 TR52,Gyro,Ball
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR67,Earth,Power
 TR75,Stone,Edge
@@ -2114,7 +2114,7 @@ TR31,Iron,Tail
 TR46,Iron,Defense
 TR52,Gyro,Ball
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR74,Iron,Head
 TR76,Stealth,Rock
@@ -2864,7 +2864,7 @@ Level,Up,Moves:
 12,Spite
 16,Incinerate
 20,Confuse,Ray
-24,Will O Wisp
+24,Will-O-Wisp
 28,Extrasensory
 32,Flamethrower
 36,Imprison
@@ -2878,7 +2878,7 @@ Hypnosis
 Flail
 Howl
 Memento
-Baby Doll,Eyes
+Baby-Doll,Eyes
 Roar
 Flame,Charge
 TMs:
@@ -2890,7 +2890,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM44,Imprison
@@ -2955,12 +2955,12 @@ Level,Up,Moves:
 52,Grudge
 56,Blizzard
 Egg,Moves:
-Freeze Dry
+Freeze-Dry
 Hypnosis
 Flail
 Howl
 Moonblast
-Baby Doll,Eyes
+Baby-Doll,Eyes
 Roar
 TMs:
 TM15,Dig
@@ -3021,7 +3021,7 @@ Level,Up,Moves:
 01,Spite
 01,Incinerate
 01,Confuse,Ray
-01,Will O Wisp
+01,Will-O-Wisp
 01,Extrasensory
 01,Flamethrower
 01,Imprison
@@ -3046,7 +3046,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM44,Imprison
@@ -3204,7 +3204,7 @@ Level,Up,Moves:
 32,Gyro,Ball
 36,Hyper,Voice
 40,Play,Rough
-44,Double Edge
+44,Double-Edge
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -3218,7 +3218,7 @@ TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -3300,7 +3300,7 @@ Level,Up,Moves:
 01,Gyro,Ball
 01,Play,Rough
 01,Hyper,Voice
-01,Double Edge
+01,Double-Edge
 01,Sing
 01,Pound
 01,Copycat
@@ -3320,7 +3320,7 @@ TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -3420,7 +3420,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM74,Venoshock
@@ -3491,7 +3491,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM74,Venoshock
@@ -3737,7 +3737,7 @@ Level,Up,Moves:
 01,Scratch
 04,Growl
 08,Astonish
-12,Mud Slap
+12,Mud-Slap
 16,Bulldoze
 20,Sucker,Punch
 24,Slash
@@ -3809,7 +3809,7 @@ Level,Up,Moves:
 01,Metal,Claw
 04,Growl
 08,Astonish
-12,Mud Slap
+12,Mud-Slap
 16,Bulldoze
 20,Sucker,Punch
 24,Iron,Head
@@ -3889,7 +3889,7 @@ Level,Up,Moves:
 01,Scratch
 01,Growl
 01,Astonish
-12,Mud Slap
+12,Mud-Slap
 16,Bulldoze
 20,Sucker,Punch
 24,Slash
@@ -3965,7 +3965,7 @@ Level,Up,Moves:
 01,Metal,Claw
 01,Growl
 01,Astonish
-12,Mud Slap
+12,Mud-Slap
 16,Bulldoze
 20,Sucker,Punch
 24,Iron,Head
@@ -4070,7 +4070,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM65,Shadow,Claw
@@ -4152,7 +4152,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM65,Shadow,Claw
@@ -4212,7 +4212,7 @@ Level,Up,Moves:
 44,Thrash
 Egg,Moves:
 Spite
-Double Edge
+Double-Edge
 Curse
 Flail
 Night,Slash
@@ -4229,7 +4229,7 @@ TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM65,Shadow,Claw
@@ -4314,7 +4314,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM65,Shadow,Claw
@@ -4398,7 +4398,7 @@ TM37,Beat,Up
 TM39,Facade
 TM40,Swift
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM65,Shadow,Claw
@@ -4633,7 +4633,7 @@ Level,Up,Moves:
 56,Flare,Blitz
 Egg,Moves:
 Thrash
-Double Edge
+Double-Edge
 Morning,Sun
 Covet
 Double,Kick
@@ -4647,7 +4647,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -4725,7 +4725,7 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -4784,7 +4784,7 @@ Level,Up,Moves:
 36,Earth,Power
 42,Hydro,Pump
 48,Belly,Drum
-54,Double Edge
+54,Double-Edge
 Egg,Moves:
 Endeavor
 Haze
@@ -4854,7 +4854,7 @@ Level,Up,Moves:
 40,Earth,Power
 48,Hydro,Pump
 56,Belly,Drum
-66,Double Edge
+66,Double-Edge
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -4926,7 +4926,7 @@ Level,Up,Moves:
 01,Earth,Power
 01,Hydro,Pump
 01,Belly,Drum
-01,Double Edge
+01,Double-Edge
 01,Water,Gun
 01,Hypnosis
 01,Pound
@@ -5277,7 +5277,7 @@ Level,Up,Moves:
 40,Seismic,Toss
 44,Dynamic,Punch
 48,Cross,Chop
-52,Double Edge
+52,Double-Edge
 Egg,Moves:
 Counter
 Bullet,Punch
@@ -5366,7 +5366,7 @@ Level,Up,Moves:
 48,Seismic,Toss
 54,Dynamic,Punch
 60,Cross,Chop
-66,Double Edge
+66,Double-Edge
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -5451,7 +5451,7 @@ Level,Up,Moves:
 48,Seismic,Toss
 54,Dynamic,Punch
 60,Cross,Chop
-66,Double Edge
+66,Double-Edge
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -5703,7 +5703,7 @@ Egg,Moves:
 Thrash
 Double,Kick
 Hypnosis
-Double Edge
+Double-Edge
 Horn,Drill
 Morning,Sun
 TMs:
@@ -5716,7 +5716,7 @@ TM25,Protect
 TM29,Charm
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM52,Bounce
@@ -5774,7 +5774,7 @@ Egg,Moves:
 Thrash
 Double,Kick
 Hypnosis
-Double Edge
+Double-Edge
 Horn,Drill
 Morning,Sun
 TMs:
@@ -5856,7 +5856,7 @@ TM25,Protect
 TM29,Charm
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM52,Bounce
@@ -6408,7 +6408,7 @@ Level,Up,Moves:
 36,Discharge
 40,Metal,Sound
 44,Light,Screen
-48,Lock On
+48,Lock-On
 52,Zap,Cannon
 TMs:
 TM14,Thunder,Wave
@@ -6472,7 +6472,7 @@ Level,Up,Moves:
 40,Discharge
 46,Metal,Sound
 52,Light,Screen
-58,Lock On
+58,Lock-On
 64,Zap,Cannon
 TMs:
 TM08,Hyper,Beam
@@ -6567,7 +6567,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM42,Revenge
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TM79,Retaliate
@@ -6635,7 +6635,7 @@ Curse
 Covet
 Night,Slash
 Simple,Beam
-Double Edge
+Double-Edge
 Feint
 Sky,Attack
 TMs:
@@ -6709,7 +6709,7 @@ Aqua,Ring
 Life,Dew
 TMs:
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -6785,7 +6785,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM16,Screech
 TM17,Light,Screen
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -6866,7 +6866,7 @@ TMs:
 TM03,Fire,Punch
 TM04,Ice,Punch
 TM05,Thunder,Punch
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -6877,7 +6877,7 @@ TM28,Giga,Drain
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM57,Payback
 TM70,Trick,Room
@@ -6944,7 +6944,7 @@ TMs:
 TM03,Fire,Punch
 TM04,Ice,Punch
 TM05,Thunder,Punch
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -6955,7 +6955,7 @@ TM28,Giga,Drain
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM57,Payback
 TM59,Fling
@@ -7030,7 +7030,7 @@ TM04,Ice,Punch
 TM05,Thunder,Punch
 TM08,Hyper,Beam
 TM09,Giga,Impact
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -7041,7 +7041,7 @@ TM28,Giga,Drain
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM44,Imprison
@@ -7116,7 +7116,7 @@ Level,Up,Moves:
 44,Dig
 48,Iron,Tail
 52,Stone,Edge
-56,Double Edge
+56,Double-Edge
 Egg,Moves:
 Flail
 Block
@@ -7128,7 +7128,7 @@ Head,Smash
 TMs:
 TM15,Dig
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -7241,7 +7241,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR39,Superpower
 TR46,Iron,Defense
-TR60,X Scissor
+TR60,X-Scissor
 TR83,Ally,Switch
 TR84,Scald
 TR98,Liquidation
@@ -7319,7 +7319,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR39,Superpower
 TR46,Iron,Defense
-TR60,X Scissor
+TR60,X-Scissor
 TR83,Ally,Switch
 TR84,Scald
 TR94,High,Horsepower
@@ -7369,7 +7369,7 @@ TMs:
 TM11,Solar,Beam
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -7440,7 +7440,7 @@ TM10,Magical,Leaf
 TM11,Solar,Beam
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -7520,7 +7520,7 @@ TM10,Magical,Leaf
 TM11,Solar,Beam
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -7583,7 +7583,7 @@ Egg,Group:,Monster
 Hatch,Cycles:,20
 Height:,00.40m,,Weight:,006.5kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Growl
 04,Tail,Whip
 08,False,Swipe
@@ -7596,7 +7596,7 @@ Level,Up,Moves:
 36,Endeavor
 40,Bonemerang
 44,Thrash
-48,Double Edge
+48,Double-Edge
 Egg,Moves:
 Ancient,Power
 Belly,Drum
@@ -7672,7 +7672,7 @@ Egg,Group:,Monster
 Hatch,Cycles:,20
 Height:,01.00m,,Weight:,045.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Growl
 01,Tail,Whip
 01,False,Swipe
@@ -7685,7 +7685,7 @@ Level,Up,Moves:
 42,Endeavor
 48,Bonemerang
 54,Thrash
-60,Double Edge
+60,Double-Edge
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -7762,8 +7762,8 @@ Level,Up,Moves:
 01,Headbutt
 01,Retaliate
 01,Focus,Energy
-01,Double Edge
-01,Mud Slap
+01,Double-Edge
+01,Mud-Slap
 01,Growl
 01,Tail,Whip
 01,Fire,Spin
@@ -7772,7 +7772,7 @@ Level,Up,Moves:
 20,Fling
 24,Stomping,Tantrum
 31,Bone,Rush
-36,Will O Wisp
+36,Will-O-Wisp
 42,Endeavor
 48,Bonemerang
 54,Thrash
@@ -7797,7 +7797,7 @@ TM31,Attract
 TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM43,Brick,Break
@@ -7951,7 +7951,7 @@ Level,Up,Moves:
 01,Fake,Out
 01,Focus,Energy
 04,Mach,Punch
-08,Power Up,Punch
+08,Power-Up,Punch
 12,Detect
 16,Revenge
 21,Quick,Guard
@@ -8127,7 +8127,7 @@ Level,Up,Moves:
 16,Assurance
 20,Sludge
 24,Haze
-28,Self Destruct
+28,Self-Destruct
 32,Sludge,Bomb
 36,Toxic
 40,Belch
@@ -8145,7 +8145,7 @@ Swallow
 Spit,Up
 TMs:
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -8153,7 +8153,7 @@ TM25,Protect
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM57,Payback
 TM58,Assurance
@@ -8207,7 +8207,7 @@ Level,Up,Moves:
 16,Assurance
 20,Sludge
 24,Haze
-28,Self Destruct
+28,Self-Destruct
 32,Sludge,Bomb
 38,Toxic
 44,Belch
@@ -8218,7 +8218,7 @@ TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -8226,7 +8226,7 @@ TM25,Protect
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM57,Payback
 TM58,Assurance
@@ -8285,7 +8285,7 @@ Level,Up,Moves:
 16,Assurance
 20,Sludge
 24,Aromatherapy
-28,Self Destruct
+28,Self-Destruct
 32,Sludge,Bomb
 38,Toxic
 44,Belch
@@ -8297,7 +8297,7 @@ TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -8305,7 +8305,7 @@ TM25,Protect
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM57,Payback
 TM58,Assurance
@@ -8571,8 +8571,8 @@ Level,Up,Moves:
 28,Heal,Pulse
 32,Helping,Hand
 36,Light,Screen
-40,Double Edge
-44,Soft Boiled
+40,Double-Edge
+44,Soft-Boiled
 48,Last,Resort
 52,Healing,Wish
 Egg,Moves:
@@ -8750,7 +8750,7 @@ Egg,Moves:
 Circle,Throw
 Counter
 Disable
-Double Edge
+Double-Edge
 Endeavor
 Hammer,Arm
 TMs:
@@ -8993,7 +8993,7 @@ Psybeam
 Haze
 Aqua,Tail
 Acupressure
-Mud Slap
+Mud-Slap
 TMs:
 TM21,Rest
 TM24,Snore
@@ -9404,7 +9404,7 @@ Level,Up,Moves:
 32,Hypnosis
 36,Mirror,Coat
 40,Sucker,Punch
-44,Freeze Dry
+44,Freeze-Dry
 48,Psychic
 52,Teeter,Dance
 Egg,Moves:
@@ -9512,7 +9512,7 @@ Level,Up,Moves:
 28,Focus,Energy
 32,Agility
 36,Air,Slash
-40,X Scissor
+40,X-Scissor
 44,Laser,Focus
 48,Swords,Dance
 Egg,Moves:
@@ -9537,7 +9537,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM43,Brick,Break
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM69,Psycho,Cut
 TM73,Cross,Poison
@@ -9555,7 +9555,7 @@ TR21,Reversal
 TR26,Endure
 TR27,Sleep,Talk
 TR29,Baton,Pass
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 Armor,Tutors:
 Dual,Wingbeat
@@ -9775,7 +9775,7 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM43,Brick,Break
@@ -9827,7 +9827,7 @@ Level,Up,Moves:
 20,Storm,Throw
 24,Double,Hit
 28,Vital,Throw
-32,X Scissor
+32,X-Scissor
 36,Strength
 40,Swords,Dance
 44,Submission
@@ -9874,7 +9874,7 @@ TR39,Superpower
 TR46,Iron,Defense
 TR48,Bulk,Up
 TR53,Close,Combat
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR75,Stone,Edge
 TR76,Stealth,Rock
@@ -9909,7 +9909,7 @@ Level,Up,Moves:
 40,Rest
 45,Swagger
 50,Thrash
-55,Double Edge
+55,Double-Edge
 60,Giga,Impact
 TMs:
 TM08,Hyper,Beam
@@ -10119,7 +10119,7 @@ Curse
 Horn,Drill
 Ancient,Power
 Fissure
-Freeze Dry
+Freeze-Dry
 Sparkling,Aria
 TMs:
 TM08,Hyper,Beam
@@ -10216,14 +10216,14 @@ Level,Up,Moves:
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Swift
 25,Bite
 30,Copycat
 35,Baton,Pass
 40,Take,Down
 45,Charm
-50,Double Edge
+50,Double-Edge
 55,Last,Resort
 Egg,Moves:
 Flail
@@ -10232,7 +10232,7 @@ Tickle
 Yawn
 Detect
 Double,Kick
-Mud Slap
+Mud-Slap
 Wish
 TMs:
 TM02,Pay,Day
@@ -10297,14 +10297,14 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Haze
 25,Water,Pulse
 30,Aurora,Beam
@@ -10383,14 +10383,14 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Thunder,Wave
 25,Double,Kick
 30,Thunder,Fang
@@ -10465,14 +10465,14 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Smog
 25,Bite
 30,Fire,Fang
@@ -10495,7 +10495,7 @@ TM29,Charm
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -10553,7 +10553,7 @@ Level,Up,Moves:
 40,Discharge
 45,Tri,Attack
 50,Magic,Coat
-55,Lock On
+55,Lock-On
 60,Zap,Cannon
 TMs:
 TM08,Hyper,Beam
@@ -10910,7 +10910,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR39,Superpower
 TR46,Iron,Defense
-TR60,X Scissor
+TR60,X-Scissor
 TR67,Earth,Power
 TR75,Stone,Edge
 TR76,Stealth,Rock
@@ -11051,7 +11051,7 @@ Level,Up,Moves:
 52,Belch
 56,Giga,Impact
 Egg,Moves:
-Double Edge
+Double-Edge
 Curse
 Fissure
 Counter
@@ -11067,7 +11067,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -11149,7 +11149,7 @@ Level,Up,Moves:
 20,Agility
 25,Ancient,Power
 30,Tailwind
-35,Freeze Dry
+35,Freeze-Dry
 40,Roost
 45,Ice,Beam
 50,Hail
@@ -11175,7 +11175,7 @@ TM39,Facade
 TM40,Swift
 TM46,Weather,Ball
 TM51,Icicle,Spear
-TM56,U turn
+TM56,U-turn
 TM64,Avalanche
 TM76,Round
 TM95,Air,Slash
@@ -11236,7 +11236,7 @@ TM30,Steel,Wing
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM60,Power,Swap
 TM61,Guard,Swap
 TM69,Psycho,Cut
@@ -11310,7 +11310,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM46,Weather,Ball
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM80,Volt,Switch
 TM93,Eerie,Impulse
@@ -11377,7 +11377,7 @@ TM40,Swift
 TM42,Revenge
 TM43,Brick,Break
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM75,Low,Sweep
@@ -11449,11 +11449,11 @@ TM30,Steel,Wing
 TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM46,Weather,Ball
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM92,Mystical,Fire
 TM95,Air,Slash
@@ -11517,7 +11517,7 @@ TM30,Steel,Wing
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM76,Round
@@ -11846,7 +11846,7 @@ TM14,Thunder,Wave
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -11856,7 +11856,7 @@ TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
 TM35,Hail
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM43,Brick,Break
@@ -11969,7 +11969,7 @@ TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -11987,7 +11987,7 @@ TM34,Sunny,Day
 TM35,Hail
 TM36,Whirlpool
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -12005,7 +12005,7 @@ TM52,Bounce
 TM53,Mud,Shot
 TM54,Rock,Blast
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -12110,7 +12110,7 @@ TR56,Aura,Sphere
 TR57,Poison,Jab
 TR58,Dark,Pulse
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR62,Dragon,Pulse
 TR63,Power,Gem
@@ -12362,7 +12362,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM73,Cross,Poison
@@ -12384,7 +12384,7 @@ TR35,Uproar
 TR36,Heat,Wave
 TR37,Taunt
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR66,Brave,Bird
 TR68,Nasty,Plot
 TR69,Zen,Headbutt
@@ -12788,7 +12788,7 @@ Level,Up,Moves:
 20,Yawn
 24,Metronome
 28,After,You
-32,Double Edge
+32,Double-Edge
 36,Safeguard
 40,Follow,Me
 44,Baton,Pass
@@ -12877,7 +12877,7 @@ Level,Up,Moves:
 20,Yawn
 24,Metronome
 28,After,You
-32,Double Edge
+32,Double-Edge
 36,Safeguard
 40,Follow,Me
 44,Baton,Pass
@@ -12995,7 +12995,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM60,Power,Swap
 TM61,Guard,Swap
 TM70,Trick,Room
@@ -13075,7 +13075,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM60,Power,Swap
 TM61,Guard,Swap
 TM70,Trick,Room
@@ -13206,7 +13206,7 @@ Level,Up,Moves:
 24,Aqua,Ring
 27,Rain,Dance
 30,Hydro,Pump
-33,Double Edge
+33,Double-Edge
 36,Superpower
 Egg,Moves:
 Aqua,Jet
@@ -13302,7 +13302,7 @@ Level,Up,Moves:
 30,Aqua,Ring
 35,Rain,Dance
 40,Hydro,Pump
-45,Double Edge
+45,Double-Edge
 50,Superpower
 TMs:
 TM00,Mega,Punch
@@ -13394,7 +13394,7 @@ Level,Up,Moves:
 32,Rock,Slide
 36,Low,Kick
 40,Counter
-44,Double Edge
+44,Double-Edge
 48,Head,Smash
 Egg,Moves:
 Headbutt
@@ -13410,7 +13410,7 @@ TM03,Fire,Punch
 TM04,Ice,Punch
 TM05,Thunder,Punch
 TM15,Dig
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -13476,7 +13476,7 @@ Level,Up,Moves:
 01,Earth,Power
 01,Hydro,Pump
 01,Belly,Drum
-01,Double Edge
+01,Double-Edge
 01,Water,Gun
 01,Hypnosis
 01,Pound
@@ -13571,7 +13571,7 @@ Double,Kick
 Recover
 After,You
 Acid,Spray
-Power Up,Punch
+Power-Up,Punch
 TMs:
 TM04,Ice,Punch
 TM15,Dig
@@ -13721,14 +13721,14 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Swift
 25,Psybeam
 30,Morning,Sun
@@ -13810,14 +13810,14 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Confuse,Ray
 25,Assurance
 30,Moonlight
@@ -14147,7 +14147,7 @@ Height:,01.50m,,Weight:,014.0kg,,Color:,Yellow
 Level,Up,Moves:
 01,Flail
 01,Defense,Curl
-04,Mud Slap
+04,Mud-Slap
 08,Rollout
 12,Glare
 16,Screech
@@ -14159,7 +14159,7 @@ Level,Up,Moves:
 40,Roost
 44,Dragon,Rush
 48,Coil
-52,Double Edge
+52,Double-Edge
 56,Endeavor
 Egg,Moves:
 Astonish
@@ -14260,14 +14260,14 @@ Level,Up,Moves:
 44,Dig
 48,Iron,Tail
 52,Stone,Edge
-56,Double Edge
+56,Double-Edge
 60,Magnet,Rise
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM15,Dig
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -14365,7 +14365,7 @@ Acid,Spray
 TMs:
 TM07,Pin,Missile
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -14443,7 +14443,7 @@ Level,Up,Moves:
 28,Focus,Energy
 32,Iron,Defense
 36,Iron,Head
-40,X Scissor
+40,X-Scissor
 44,Laser,Focus
 48,Swords,Dance
 TMs:
@@ -14464,7 +14464,7 @@ TM39,Facade
 TM40,Swift
 TM43,Brick,Break
 TM49,Sand,Tomb
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM69,Psycho,Cut
@@ -14486,7 +14486,7 @@ TR27,Sleep,Talk
 TR29,Baton,Pass
 TR39,Superpower
 TR46,Iron,Defense
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -14604,7 +14604,7 @@ Level,Up,Moves:
 60,Close,Combat
 Egg,Moves:
 Flail
-Double Edge
+Double-Edge
 Harden
 Seismic,Toss
 Night,Slash
@@ -14747,7 +14747,7 @@ TR37,Taunt
 TR49,Calm,Mind
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR81,Foul,Play
 TR95,Throat,Chop
 Armor,Tutors:
@@ -14770,7 +14770,7 @@ Hatch,Cycles:,20
 Height:,00.40m,,Weight:,006.5kg,,Color:,Brown
 Level,Up,Moves:
 01,Tackle
-01,Mud Slap
+01,Mud-Slap
 05,Powder,Snow
 10,Flail
 15,Ice,Shard
@@ -14784,11 +14784,11 @@ Level,Up,Moves:
 Egg,Moves:
 Bite
 Ancient,Power
-Double Edge
+Double-Edge
 Fissure
 Curse
 Icicle,Crash
-Freeze Dry
+Freeze-Dry
 TMs:
 TM15,Dig
 TM17,Light,Screen
@@ -14845,7 +14845,7 @@ Level,Up,Moves:
 01,Ice,Fang
 01,Ancient,Power
 01,Tackle
-01,Mud Slap
+01,Mud-Slap
 01,Powder,Snow
 01,Flail
 15,Ice,Shard
@@ -14943,7 +14943,7 @@ TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -15028,7 +15028,7 @@ TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -15041,7 +15041,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM35,Hail
 TM36,Whirlpool
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM48,Rock,Tomb
 TM51,Icicle,Spear
@@ -15098,7 +15098,7 @@ Level,Up,Moves:
 12,Psybeam
 16,Aurora,Beam
 20,Bubble,Beam
-24,Lock On
+24,Lock-On
 28,Bullet,Seed
 32,Ice,Beam
 36,Hydro,Pump
@@ -15181,7 +15181,7 @@ Level,Up,Moves:
 12,Psybeam
 16,Aurora,Beam
 20,Bubble,Beam
-24,Lock On
+24,Lock-On
 30,Bullet,Seed
 36,Ice,Beam
 42,Hydro,Pump
@@ -15260,7 +15260,7 @@ Splash
 Rapid,Spin
 Ice,Shard
 Fake,Out
-Freeze Dry
+Freeze-Dry
 Destiny,Bond
 Counter
 Aurora,Veil
@@ -15468,7 +15468,7 @@ TR27,Sleep,Talk
 TR37,Taunt
 TR46,Iron,Defense
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR66,Brave,Bird
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -15578,7 +15578,7 @@ Level,Up,Moves:
 40,Discharge
 45,Tri,Attack
 50,Magic,Coat
-55,Lock On
+55,Lock-On
 60,Zap,Cannon
 65,Hyper,Beam
 TMs:
@@ -15973,7 +15973,7 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM43,Brick,Break
@@ -16031,7 +16031,7 @@ Level,Up,Moves:
 Egg,Moves:
 Belch
 Curse
-Double Edge
+Double-Edge
 Hammer,Arm
 Present
 Seismic,Toss
@@ -16127,8 +16127,8 @@ Level,Up,Moves:
 28,Heal,Pulse
 32,Helping,Hand
 36,Light,Screen
-40,Double Edge
-44,Soft Boiled
+40,Double-Edge
+44,Soft-Boiled
 48,Last,Resort
 52,Healing,Wish
 TMs:
@@ -16321,7 +16321,7 @@ TM26,Scary,Face
 TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -16851,7 +16851,7 @@ TM30,Steel,Wing
 TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -16936,7 +16936,7 @@ TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
 TM46,Weather,Ball
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM69,Psycho,Cut
 TM70,Trick,Room
@@ -17077,7 +17077,7 @@ Height:,00.90m,,Weight:,021.6kg,,Color:,Green
 Level,Up,Moves:
 01,Fury,Cutter
 01,False,Swipe
-01,X Scissor
+01,X-Scissor
 01,Energy,Ball
 01,Pound
 01,Leer
@@ -17136,7 +17136,7 @@ TR31,Iron,Tail
 TR32,Crunch
 TR50,Leaf,Blade
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR65,Energy,Ball
 TR71,Leaf,Storm
 TR77,Grass,Knot
@@ -17163,7 +17163,7 @@ Level,Up,Moves:
 01,Dual,Chop
 01,Fury,Cutter
 01,False,Swipe
-01,X Scissor
+01,X-Scissor
 01,Energy,Ball
 01,Pound
 01,Leer
@@ -17232,7 +17232,7 @@ TR47,Dragon,Claw
 TR50,Leaf,Blade
 TR51,Dragon,Dance
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR64,Focus,Blast
 TR65,Energy,Ball
@@ -17292,7 +17292,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM48,Rock,Tomb
@@ -17367,7 +17367,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -17455,7 +17455,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -17463,7 +17463,7 @@ TM42,Revenge
 TM43,Brick,Break
 TM48,Rock,Tomb
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM65,Shadow,Claw
@@ -17533,12 +17533,12 @@ Level,Up,Moves:
 36,Endeavor
 39,Hydro,Pump
 Egg,Moves:
-Mud Slap
+Mud-Slap
 Bite
 Ancient,Power
 Counter
 Curse
-Double Edge
+Double-Edge
 Mirror,Coat
 Sludge
 Stomp
@@ -17784,14 +17784,14 @@ Level,Up,Moves:
 06,Tail,Whip
 09,Covet
 12,Headbutt
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 18,Pin,Missile
 21,Rest
 24,Take,Down
 27,Fling
 30,Flail
 33,Belly,Drum
-36,Double Edge
+36,Double-Edge
 Egg,Moves:
 Tickle
 Simple,Beam
@@ -17860,14 +17860,14 @@ Level,Up,Moves:
 06,Lick
 09,Snarl
 12,Headbutt
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 18,Pin,Missile
 21,Rest
 24,Take,Down
 27,Scary,Face
 30,Counter
 33,Taunt
-36,Double Edge
+36,Double-Edge
 Egg,Moves:
 Parting,Shot
 Quick,Guard
@@ -17941,7 +17941,7 @@ Level,Up,Moves:
 01,Slash
 01,Switcheroo
 01,Pin,Missile
-01,Baby Doll,Eyes
+01,Baby-Doll,Eyes
 01,Tackle
 01,Growl
 01,Sand,Attack
@@ -17955,7 +17955,7 @@ Level,Up,Moves:
 33,Fling
 38,Flail
 43,Belly,Drum
-48,Double Edge
+48,Double-Edge
 TMs:
 TM07,Pin,Missile
 TM08,Hyper,Beam
@@ -18023,7 +18023,7 @@ Level,Up,Moves:
 01,Night,Slash
 01,Switcheroo
 01,Pin,Missile
-01,Baby Doll,Eyes
+01,Baby-Doll,Eyes
 01,Tackle
 01,Leer
 01,Sand,Attack
@@ -18037,7 +18037,7 @@ Level,Up,Moves:
 33,Scary,Face
 38,Counter
 43,Taunt
-48,Double Edge
+48,Double-Edge
 TMs:
 TM07,Pin,Missile
 TM08,Hyper,Beam
@@ -18378,7 +18378,7 @@ Night,Slash
 TMs:
 TM11,Solar,Beam
 TM15,Dig
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -18454,7 +18454,7 @@ TM08,Hyper,Beam
 TM11,Solar,Beam
 TM12,Solar,Blade
 TM15,Dig
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -18548,7 +18548,7 @@ TM11,Solar,Beam
 TM12,Solar,Blade
 TM15,Dig
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -18591,7 +18591,7 @@ TR36,Heat,Wave
 TR50,Leaf,Blade
 TR58,Dark,Pulse
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR65,Energy,Ball
 TR68,Nasty,Plot
@@ -18654,7 +18654,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM95,Air,Slash
 TRs:
@@ -18725,7 +18725,7 @@ TM39,Facade
 TM40,Swift
 TM46,Weather,Ball
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM76,Round
@@ -18807,7 +18807,7 @@ TM29,Charm
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -18893,7 +18893,7 @@ TM29,Charm
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -18989,7 +18989,7 @@ TM29,Charm
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -19053,7 +19053,7 @@ Level,Up,Moves:
 01,Scratch
 05,Harden
 10,False,Swipe
-15,Mud Slap
+15,Mud-Slap
 21,Absorb
 25,Metal,Claw
 30,Fury,Swipes
@@ -19083,7 +19083,7 @@ TR20,Substitute
 TR26,Endure
 TR27,Sleep,Talk
 TR33,Shadow,Ball
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 Armor,Tutors:
 Skitter,Smack
@@ -19111,7 +19111,7 @@ Level,Up,Moves:
 01,Fury,Cutter
 01,Baton,Pass
 01,Aerial,Ace
-01,Mud Slap
+01,Mud-Slap
 01,Metal,Claw
 01,Dig
 01,Sand,Attack
@@ -19125,7 +19125,7 @@ Level,Up,Moves:
 43,Mind,Reader
 50,Slash
 57,Swords,Dance
-64,X Scissor
+64,X-Scissor
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
@@ -19141,7 +19141,7 @@ TM32,Sandstorm
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TM94,False,Swipe
@@ -19156,7 +19156,7 @@ TR27,Sleep,Talk
 TR29,Baton,Pass
 TR33,Shadow,Ball
 TR35,Uproar
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 Armor,Tutors:
 Dual,Wingbeat
@@ -19178,7 +19178,7 @@ Height:,00.80m,,Weight:,001.2kg,,Color:,Brown
 Level,Up,Moves:
 01,Shadow,Claw
 01,Grudge
-01,Mud Slap
+01,Mud-Slap
 01,Metal,Claw
 01,Dig
 01,Scratch
@@ -19205,7 +19205,7 @@ TM25,Protect
 TM28,Giga,Drain
 TM32,Sandstorm
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM65,Shadow,Claw
 TM76,Round
@@ -19220,7 +19220,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR33,Shadow,Ball
 TR38,Trick
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR83,Ally,Switch
 Armor,Tutors:
@@ -19594,7 +19594,7 @@ TM27,Icy,Wind
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM43,Brick,Break
@@ -19673,7 +19673,7 @@ Ancient,Power
 Tickle
 Slam
 Seismic,Toss
-Power Up,Punch
+Power-Up,Punch
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -19767,7 +19767,7 @@ Level,Up,Moves:
 44,Iron,Tail
 48,Iron,Defense
 52,Heavy,Slam
-56,Double Edge
+56,Double-Edge
 60,Metal,Burst
 Egg,Moves:
 Curse
@@ -19775,7 +19775,7 @@ Dragon,Rush
 Endeavor
 Head,Smash
 Stomp
-Mud Slap
+Mud-Slap
 TMs:
 TM15,Dig
 TM16,Screech
@@ -19843,7 +19843,7 @@ Level,Up,Moves:
 52,Iron,Tail
 58,Iron,Defense
 64,Heavy,Slam
-70,Double Edge
+70,Double-Edge
 76,Metal,Burst
 TMs:
 TM15,Dig
@@ -19916,7 +19916,7 @@ Level,Up,Moves:
 56,Iron,Tail
 64,Iron,Defense
 72,Heavy,Slam
-80,Double Edge
+80,Double-Edge
 88,Metal,Burst
 TMs:
 TM00,Mega,Punch
@@ -20243,7 +20243,7 @@ Level,Up,Moves:
 Egg,Moves:
 Ancient,Power
 Destiny,Bond
-Double Edge
+Double-Edge
 Thrash
 Water,Pulse
 TMs:
@@ -20408,7 +20408,7 @@ Level,Up,Moves:
 45,Hydro,Pump
 48,Water,Spout
 Egg,Moves:
-Double Edge
+Double-Edge
 Thrash
 Curse
 Fissure
@@ -20418,7 +20418,7 @@ Rollout
 Aqua,Ring
 Soak
 TMs:
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -20492,7 +20492,7 @@ Level,Up,Moves:
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -20577,14 +20577,14 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
 TM13,Fire,Spin
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM46,Weather,Ball
 TM48,Rock,Tomb
@@ -20636,7 +20636,7 @@ Level,Up,Moves:
 01,Astonish
 04,Laser,Focus
 08,Bite
-12,Mud Slap
+12,Mud-Slap
 16,Sand,Tomb
 20,Bulldoze
 24,Dig
@@ -20712,7 +20712,7 @@ Level,Up,Moves:
 01,Astonish
 01,Supersonic
 01,Bite
-12,Mud Slap
+12,Mud-Slap
 16,Sand,Tomb
 20,Dragon,Tail
 24,Screech
@@ -20743,7 +20743,7 @@ TM40,Swift
 TM48,Rock,Tomb
 TM49,Sand,Tomb
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM81,Bulldoze
 TM95,Air,Slash
@@ -20797,7 +20797,7 @@ Level,Up,Moves:
 01,Astonish
 01,Supersonic
 01,Bite
-12,Mud Slap
+12,Mud-Slap
 16,Sand,Tomb
 20,Dragon,Tail
 24,Screech
@@ -20834,7 +20834,7 @@ TM40,Swift
 TM48,Rock,Tomb
 TM49,Sand,Tomb
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM81,Bulldoze
 TM95,Air,Slash
@@ -21053,7 +21053,7 @@ TM09,Giga,Impact
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -21147,7 +21147,7 @@ TM13,Fire,Spin
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -21155,7 +21155,7 @@ TM25,Protect
 TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -21217,7 +21217,7 @@ Egg,Group:,Water2
 Hatch,Cycles:,20
 Height:,00.40m,,Weight:,001.9kg,,Color:,Gray
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Water,Gun
 06,Rest
 06,Snore
@@ -21289,7 +21289,7 @@ Level,Up,Moves:
 01,Belch
 01,Zen,Headbutt
 01,Tickle
-01,Mud Slap
+01,Mud-Slap
 01,Water,Gun
 01,Rest
 01,Snore
@@ -21378,7 +21378,7 @@ Level,Up,Moves:
 Egg,Moves:
 Ancient,Power
 Metal,Claw
-Double Edge
+Double-Edge
 Aqua,Jet
 Switcheroo
 Slash
@@ -21420,7 +21420,7 @@ TR39,Superpower
 TR45,Muddy,Water
 TR46,Iron,Defense
 TR51,Dragon,Dance
-TR60,X Scissor
+TR60,X-Scissor
 TR84,Scald
 Armor,Tutors:
 None!
@@ -21505,7 +21505,7 @@ TR46,Iron,Defense
 TR51,Dragon,Dance
 TR53,Close,Combat
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR68,Nasty,Plot
 TR78,Sludge,Wave
 TR84,Scald
@@ -21530,7 +21530,7 @@ Hatch,Cycles:,20
 Height:,00.50m,,Weight:,021.5kg,,Color:,Brown
 Level,Up,Moves:
 01,Harden
-01,Mud Slap
+01,Mud-Slap
 03,Rapid,Spin
 06,Confusion
 09,Rock,Tomb
@@ -21541,7 +21541,7 @@ Level,Up,Moves:
 24,Cosmic,Power
 27,Extrasensory
 30,Earth,Power
-33,Self Destruct
+33,Self-Destruct
 36,Guard,Split
 36,Power,Split
 39,Sandstorm
@@ -21552,7 +21552,7 @@ TM15,Dig
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -21619,7 +21619,7 @@ Level,Up,Moves:
 01,Hyper,Beam
 01,Teleport
 01,Harden
-01,Mud Slap
+01,Mud-Slap
 01,Rapid,Spin
 01,Confusion
 09,Rock,Tomb
@@ -21630,7 +21630,7 @@ Level,Up,Moves:
 24,Cosmic,Power
 27,Extrasensory
 30,Earth,Power
-33,Self Destruct
+33,Self-Destruct
 38,Guard,Split
 38,Power,Split
 43,Sandstorm
@@ -21643,7 +21643,7 @@ TM15,Dig
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -21866,7 +21866,7 @@ Level,Up,Moves:
 32,Crush,Claw
 36,Rock,Blast
 41,Protect
-44,X Scissor
+44,X-Scissor
 Egg,Moves:
 Knock,Off
 Curse
@@ -21900,7 +21900,7 @@ TR20,Substitute
 TR26,Endure
 TR27,Sleep,Talk
 TR46,Iron,Defense
-TR60,X Scissor
+TR60,X-Scissor
 TR67,Earth,Power
 TR76,Stealth,Rock
 Armor,Tutors:
@@ -21933,7 +21933,7 @@ Level,Up,Moves:
 32,Crush,Claw
 36,Rock,Blast
 43,Protect
-48,X Scissor
+48,X-Scissor
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
@@ -21970,7 +21970,7 @@ TR27,Sleep,Talk
 TR31,Iron,Tail
 TR39,Superpower
 TR46,Iron,Defense
-TR60,X Scissor
+TR60,X-Scissor
 TR67,Earth,Power
 TR70,Flash,Cannon
 TR75,Stone,Edge
@@ -22142,7 +22142,7 @@ Level,Up,Moves:
 12,Confuse,Ray
 16,Night,Shade
 20,Payback
-24,Will O Wisp
+24,Will-O-Wisp
 28,Mean,Look
 32,Hex
 36,Curse
@@ -22162,7 +22162,7 @@ TM27,Icy,Wind
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM42,Revenge
@@ -22224,7 +22224,7 @@ Level,Up,Moves:
 12,Confuse,Ray
 16,Night,Shade
 20,Payback
-24,Will O Wisp
+24,Will-O-Wisp
 28,Mean,Look
 32,Hex
 36,Curse
@@ -22247,7 +22247,7 @@ TM27,Icy,Wind
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM42,Revenge
@@ -22313,7 +22313,7 @@ Level,Up,Moves:
 55,Perish,Song
 Egg,Moves:
 Curse
-Double Edge
+Double-Edge
 Magic,Coat
 Mean,Look
 Bite
@@ -22333,7 +22333,7 @@ TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
 TM35,Hail
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM48,Rock,Tomb
@@ -22372,7 +22372,7 @@ TR39,Superpower
 TR49,Calm,Mind
 TR53,Close,Combat
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR75,Stone,Edge
 TR81,Foul,Play
@@ -22495,8 +22495,8 @@ Egg,Group:,Fairy,/,Mineral
 Hatch,Cycles:,20
 Height:,01.50m,,Weight:,256.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Freeze Dry
-01,Freeze Dry
+00,Freeze-Dry
+01,Freeze-Dry
 01,Sheer,Cold
 01,Powder,Snow
 01,Astonish
@@ -22517,7 +22517,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM17,Light,Screen
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -22790,10 +22790,10 @@ Level,Up,Moves:
 35,Rest
 40,Flail
 45,Hydro,Pump
-50,Double Edge
+50,Double-Edge
 55,Head,Smash
 Egg,Moves:
-Mud Slap
+Mud-Slap
 Skull,Bash
 TMs:
 TM08,Hyper,Beam
@@ -22873,7 +22873,7 @@ Level,Up,Moves:
 40,Focus,Energy
 45,Flamethrower
 50,Outrage
-55,Double Edge
+55,Double-Edge
 Egg,Moves:
 Defense,Curl
 Dragon,Rush
@@ -22945,7 +22945,7 @@ Level,Up,Moves:
 46,Focus,Energy
 53,Flamethrower
 60,Outrage
-67,Double Edge
+67,Double-Edge
 TMs:
 TM21,Rest
 TM22,Rock,Slide
@@ -23014,7 +23014,7 @@ Level,Up,Moves:
 46,Focus,Energy
 55,Flamethrower
 64,Outrage
-73,Double Edge
+73,Double-Edge
 TMs:
 TM06,Fly
 TM08,Hyper,Beam
@@ -23130,7 +23130,7 @@ TM05,Thunder,Punch
 TM08,Hyper,Beam
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -23213,7 +23213,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -23284,7 +23284,7 @@ Level,Up,Moves:
 42,Hammer,Arm
 48,Stone,Edge
 54,Superpower
-60,Lock On
+60,Lock-On
 66,Zap,Cannon
 72,Hyper,Beam
 78,Explosion
@@ -23299,7 +23299,7 @@ TM09,Giga,Impact
 TM14,Thunder,Wave
 TM15,Dig
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -23362,7 +23362,7 @@ Level,Up,Moves:
 42,Hammer,Arm
 48,Blizzard
 54,Superpower
-60,Lock On
+60,Lock-On
 66,Zap,Cannon
 72,Hyper,Beam
 78,Explosion
@@ -23375,7 +23375,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -23438,7 +23438,7 @@ Level,Up,Moves:
 42,Hammer,Arm
 48,Heavy,Slam
 54,Superpower
-60,Lock On
+60,Lock-On
 66,Zap,Cannon
 72,Hyper,Beam
 78,Explosion
@@ -23451,7 +23451,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -23710,7 +23710,7 @@ Level,Up,Moves:
 54,Aqua,Ring
 63,Origin,Pulse
 72,Hydro,Pump
-81,Double Edge
+81,Double-Edge
 90,Water,Spout
 TMs:
 TM08,Hyper,Beam
@@ -23965,7 +23965,7 @@ Level,Up,Moves:
 56,Healing,Wish
 63,Rest
 70,Future,Sight
-77,Double Edge
+77,Double-Edge
 84,Cosmic,Power
 91,Last,Resort
 98,Doom,Desire
@@ -23993,7 +23993,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM63,Drain,Punch
 TM70,Trick,Room
@@ -24064,7 +24064,7 @@ Level,Up,Moves:
 44,Swagger
 48,Wild,Charge
 Egg,Moves:
-Baby Doll,Eyes
+Baby-Doll,Eyes
 Take,Down
 Double,Kick
 Howl
@@ -24462,7 +24462,7 @@ TM37,Beat,Up
 TM39,Facade
 TM40,Swift
 TM42,Revenge
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM73,Cross,Poison
@@ -24479,7 +24479,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR35,Uproar
 TR54,Toxic,Spikes
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR63,Power,Gem
 Armor,Tutors:
@@ -24699,7 +24699,7 @@ Hatch,Cycles:,20
 Height:,00.30m,,Weight:,006.3kg,,Color:,Purple
 Level,Up,Moves:
 01,Water,Gun
-01,Mud Slap
+01,Mud-Slap
 05,Harden
 10,Recover
 15,Water,Pulse
@@ -24767,7 +24767,7 @@ Hatch,Cycles:,20
 Height:,00.30m,,Weight:,006.3kg,,Color:,Blue
 Level,Up,Moves:
 01,Water,Gun
-01,Mud Slap
+01,Mud-Slap
 05,Harden
 10,Recover
 15,Water,Pulse
@@ -24835,7 +24835,7 @@ Hatch,Cycles:,20
 Height:,00.90m,,Weight:,029.9kg,,Color:,Purple
 Level,Up,Moves:
 01,Water,Gun
-01,Mud Slap
+01,Mud-Slap
 01,Harden
 01,Recover
 15,Water,Pulse
@@ -24905,7 +24905,7 @@ Hatch,Cycles:,20
 Height:,00.90m,,Weight:,029.9kg,,Color:,Blue
 Level,Up,Moves:
 01,Water,Gun
-01,Mud Slap
+01,Mud-Slap
 01,Harden
 01,Recover
 15,Water,Pulse
@@ -24984,7 +24984,7 @@ Level,Up,Moves:
 24,Stockpile
 24,Swallow
 24,Spit,Up
-29,Self Destruct
+29,Self-Destruct
 32,Destiny,Bond
 36,Baton,Pass
 40,Tailwind
@@ -24998,7 +24998,7 @@ Clear,Smog
 Defog
 TMs:
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -25007,7 +25007,7 @@ TM27,Icy,Wind
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM46,Weather,Ball
@@ -25064,7 +25064,7 @@ Level,Up,Moves:
 24,Stockpile
 24,Swallow
 24,Spit,Up
-31,Self Destruct
+31,Self-Destruct
 36,Destiny,Bond
 42,Baton,Pass
 48,Tailwind
@@ -25074,7 +25074,7 @@ TM06,Fly
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -25083,7 +25083,7 @@ TM27,Icy,Wind
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM44,Imprison
@@ -25131,7 +25131,7 @@ Level,Up,Moves:
 01,Splash
 01,Pound
 04,Defense,Curl
-08,Baby Doll,Eyes
+08,Baby-Doll,Eyes
 12,After,You
 16,Quick,Attack
 20,Double,Kick
@@ -25222,7 +25222,7 @@ Level,Up,Moves:
 01,Splash
 01,Pound
 01,Defense,Curl
-01,Baby Doll,Eyes
+01,Baby-Doll,Eyes
 12,After,You
 16,Quick,Attack
 20,Double,Kick
@@ -25258,7 +25258,7 @@ TM40,Swift
 TM41,Helping,Hand
 TM47,Fake,Tears
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -25329,7 +25329,7 @@ Level,Up,Moves:
 Egg,Moves:
 Leer
 Smog
-Double Edge
+Double-Edge
 Astonish
 Haze
 Slash
@@ -25650,7 +25650,7 @@ Level,Up,Moves:
 32,Rock,Slide
 36,Low,Kick
 40,Counter
-44,Double Edge
+44,Double-Edge
 Egg,Moves:
 Headbutt
 Harden
@@ -25660,7 +25660,7 @@ Rollout
 Rock,Polish
 TMs:
 TM15,Dig
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -25892,7 +25892,7 @@ TM27,Icy,Wind
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM48,Rock,Tomb
@@ -25951,7 +25951,7 @@ Level,Up,Moves:
 Egg,Moves:
 Thrash
 Metal,Claw
-Double Edge
+Double-Edge
 Twister
 TMs:
 TM15,Dig
@@ -26175,7 +26175,7 @@ Level,Up,Moves:
 48,Belly,Drum
 52,Last,Resort
 Egg,Moves:
-Double Edge
+Double-Edge
 Curse
 Fissure
 Counter
@@ -26189,7 +26189,7 @@ TM04,Ice,Punch
 TM05,Thunder,Punch
 TM11,Solar,Beam
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -26362,7 +26362,7 @@ Level,Up,Moves:
 01,Metal,Claw
 12,Counter
 16,Laser,Focus
-20,Power Up,Punch
+20,Power-Up,Punch
 24,Calm,Mind
 28,Metal,Sound
 32,Quick,Guard
@@ -26463,7 +26463,7 @@ Level,Up,Moves:
 32,Roar
 36,Rest
 40,Earthquake
-44,Double Edge
+44,Double-Edge
 48,Fissure
 52,Slack,Off
 Egg,Moves:
@@ -26537,7 +26537,7 @@ Level,Up,Moves:
 32,Roar
 38,Rest
 44,Earthquake
-50,Double Edge
+50,Double-Edge
 56,Fissure
 62,Slack,Off
 TMs:
@@ -26615,7 +26615,7 @@ Level,Up,Moves:
 33,Toxic
 36,Night,Slash
 39,Cross,Poison
-42,X Scissor
+42,X-Scissor
 45,Acupressure
 48,Crunch
 Egg,Moves:
@@ -26659,7 +26659,7 @@ TR37,Taunt
 TR54,Toxic,Spikes
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 Armor,Tutors:
 Skitter,Smack
@@ -26699,7 +26699,7 @@ Level,Up,Moves:
 33,Toxic
 36,Night,Slash
 39,Cross,Poison
-44,X Scissor
+44,X-Scissor
 49,Acupressure
 54,Crunch
 TMs:
@@ -26753,7 +26753,7 @@ TR46,Iron,Defense
 TR54,Toxic,Spikes
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR91,Venom,Drench
 TR95,Throat,Chop
@@ -26778,7 +26778,7 @@ Hatch,Cycles:,10
 Height:,00.70m,,Weight:,023.0kg,,Color:,Blue
 Level,Up,Moves:
 01,Poison,Sting
-01,Mud Slap
+01,Mud-Slap
 04,Astonish
 08,Taunt
 12,Flatter
@@ -26846,7 +26846,7 @@ TR37,Taunt
 TR48,Bulk,Up
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR68,Nasty,Plot
 TR73,Gunk,Shot
@@ -26876,7 +26876,7 @@ Hatch,Cycles:,20
 Height:,01.30m,,Weight:,044.4kg,,Color:,Blue
 Level,Up,Moves:
 01,Poison,Sting
-01,Mud Slap
+01,Mud-Slap
 01,Astonish
 01,Taunt
 12,Flatter
@@ -26938,7 +26938,7 @@ TR37,Taunt
 TR48,Bulk,Up
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR68,Nasty,Plot
 TR73,Gunk,Shot
@@ -27056,7 +27056,7 @@ Level,Up,Moves:
 Egg,Moves:
 Leech,Seed
 Growth
-Double Edge
+Double-Edge
 Stomp
 Skull,Bash
 TMs:
@@ -27264,7 +27264,7 @@ TR37,Taunt
 TR49,Calm,Mind
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR68,Nasty,Plot
 TR81,Foul,Play
@@ -27306,7 +27306,7 @@ Level,Up,Moves:
 40,Discharge
 46,Metal,Sound
 52,Light,Screen
-58,Lock On
+58,Lock-On
 64,Zap,Cannon
 TMs:
 TM08,Hyper,Beam
@@ -27315,7 +27315,7 @@ TM14,Thunder,Wave
 TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -27386,7 +27386,7 @@ TM09,Giga,Impact
 TM11,Solar,Beam
 TM15,Dig
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -27758,7 +27758,7 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM43,Brick,Break
@@ -27820,7 +27820,7 @@ Level,Up,Moves:
 01,Yawn
 01,Metronome
 01,After,You
-01,Double Edge
+01,Double-Edge
 01,Safeguard
 01,Follow,Me
 01,Baton,Pass
@@ -27918,14 +27918,14 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Leech,Seed
 25,Magical,Leaf
 30,Synthesis
@@ -27971,7 +27971,7 @@ TR33,Shadow,Ball
 TR42,Hyper,Voice
 TR50,Leaf,Blade
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR65,Energy,Ball
 TR71,Leaf,Storm
 TR77,Grass,Knot
@@ -28002,19 +28002,19 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Ice,Shard
 25,Bite
 30,Ice,Fang
 35,Hail
-40,Freeze Dry
+40,Freeze-Dry
 45,Mirror,Coat
 50,Blizzard
 55,Last,Resort
@@ -28078,7 +28078,7 @@ Level,Up,Moves:
 01,Ice,Fang
 01,Ancient,Power
 01,Tackle
-01,Mud Slap
+01,Mud-Slap
 01,Powder,Snow
 01,Flail
 15,Ice,Shard
@@ -28166,7 +28166,7 @@ Level,Up,Moves:
 40,Discharge
 45,Tri,Attack
 50,Magic,Coat
-55,Lock On
+55,Lock-On
 60,Zap,Cannon
 65,Hyper,Beam
 TMs:
@@ -28284,7 +28284,7 @@ TM29,Charm
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -28331,7 +28331,7 @@ TR50,Leaf,Blade
 TR53,Close,Combat
 TR56,Aura,Sphere
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR65,Energy,Ball
 TR69,Zen,Headbutt
@@ -28376,7 +28376,7 @@ Level,Up,Moves:
 12,Confuse,Ray
 16,Night,Shade
 20,Payback
-24,Will O Wisp
+24,Will-O-Wisp
 28,Mean,Look
 32,Hex
 36,Curse
@@ -28400,7 +28400,7 @@ TM27,Icy,Wind
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM41,Helping,Hand
 TM42,Revenge
@@ -28470,7 +28470,7 @@ Level,Up,Moves:
 30,Frost,Breath
 35,Confuse,Ray
 40,Hail
-47,Will O Wisp
+47,Will-O-Wisp
 54,Aurora,Veil
 61,Shadow,Ball
 68,Blizzard
@@ -28490,7 +28490,7 @@ TM29,Charm
 TM31,Attract
 TM33,Rain,Dance
 TM35,Hail
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM46,Weather,Ball
@@ -28560,7 +28560,7 @@ TM24,Snore
 TM25,Protect
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -28627,7 +28627,7 @@ TM24,Snore
 TM25,Protect
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -28694,7 +28694,7 @@ TM24,Snore
 TM25,Protect
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -28761,7 +28761,7 @@ TM24,Snore
 TM25,Protect
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -28828,7 +28828,7 @@ TM24,Snore
 TM25,Protect
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -28895,7 +28895,7 @@ TM24,Snore
 TM25,Protect
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -28974,7 +28974,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM63,Drain,Punch
 TM69,Psycho,Cut
@@ -29064,7 +29064,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM63,Drain,Punch
 TM69,Psycho,Cut
@@ -29143,7 +29143,7 @@ TM14,Thunder,Wave
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -29154,7 +29154,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -29403,7 +29403,7 @@ TM09,Giga,Impact
 TM11,Solar,Beam
 TM13,Fire,Spin
 TM15,Dig
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -29411,7 +29411,7 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM48,Rock,Tomb
 TM57,Payback
@@ -29570,7 +29570,7 @@ TM27,Icy,Wind
 TM30,Steel,Wing
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM57,Payback
@@ -29649,7 +29649,7 @@ TM27,Icy,Wind
 TM30,Steel,Wing
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM57,Payback
@@ -29773,7 +29773,7 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,00.40m,,Weight:,004.0kg,,Color:,Yellow
 Level,Up,Moves:
-01,V Create
+01,V-Create
 01,Quick,Attack
 01,Flame,Charge
 01,Confusion
@@ -29787,7 +29787,7 @@ Level,Up,Moves:
 49,Inferno
 56,Reversal
 63,Searing,Shot
-70,Double Edge
+70,Double-Edge
 77,Flare,Blitz
 84,Overheat
 91,Final,Gambit
@@ -29807,13 +29807,13 @@ TM21,Rest
 TM24,Snore
 TM25,Protect
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM43,Brick,Break
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM60,Power,Swap
 TM61,Guard,Swap
@@ -29876,7 +29876,7 @@ Level,Up,Moves:
 04,Work,Up
 08,Bite
 12,Retaliate
-17,Baby Doll,Eyes
+17,Baby-Doll,Eyes
 20,Play,Rough
 24,Crunch
 28,Take,Down
@@ -29889,7 +29889,7 @@ Egg,Moves:
 After,You
 Howl
 Lick
-Mud Slap
+Mud-Slap
 Yawn
 Covet
 TMs:
@@ -29950,7 +29950,7 @@ Level,Up,Moves:
 01,Work,Up
 01,Bite
 12,Retaliate
-19,Baby Doll,Eyes
+19,Baby-Doll,Eyes
 24,Play,Rough
 30,Crunch
 36,Take,Down
@@ -30021,7 +30021,7 @@ Level,Up,Moves:
 01,Work,Up
 01,Bite
 12,Retaliate
-19,Baby Doll,Eyes
+19,Baby-Doll,Eyes
 24,Play,Rough
 30,Crunch
 38,Take,Down
@@ -30122,7 +30122,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM65,Shadow,Claw
@@ -30193,7 +30193,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM65,Shadow,Claw
@@ -30419,7 +30419,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM95,Air,Slash
 TRs:
@@ -30474,7 +30474,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM95,Air,Slash
 TRs:
@@ -30531,7 +30531,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM95,Air,Slash
 TRs:
@@ -30569,7 +30569,7 @@ Level,Up,Moves:
 01,Tackle
 04,Harden
 08,Stealth,Rock
-12,Mud Slap
+12,Mud-Slap
 16,Smack,Down
 20,Iron,Defense
 24,Headbutt
@@ -30635,7 +30635,7 @@ Level,Up,Moves:
 01,Tackle
 01,Harden
 01,Stealth,Rock
-12,Mud Slap
+12,Mud-Slap
 16,Smack,Down
 20,Iron,Defense
 24,Headbutt
@@ -30696,7 +30696,7 @@ Level,Up,Moves:
 01,Tackle
 01,Harden
 01,Stealth,Rock
-12,Mud Slap
+12,Mud-Slap
 16,Smack,Down
 20,Iron,Defense
 24,Headbutt
@@ -30709,7 +30709,7 @@ TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -30796,7 +30796,7 @@ TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM62,Speed,Swap
 TM69,Psycho,Cut
@@ -30881,7 +30881,7 @@ TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM62,Speed,Swap
 TM69,Psycho,Cut
@@ -30931,7 +30931,7 @@ Egg,Group:,Field
 Hatch,Cycles:,20
 Height:,00.30m,,Weight:,008.5kg,,Color:,Gray
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Rapid,Spin
 04,Scratch
 08,Hone,Claws
@@ -30975,7 +30975,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR67,Earth,Power
 TR76,Stealth,Rock
 TR87,Drill,Run
@@ -31000,7 +31000,7 @@ Height:,00.70m,,Weight:,040.4kg,,Color:,Gray
 Level,Up,Moves:
 00,Horn,Drill
 01,Horn,Drill
-01,Mud Slap
+01,Mud-Slap
 01,Rapid,Spin
 01,Scratch
 01,Hone,Claws
@@ -31046,7 +31046,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR67,Earth,Power
 TR74,Iron,Head
@@ -31075,7 +31075,7 @@ Level,Up,Moves:
 01,Pound
 01,Play,Nice
 04,Disarming,Voice
-09,Baby Doll,Eyes
+09,Baby-Doll,Eyes
 12,Helping,Hand
 16,Growl
 20,Zen,Headbutt
@@ -31085,7 +31085,7 @@ Level,Up,Moves:
 36,Simple,Beam
 40,Hyper,Voice
 44,Heal,Pulse
-48,Double Edge
+48,Double-Edge
 52,Entrainment
 56,Misty,Terrain
 60,Last,Resort
@@ -31191,7 +31191,7 @@ Counter
 Detect
 Wide,Guard
 Mach,Punch
-Power Up,Punch
+Power-Up,Punch
 Defog
 TMs:
 TM00,Mega,Punch
@@ -31428,7 +31428,7 @@ Egg,Moves:
 Water,Pulse
 Mist
 Toxic
-Mud Slap
+Mud-Slap
 TMs:
 TM16,Screech
 TM21,Rest
@@ -31794,7 +31794,7 @@ Level,Up,Moves:
 32,Agility
 36,Toxic
 40,Venom,Drench
-44,Double Edge
+44,Double-Edge
 Egg,Moves:
 Bite
 Fury,Cutter
@@ -31859,7 +31859,7 @@ Level,Up,Moves:
 38,Agility
 44,Toxic
 50,Venom,Drench
-56,Double Edge
+56,Double-Edge
 TMs:
 TM07,Pin,Missile
 TM11,Solar,Beam
@@ -31921,7 +31921,7 @@ Level,Up,Moves:
 42,Agility
 50,Toxic
 58,Venom,Drench
-66,Double Edge
+66,Double-Edge
 74,Megahorn
 TMs:
 TM07,Pin,Missile
@@ -31964,7 +31964,7 @@ TR46,Iron,Defense
 TR52,Gyro,Ball
 TR54,Toxic,Spikes
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR91,Venom,Drench
 TR95,Throat,Chop
 Armor,Tutors:
@@ -32099,7 +32099,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM70,Trick,Room
 TM76,Round
@@ -32286,7 +32286,7 @@ Level,Up,Moves:
 40,Final,Gambit
 44,Aqua,Tail
 48,Thrash
-52,Double Edge
+52,Double-Edge
 56,Head,Smash
 Egg,Moves:
 Bubble,Beam
@@ -32362,7 +32362,7 @@ Level,Up,Moves:
 40,Final,Gambit
 44,Aqua,Tail
 48,Thrash
-52,Double Edge
+52,Double-Edge
 56,Head,Smash
 Egg,Moves:
 Bubble,Beam
@@ -32443,7 +32443,7 @@ Level,Up,Moves:
 39,Thrash
 Egg,Moves:
 Counter
-Double Edge
+Double-Edge
 Aqua,Tail
 Spite
 TMs:
@@ -32725,11 +32725,11 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM68,Fire,Fang
 TM76,Round
@@ -32789,9 +32789,9 @@ Hammer,Arm
 Take,Down
 Flame,Wheel
 Yawn
-Freeze Dry
+Freeze-Dry
 Incinerate
-Power Up,Punch
+Power-Up,Punch
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -32807,11 +32807,11 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM64,Avalanche
 TM67,Ice,Fang
@@ -32887,11 +32887,11 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM60,Power,Swap
@@ -32981,11 +32981,11 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM60,Power,Swap
@@ -33076,11 +33076,11 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM64,Avalanche
@@ -33169,11 +33169,11 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM64,Avalanche
@@ -33317,7 +33317,7 @@ Level,Up,Moves:
 24,Rock,Slide
 28,Stealth,Rock
 32,Rock,Blast
-36,X Scissor
+36,X-Scissor
 40,Rock,Polish
 44,Shell,Smash
 48,Rock,Wrecker
@@ -33353,7 +33353,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR75,Stone,Edge
 TR76,Stealth,Rock
 Armor,Tutors:
@@ -33386,7 +33386,7 @@ Level,Up,Moves:
 24,Rock,Slide
 28,Stealth,Rock
 32,Rock,Blast
-38,X Scissor
+38,X-Scissor
 44,Rock,Polish
 50,Shell,Smash
 56,Rock,Wrecker
@@ -33419,7 +33419,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR75,Stone,Edge
 TR76,Stealth,Rock
 TR79,Heavy,Slam
@@ -33464,7 +33464,7 @@ Counter
 Detect
 Fake,Out
 Quick,Guard
-Power Up,Punch
+Power-Up,Punch
 Acid,Spray
 TMs:
 TM00,Mega,Punch
@@ -33724,7 +33724,7 @@ Level,Up,Moves:
 04,Haze
 08,Night,Shade
 12,Disable
-16,Will O Wisp
+16,Will-O-Wisp
 20,Crafty,Shield
 24,Hex
 28,Mean,Look
@@ -33745,7 +33745,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM33,Rain,Dance
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM47,Fake,Tears
@@ -33816,7 +33816,7 @@ TM25,Protect
 TM31,Attract
 TM32,Sandstorm
 TM33,Rain,Dance
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM47,Fake,Tears
@@ -33873,7 +33873,7 @@ Level,Up,Moves:
 01,Haze
 01,Night,Shade
 12,Disable
-16,Will O Wisp
+16,Will-O-Wisp
 20,Crafty,Shield
 24,Hex
 28,Mean,Look
@@ -33895,7 +33895,7 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM33,Rain,Dance
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM42,Revenge
 TM44,Imprison
@@ -34117,7 +34117,7 @@ Level,Up,Moves:
 12,Ancient,Power
 15,Pluck
 18,Quick,Guard
-21,U turn
+21,U-turn
 24,Rock,Slide
 27,Scary,Face
 30,Crunch
@@ -34148,7 +34148,7 @@ TM40,Swift
 TM48,Rock,Tomb
 TM52,Bounce
 TM54,Rock,Blast
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -34201,7 +34201,7 @@ Level,Up,Moves:
 12,Ancient,Power
 15,Pluck
 18,Quick,Guard
-21,U turn
+21,U-turn
 24,Rock,Slide
 27,Scary,Face
 30,Crunch
@@ -34228,7 +34228,7 @@ TM40,Swift
 TM48,Rock,Tomb
 TM52,Bounce
 TM54,Rock,Blast
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -34301,7 +34301,7 @@ Sand,Attack
 Autotomize
 Rollout
 TMs:
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -34373,7 +34373,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
 TM16,Screech
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
@@ -34463,7 +34463,7 @@ TM42,Revenge
 TM44,Imprison
 TM47,Fake,Tears
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -34510,7 +34510,7 @@ Height:,01.60m,,Weight:,081.1kg,,Color:,Gray
 Level,Up,Moves:
 00,Night,Slash
 01,Night,Slash
-01,U turn
+01,U-turn
 01,Scratch
 01,Leer
 01,Torment
@@ -34545,7 +34545,7 @@ TM42,Revenge
 TM44,Imprison
 TM47,Fake,Tears
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -34597,7 +34597,7 @@ Hatch,Cycles:,15
 Height:,00.40m,,Weight:,005.8kg,,Color:,Gray
 Level,Up,Moves:
 01,Pound
-01,Baby Doll,Eyes
+01,Baby-Doll,Eyes
 04,Helping,Hand
 08,Echoed,Voice
 12,Sing
@@ -34631,7 +34631,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM76,Round
 TM79,Retaliate
@@ -34683,7 +34683,7 @@ Level,Up,Moves:
 01,Hyper,Voice
 01,Last,Resort
 01,Pound
-01,Baby Doll,Eyes
+01,Baby-Doll,Eyes
 01,Helping,Hand
 01,Echoed,Voice
 TMs:
@@ -34707,7 +34707,7 @@ TM41,Helping,Hand
 TM47,Fake,Tears
 TM50,Bullet,Seed
 TM54,Rock,Blast
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM76,Round
 TM79,Retaliate
@@ -35258,7 +35258,7 @@ Aurora,Veil
 Icicle,Crash
 TMs:
 TM17,Light,Screen
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -35319,7 +35319,7 @@ Level,Up,Moves:
 56,Sheer,Cold
 TMs:
 TM17,Light,Screen
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -35366,7 +35366,7 @@ Height:,01.30m,,Weight:,057.5kg,,Color:,White
 Level,Up,Moves:
 01,Weather,Ball
 01,Icicle,Crash
-01,Freeze Dry
+01,Freeze-Dry
 01,Astonish
 01,Harden
 01,Taunt
@@ -35385,7 +35385,7 @@ TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM17,Light,Screen
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -35462,7 +35462,7 @@ TM33,Rain,Dance
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM62,Speed,Swap
 TM76,Round
@@ -35512,11 +35512,11 @@ Level,Up,Moves:
 20,Headbutt
 24,Flail
 28,Scary,Face
-32,X Scissor
+32,X-Scissor
 36,Swords,Dance
 40,Take,Down
 44,Bug,Buzz
-48,Double Edge
+48,Double-Edge
 Egg,Moves:
 Counter
 Bug,Bite
@@ -35544,7 +35544,7 @@ TR28,Megahorn
 TR30,Encore
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR87,Drill,Run
@@ -35571,7 +35571,7 @@ Level,Up,Moves:
 01,Flail
 01,Scary,Face
 01,Take,Down
-01,Double Edge
+01,Double-Edge
 01,Peck
 01,Leer
 01,Fury,Cutter
@@ -35581,7 +35581,7 @@ Level,Up,Moves:
 20,Headbutt
 24,Reversal
 28,Iron,Defense
-32,X Scissor
+32,X-Scissor
 36,Swords,Dance
 40,Iron,Head
 44,Bug,Buzz
@@ -35618,7 +35618,7 @@ TR37,Taunt
 TR46,Iron,Defense
 TR53,Close,Combat
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR64,Focus,Blast
 TR65,Energy,Ball
@@ -35798,7 +35798,7 @@ TM31,Attract
 TM33,Rain,Dance
 TM35,Hail
 TM36,Whirlpool
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM45,Dive
@@ -35871,7 +35871,7 @@ TM31,Attract
 TM33,Rain,Dance
 TM35,Hail
 TM36,Whirlpool
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM45,Dive
@@ -35964,7 +35964,7 @@ TR20,Substitute
 TR26,Endure
 TR27,Sleep,Talk
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR80,Electro,Ball
@@ -36035,7 +36035,7 @@ TR20,Substitute
 TR26,Endure
 TR27,Sleep,Talk
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR80,Electro,Ball
@@ -36068,7 +36068,7 @@ Level,Up,Moves:
 15,Ingrain
 20,Flash,Cannon
 25,Iron,Head
-30,Self Destruct
+30,Self-Destruct
 35,Iron,Defense
 41,Curse
 45,Gyro,Ball
@@ -36083,7 +36083,7 @@ TMs:
 TM07,Pin,Missile
 TM11,Solar,Beam
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -36139,7 +36139,7 @@ Level,Up,Moves:
 15,Ingrain
 20,Flash,Cannon
 25,Iron,Head
-30,Self Destruct
+30,Self-Destruct
 35,Iron,Defense
 43,Curse
 49,Gyro,Ball
@@ -36150,7 +36150,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -36214,7 +36214,7 @@ Level,Up,Moves:
 24,Discharge
 28,Screech
 32,Gear,Grind
-36,Lock On
+36,Lock-On
 40,Shift,Gear
 44,Zap,Cannon
 48,Hyper,Beam
@@ -36269,7 +36269,7 @@ Level,Up,Moves:
 24,Discharge
 28,Screech
 32,Gear,Grind
-36,Lock On
+36,Lock-On
 42,Shift,Gear
 48,Zap,Cannon
 54,Hyper,Beam
@@ -36327,7 +36327,7 @@ Level,Up,Moves:
 24,Discharge
 28,Screech
 32,Gear,Grind
-36,Lock On
+36,Lock-On
 42,Shift,Gear
 48,Zap,Cannon
 56,Hyper,Beam
@@ -36542,7 +36542,7 @@ Level,Up,Moves:
 08,Minimize
 12,Confuse,Ray
 16,Hex
-20,Will O Wisp
+20,Will-O-Wisp
 24,Fire,Spin
 28,Night,Shade
 32,Curse
@@ -36567,7 +36567,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM57,Payback
@@ -36617,7 +36617,7 @@ Level,Up,Moves:
 01,Minimize
 12,Confuse,Ray
 16,Hex
-20,Will O Wisp
+20,Will-O-Wisp
 24,Fire,Spin
 28,Night,Shade
 32,Curse
@@ -36637,7 +36637,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM57,Payback
@@ -36683,7 +36683,7 @@ Height:,01.00m,,Weight:,034.3kg,,Color:,Black
 Level,Up,Moves:
 01,Confuse,Ray
 01,Hex
-01,Will O Wisp
+01,Will-O-Wisp
 01,Fire,Spin
 01,Night,Shade
 01,Curse
@@ -36709,7 +36709,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM57,Payback
@@ -36811,7 +36811,7 @@ TR39,Superpower
 TR47,Dragon,Claw
 TR51,Dragon,Dance
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 Armor,Tutors:
 Scale,Shot
@@ -36886,7 +36886,7 @@ TR39,Superpower
 TR47,Dragon,Claw
 TR51,Dragon,Dance
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 Armor,Tutors:
 Scale,Shot
@@ -36971,7 +36971,7 @@ TR47,Dragon,Claw
 TR51,Dragon,Dance
 TR53,Close,Combat
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR64,Focus,Blast
 TR77,Grass,Knot
@@ -37167,7 +37167,7 @@ Level,Up,Moves:
 28,Aurora,Beam
 32,Slash
 32,Night,Slash
-36,Freeze Dry
+36,Freeze-Dry
 40,Light,Screen
 40,Reflect
 44,Recover
@@ -37180,7 +37180,7 @@ TM08,Hyper,Beam
 TM11,Solar,Beam
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -37233,7 +37233,7 @@ Level,Up,Moves:
 44,Bug,Buzz
 48,Final,Gambit
 Egg,Moves:
-Double Edge
+Double-Edge
 Guard,Split
 Mind,Reader
 Feint
@@ -37297,7 +37297,7 @@ Level,Up,Moves:
 24,Agility
 28,Giga,Drain
 32,Power,Swap
-36,U turn
+36,U-turn
 40,Recover
 44,Bug,Buzz
 48,Final,Gambit
@@ -37315,7 +37315,7 @@ TM33,Rain,Dance
 TM39,Facade
 TM40,Swift
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM60,Power,Swap
 TM61,Guard,Swap
 TM63,Drain,Punch
@@ -37357,7 +37357,7 @@ Egg,Group:,Water1,/,Amorphous
 Hatch,Cycles:,20
 Height:,00.70m,,Weight:,011.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Tackle
 01,Water,Gun
 01,Thunder,Shock
@@ -37436,7 +37436,7 @@ Egg,Group:,Water1,/,Amorphous
 Hatch,Cycles:,20
 Height:,00.70m,,Weight:,020.5kg,,Color:,Green
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Tackle
 01,Water,Gun
 01,Metal,Claw
@@ -37524,7 +37524,7 @@ Level,Up,Moves:
 15,Fury,Swipes
 20,Quick,Guard
 25,Force,Palm
-30,U turn
+30,U-turn
 35,Drain,Punch
 40,Hone,Claws
 45,Aura,Sphere
@@ -37555,7 +37555,7 @@ TM42,Revenge
 TM43,Brick,Break
 TM48,Rock,Tomb
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM63,Drain,Punch
@@ -37610,7 +37610,7 @@ Level,Up,Moves:
 15,Fury,Swipes
 20,Wide,Guard
 25,Force,Palm
-30,U turn
+30,U-turn
 35,Drain,Punch
 40,Hone,Claws
 45,Aura,Sphere
@@ -37638,7 +37638,7 @@ TM42,Revenge
 TM43,Brick,Break
 TM48,Rock,Tomb
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -37779,7 +37779,7 @@ Egg,Group:,Mineral
 Hatch,Cycles:,25
 Height:,01.00m,,Weight:,092.0kg,,Color:,Green
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Astonish
 04,Defense,Curl
 08,Pound
@@ -37803,7 +37803,7 @@ TM04,Ice,Punch
 TM05,Thunder,Punch
 TM15,Dig
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -37864,7 +37864,7 @@ Height:,02.80m,,Weight:,330.0kg,,Color:,Green
 Level,Up,Moves:
 01,High,Horsepower
 01,Focus,Punch
-01,Mud Slap
+01,Mud-Slap
 01,Astonish
 01,Defense,Curl
 01,Pound
@@ -37892,7 +37892,7 @@ TM09,Giga,Impact
 TM11,Solar,Beam
 TM15,Dig
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM23,Thief
@@ -38016,7 +38016,7 @@ TR37,Taunt
 TR46,Iron,Defense
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR74,Iron,Head
 TR76,Stealth,Rock
 TR77,Grass,Knot
@@ -38095,7 +38095,7 @@ TR37,Taunt
 TR46,Iron,Defense
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR74,Iron,Head
 TR75,Stone,Edge
@@ -38136,7 +38136,7 @@ Level,Up,Moves:
 Egg,Moves:
 Belch
 Headbutt
-Mud Slap
+Mud-Slap
 Skull,Bash
 Stomp
 Cotton,Guard
@@ -38232,7 +38232,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -38302,7 +38302,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -38372,7 +38372,7 @@ TM39,Facade
 TM40,Swift
 TM47,Fake,Tears
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM76,Round
@@ -38445,7 +38445,7 @@ TM39,Facade
 TM40,Swift
 TM47,Fake,Tears
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM76,Round
@@ -38519,7 +38519,7 @@ TM28,Giga,Drain
 TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM48,Rock,Tomb
 TM59,Fling
@@ -38571,7 +38571,7 @@ Level,Up,Moves:
 20,Bite
 24,Agility
 28,Dig
-32,X Scissor
+32,X-Scissor
 36,Crunch
 40,Metal,Sound
 44,Iron,Head
@@ -38613,7 +38613,7 @@ TR29,Baton,Pass
 TR32,Crunch
 TR39,Superpower
 TR46,Iron,Defense
-TR60,X Scissor
+TR60,X-Scissor
 TR65,Energy,Ball
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -38825,7 +38825,7 @@ TM37,Beat,Up
 TM39,Facade
 TM41,Helping,Hand
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM66,Thunder,Fang
@@ -38897,7 +38897,7 @@ Level,Up,Moves:
 42,Bug,Buzz
 48,Take,Down
 54,Amnesia
-60,Double Edge
+60,Double-Edge
 66,Flare,Blitz
 Egg,Moves:
 Harden
@@ -38914,9 +38914,9 @@ TM25,Protect
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TRs:
@@ -38962,7 +38962,7 @@ Level,Up,Moves:
 01,Ember
 01,Flame,Charge
 01,Take,Down
-01,Double Edge
+01,Double-Edge
 01,Flare,Blitz
 01,Fire,Spin
 01,String,Shot
@@ -38993,9 +38993,9 @@ TM25,Protect
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TM92,Mystical,Fire
@@ -39085,7 +39085,7 @@ TR46,Iron,Defense
 TR49,Calm,Mind
 TR53,Close,Combat
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
@@ -39162,7 +39162,7 @@ TR39,Superpower
 TR49,Calm,Mind
 TR53,Close,Combat
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR67,Earth,Power
 TR69,Zen,Headbutt
@@ -39239,7 +39239,7 @@ TR49,Calm,Mind
 TR50,Leaf,Blade
 TR53,Close,Combat
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR65,Energy,Ball
 TR69,Zen,Headbutt
@@ -39297,7 +39297,7 @@ TM39,Facade
 TM42,Revenge
 TM43,Brick,Break
 TM46,Weather,Ball
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -39376,7 +39376,7 @@ TM39,Facade
 TM42,Revenge
 TM43,Brick,Break
 TM46,Weather,Ball
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -39456,7 +39456,7 @@ TM39,Facade
 TM42,Revenge
 TM43,Brick,Break
 TM46,Weather,Ball
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -39542,7 +39542,7 @@ TM39,Facade
 TM42,Revenge
 TM43,Brick,Break
 TM46,Weather,Ball
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -39625,7 +39625,7 @@ TM25,Protect
 TM30,Steel,Wing
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -39789,7 +39789,7 @@ TM06,Fly
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM15,Dig
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -39804,7 +39804,7 @@ TM46,Weather,Ball
 TM48,Rock,Tomb
 TM49,Sand,Tomb
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM76,Round
@@ -39869,7 +39869,7 @@ TM06,Fly
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM15,Dig
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -39884,7 +39884,7 @@ TM46,Weather,Ball
 TM48,Rock,Tomb
 TM49,Sand,Tomb
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM76,Round
@@ -39930,7 +39930,7 @@ Level,Up,Moves:
 01,Dragon,Breath
 01,Noble,Roar
 01,Ancient,Power
-01,Freeze Dry
+01,Freeze-Dry
 08,Slash
 16,Endeavor
 24,Dragon,Pulse
@@ -40013,7 +40013,7 @@ Level,Up,Moves:
 01,Dragon,Breath
 01,Noble,Roar
 01,Ancient,Power
-01,Freeze Dry
+01,Freeze-Dry
 08,Slash
 16,Endeavor
 24,Dragon,Pulse
@@ -40096,7 +40096,7 @@ Level,Up,Moves:
 01,Dragon,Breath
 01,Noble,Roar
 01,Ancient,Power
-01,Freeze Dry
+01,Freeze-Dry
 08,Slash
 16,Endeavor
 24,Dragon,Pulse
@@ -40231,7 +40231,7 @@ TR49,Calm,Mind
 TR53,Close,Combat
 TR56,Aura,Sphere
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR75,Stone,Edge
 TR84,Scald
@@ -40310,7 +40310,7 @@ TR49,Calm,Mind
 TR53,Close,Combat
 TR56,Aura,Sphere
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR75,Stone,Edge
 TR84,Scald
@@ -40341,14 +40341,14 @@ Level,Up,Moves:
 21,Fell,Stinger
 28,Flame,Charge
 35,Metal,Sound
-42,X Scissor
+42,X-Scissor
 49,Magnet,Rise
 56,Bug,Buzz
 63,Simple,Beam
 70,Zap,Cannon
-77,Lock On
+77,Lock-On
 84,Techno,Blast
-91,Self Destruct
+91,Self-Destruct
 TMs:
 TM06,Fly
 TM08,Hyper,Beam
@@ -40358,14 +40358,14 @@ TM14,Thunder,Wave
 TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -40385,7 +40385,7 @@ TR27,Sleep,Talk
 TR41,Blaze,Kick
 TR46,Iron,Defense
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR69,Zen,Headbutt
@@ -40417,14 +40417,14 @@ Level,Up,Moves:
 21,Fell,Stinger
 28,Flame,Charge
 35,Metal,Sound
-42,X Scissor
+42,X-Scissor
 49,Magnet,Rise
 56,Bug,Buzz
 63,Simple,Beam
 70,Zap,Cannon
-77,Lock On
+77,Lock-On
 84,Techno,Blast
-91,Self Destruct
+91,Self-Destruct
 TMs:
 TM06,Fly
 TM08,Hyper,Beam
@@ -40434,14 +40434,14 @@ TM14,Thunder,Wave
 TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -40461,7 +40461,7 @@ TR27,Sleep,Talk
 TR41,Blaze,Kick
 TR46,Iron,Defense
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR69,Zen,Headbutt
@@ -40493,14 +40493,14 @@ Level,Up,Moves:
 21,Fell,Stinger
 28,Flame,Charge
 35,Metal,Sound
-42,X Scissor
+42,X-Scissor
 49,Magnet,Rise
 56,Bug,Buzz
 63,Simple,Beam
 70,Zap,Cannon
-77,Lock On
+77,Lock-On
 84,Techno,Blast
-91,Self Destruct
+91,Self-Destruct
 TMs:
 TM06,Fly
 TM08,Hyper,Beam
@@ -40510,14 +40510,14 @@ TM14,Thunder,Wave
 TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -40537,7 +40537,7 @@ TR27,Sleep,Talk
 TR41,Blaze,Kick
 TR46,Iron,Defense
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR69,Zen,Headbutt
@@ -40569,14 +40569,14 @@ Level,Up,Moves:
 21,Fell,Stinger
 28,Flame,Charge
 35,Metal,Sound
-42,X Scissor
+42,X-Scissor
 49,Magnet,Rise
 56,Bug,Buzz
 63,Simple,Beam
 70,Zap,Cannon
-77,Lock On
+77,Lock-On
 84,Techno,Blast
-91,Self Destruct
+91,Self-Destruct
 TMs:
 TM06,Fly
 TM08,Hyper,Beam
@@ -40586,14 +40586,14 @@ TM14,Thunder,Wave
 TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -40613,7 +40613,7 @@ TR27,Sleep,Talk
 TR41,Blaze,Kick
 TR46,Iron,Defense
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR69,Zen,Headbutt
@@ -40645,14 +40645,14 @@ Level,Up,Moves:
 21,Fell,Stinger
 28,Flame,Charge
 35,Metal,Sound
-42,X Scissor
+42,X-Scissor
 49,Magnet,Rise
 56,Bug,Buzz
 63,Simple,Beam
 70,Zap,Cannon
-77,Lock On
+77,Lock-On
 84,Techno,Blast
-91,Self Destruct
+91,Self-Destruct
 TMs:
 TM06,Fly
 TM08,Hyper,Beam
@@ -40662,14 +40662,14 @@ TM14,Thunder,Wave
 TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM76,Round
@@ -40689,7 +40689,7 @@ TR27,Sleep,Talk
 TR41,Blaze,Kick
 TR46,Iron,Defense
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR69,Zen,Headbutt
@@ -40714,7 +40714,7 @@ Egg,Group:,Field
 Hatch,Cycles:,15
 Height:,00.40m,,Weight:,005.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Leer
 03,Tackle
 06,Laser,Focus
@@ -40746,7 +40746,7 @@ TM43,Brick,Break
 TM48,Rock,Tomb
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM76,Round
@@ -40786,7 +40786,7 @@ Egg,Group:,Field
 Hatch,Cycles:,15
 Height:,01.00m,,Weight:,042.4kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Leer
 01,Tackle
 01,Laser,Focus
@@ -40824,7 +40824,7 @@ TM48,Rock,Tomb
 TM49,Sand,Tomb
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM76,Round
@@ -40898,10 +40898,10 @@ TM25,Protect
 TM30,Steel,Wing
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TRs:
@@ -40957,10 +40957,10 @@ TM25,Protect
 TM30,Steel,Wing
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TRs:
@@ -41022,10 +41022,10 @@ TM25,Protect
 TM30,Steel,Wing
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TRs:
@@ -41228,7 +41228,7 @@ TR48,Bulk,Up
 TR53,Close,Combat
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR69,Zen,Headbutt
 TR73,Gunk,Shot
@@ -42048,7 +42048,7 @@ Level,Up,Moves:
 27,Psycho,Cut
 31,Switcheroo
 33,Foul,Play
-36,Topsy Turvy
+36,Topsy-Turvy
 39,Superpower
 Egg,Moves:
 Destiny,Bond
@@ -42125,7 +42125,7 @@ Level,Up,Moves:
 27,Psycho,Cut
 33,Switcheroo
 37,Foul,Play
-42,Topsy Turvy
+42,Topsy-Turvy
 47,Superpower
 TMs:
 TM08,Hyper,Beam
@@ -42190,7 +42190,7 @@ Egg,Group:,Water3
 Hatch,Cycles:,20
 Height:,00.50m,,Weight:,031.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Scratch
 04,Withdraw
 08,Water,Gun
@@ -42249,7 +42249,7 @@ TR35,Uproar
 TR37,Taunt
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR75,Stone,Edge
 TR76,Stealth,Rock
 TR77,Grass,Knot
@@ -42275,7 +42275,7 @@ Hatch,Cycles:,20
 Height:,01.30m,,Weight:,096.0kg,,Color:,Brown
 Level,Up,Moves:
 01,Skull,Bash
-01,Mud Slap
+01,Mud-Slap
 01,Scratch
 01,Withdraw
 01,Water,Gun
@@ -42341,7 +42341,7 @@ TR46,Iron,Defense
 TR47,Dragon,Claw
 TR48,Bulk,Up
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR67,Earth,Power
 TR75,Stone,Edge
@@ -42533,7 +42533,7 @@ TM39,Facade
 TM41,Helping,Hand
 TM45,Dive
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM74,Venoshock
 TM76,Round
 TRs:
@@ -42601,7 +42601,7 @@ TM39,Facade
 TM41,Helping,Hand
 TM45,Dive
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM74,Venoshock
 TM76,Round
 TRs:
@@ -42642,7 +42642,7 @@ Egg,Group:,Monster,/,Dragon
 Hatch,Cycles:,20
 Height:,00.50m,,Weight:,006.0kg,,Color:,Yellow
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Tail,Whip
 04,Pound
 08,Thunder,Shock
@@ -42673,7 +42673,7 @@ TM33,Rain,Dance
 TM39,Facade
 TM40,Swift
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM75,Low,Sweep
 TM76,Round
 TM80,Volt,Switch
@@ -42724,7 +42724,7 @@ Level,Up,Moves:
 01,Thunderbolt
 01,Electrify
 01,Thunder
-01,Mud Slap
+01,Mud-Slap
 01,Tail,Whip
 01,Pound
 01,Thunder,Shock
@@ -42751,7 +42751,7 @@ TM39,Facade
 TM40,Swift
 TM46,Weather,Ball
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM75,Low,Sweep
 TM76,Round
 TM80,Volt,Switch
@@ -42978,7 +42978,7 @@ Level,Up,Moves:
 24,Aurora,Beam
 28,Thunder,Wave
 32,Nature,Power
-36,Freeze Dry
+36,Freeze-Dry
 40,Ice,Beam
 44,Light,Screen
 48,Hail
@@ -43063,7 +43063,7 @@ Level,Up,Moves:
 24,Aurora,Beam
 28,Thunder,Wave
 32,Nature,Power
-36,Freeze Dry
+36,Freeze-Dry
 42,Ice,Beam
 48,Light,Screen
 54,Hail
@@ -43143,14 +43143,14 @@ Level,Up,Moves:
 01,Baton,Pass
 01,Take,Down
 01,Charm
-01,Double Edge
+01,Double-Edge
 01,Helping,Hand
 01,Tackle
 01,Growl
 01,Tail,Whip
 05,Sand,Attack
 10,Quick,Attack
-15,Baby Doll,Eyes
+15,Baby-Doll,Eyes
 20,Swift
 25,Light,Screen
 30,Draining,Kiss
@@ -43267,7 +43267,7 @@ TM42,Revenge
 TM43,Brick,Break
 TM48,Rock,Tomb
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -43292,7 +43292,7 @@ TR39,Superpower
 TR48,Bulk,Up
 TR53,Close,Combat
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR66,Brave,Bird
 TR69,Zen,Headbutt
@@ -43355,7 +43355,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM41,Helping,Hand
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM76,Round
 TM79,Retaliate
@@ -43737,7 +43737,7 @@ Level,Up,Moves:
 04,Branch,Poke
 08,Leech,Seed
 12,Confuse,Ray
-16,Will O Wisp
+16,Will-O-Wisp
 20,Hex
 24,Growth
 28,Horn,Leech
@@ -43765,7 +43765,7 @@ TM25,Protect
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM65,Shadow,Claw
@@ -43817,7 +43817,7 @@ Level,Up,Moves:
 01,Branch,Poke
 01,Leech,Seed
 12,Confuse,Ray
-16,Will O Wisp
+16,Will-O-Wisp
 20,Hex
 24,Growth
 28,Horn,Leech
@@ -43843,7 +43843,7 @@ TM25,Protect
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM63,Drain,Punch
@@ -43867,7 +43867,7 @@ TR49,Calm,Mind
 TR57,Poison,Jab
 TR58,Dark,Pulse
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR64,Focus,Blast
 TR65,Energy,Ball
 TR71,Leaf,Storm
@@ -43894,19 +43894,19 @@ Egg,Group:,Amorphous
 Hatch,Cycles:,20
 Height:,00.40m,,Weight:,005.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 04,Shadow,Sneak
 08,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -43927,7 +43927,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -43973,19 +43973,19 @@ Egg,Group:,Amorphous
 Hatch,Cycles:,20
 Height:,00.30m,,Weight:,003.5kg,,Color:,Brown
 Level,Up,Moves:
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 04,Shadow,Sneak
 08,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -44006,7 +44006,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -44052,19 +44052,19 @@ Egg,Group:,Amorphous
 Hatch,Cycles:,20
 Height:,00.50m,,Weight:,007.5kg,,Color:,Brown
 Level,Up,Moves:
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 04,Shadow,Sneak
 08,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -44085,7 +44085,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -44133,19 +44133,19 @@ Egg,Group:,Amorphous
 Hatch,Cycles:,20
 Height:,00.80m,,Weight:,015.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 04,Shadow,Sneak
 08,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -44166,7 +44166,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -44214,19 +44214,19 @@ Height:,00.90m,,Weight:,012.5kg,,Color:,Brown
 Level,Up,Moves:
 01,Explosion
 01,Moonblast
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 01,Shadow,Sneak
 01,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -44246,7 +44246,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -44298,19 +44298,19 @@ Height:,00.70m,,Weight:,009.5kg,,Color:,Brown
 Level,Up,Moves:
 01,Explosion
 01,Moonblast
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 01,Shadow,Sneak
 01,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -44330,7 +44330,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -44382,19 +44382,19 @@ Height:,01.10m,,Weight:,014.0kg,,Color:,Brown
 Level,Up,Moves:
 01,Explosion
 01,Moonblast
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 01,Shadow,Sneak
 01,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -44414,7 +44414,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -44468,19 +44468,19 @@ Height:,01.70m,,Weight:,039.0kg,,Color:,Brown
 Level,Up,Moves:
 01,Explosion
 01,Moonblast
-01,Trick or Treat
+01,Trick-or-Treat
 01,Astonish
 01,Shadow,Sneak
 01,Confuse,Ray
-12,Trick or Treat
+12,Trick-or-Treat
 12,Razor,Leaf
 16,Leech,Seed
 20,Bullet,Seed
-24,Trick or Treat
+24,Trick-or-Treat
 24,Scary,Face
 28,Worry,Seed
 32,Seed,Bomb
-36,Trick or Treat
+36,Trick-or-Treat
 36,Shadow,Ball
 40,Trick
 44,Pain,Split
@@ -44500,7 +44500,7 @@ TM26,Scary,Face
 TM28,Giga,Drain
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM50,Bullet,Seed
@@ -44565,7 +44565,7 @@ Level,Up,Moves:
 33,Crunch
 36,Take,Down
 39,Blizzard
-42,Double Edge
+42,Double-Edge
 Egg,Moves:
 Mist
 Mirror,Coat
@@ -44634,7 +44634,7 @@ Level,Up,Moves:
 33,Crunch
 36,Take,Down
 41,Blizzard
-46,Double Edge
+46,Double-Edge
 51,Skull,Bash
 TMs:
 TM08,Hyper,Beam
@@ -44725,7 +44725,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM43,Brick,Break
-TM56,U turn
+TM56,U-turn
 TM65,Shadow,Claw
 TM76,Round
 TM78,Acrobatics
@@ -44745,7 +44745,7 @@ TR36,Heat,Wave
 TR37,Taunt
 TR42,Hyper,Voice
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR86,Wild,Charge
 TR89,Hurricane
@@ -44802,7 +44802,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM43,Brick,Break
-TM56,U turn
+TM56,U-turn
 TM65,Shadow,Claw
 TM76,Round
 TM78,Acrobatics
@@ -44825,7 +44825,7 @@ TR42,Hyper,Voice
 TR47,Dragon,Claw
 TR51,Dragon,Dance
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR64,Focus,Blast
 TR86,Wild,Charge
@@ -45034,7 +45034,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM76,Round
@@ -45571,7 +45571,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
 TM13,Fire,Spin
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -45580,7 +45580,7 @@ TM26,Scary,Face
 TM32,Sandstorm
 TM33,Rain,Dance
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM43,Brick,Break
 TM46,Weather,Ball
@@ -45767,7 +45767,7 @@ Level,Up,Moves:
 01,Spirit,Shackle
 01,Phantom,Force
 01,Leaf,Storm
-01,U turn
+01,U-turn
 01,Spite
 01,Tackle
 01,Growl
@@ -45800,7 +45800,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM65,Shadow,Claw
 TM69,Psycho,Cut
 TM75,Low,Sweep
@@ -45873,10 +45873,10 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM42,Revenge
-TM56,U turn
+TM56,U-turn
 TM65,Shadow,Claw
 TM68,Fire,Fang
 TM76,Round
@@ -45940,10 +45940,10 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM42,Revenge
-TM56,U turn
+TM56,U-turn
 TM65,Shadow,Claw
 TM68,Fire,Fang
 TM76,Round
@@ -46018,11 +46018,11 @@ TM25,Protect
 TM26,Scary,Face
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM42,Revenge
 TM43,Brick,Break
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM63,Drain,Punch
@@ -46089,7 +46089,7 @@ Level,Up,Moves:
 03,Water,Gun
 06,Disarming,Voice
 09,Aqua,Jet
-12,Baby Doll,Eyes
+12,Baby-Doll,Eyes
 15,Icy,Wind
 18,Sing
 21,Bubble,Beam
@@ -46162,7 +46162,7 @@ Level,Up,Moves:
 01,Water,Gun
 01,Disarming,Voice
 09,Aqua,Jet
-12,Baby Doll,Eyes
+12,Baby-Doll,Eyes
 15,Icy,Wind
 20,Sing
 25,Bubble,Beam
@@ -46233,7 +46233,7 @@ Level,Up,Moves:
 01,Water,Gun
 01,Disarming,Voice
 09,Aqua,Jet
-12,Baby Doll,Eyes
+12,Baby-Doll,Eyes
 15,Icy,Wind
 20,Sing
 25,Bubble,Beam
@@ -46310,13 +46310,13 @@ Hatch,Cycles:,15
 Height:,00.40m,,Weight:,004.4kg,,Color:,Gray
 Level,Up,Moves:
 01,Vice,Grip
-01,Mud Slap
+01,Mud-Slap
 05,String,Shot
 10,Bug,Bite
 15,Bite
 21,Spark
 25,Sticky,Web
-30,X Scissor
+30,X-Scissor
 35,Crunch
 40,Dig
 Egg,Moves:
@@ -46345,7 +46345,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR32,Crunch
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR86,Wild,Charge
 Armor,Tutors:
 Rising,Voltage
@@ -46371,13 +46371,13 @@ Level,Up,Moves:
 00,Charge
 01,Charge
 01,Vice,Grip
-01,Mud Slap
+01,Mud-Slap
 01,String,Shot
 01,Bug,Bite
 15,Bite
 23,Spark
 29,Sticky,Web
-36,X Scissor
+36,X-Scissor
 43,Crunch
 50,Dig
 57,Iron,Defense
@@ -46407,7 +46407,7 @@ TR27,Sleep,Talk
 TR32,Crunch
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR80,Electro,Ball
 TR86,Wild,Charge
 Armor,Tutors:
@@ -46432,13 +46432,13 @@ Level,Up,Moves:
 00,Thunderbolt
 01,Thunderbolt
 01,Charge
-01,X Scissor
+01,X-Scissor
 01,Crunch
 01,Dig
 01,Iron,Defense
 01,Discharge
 01,Vice,Grip
-01,Mud Slap
+01,Mud-Slap
 01,String,Shot
 01,Bug,Bite
 15,Bite
@@ -46481,7 +46481,7 @@ TR27,Sleep,Talk
 TR32,Crunch
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR65,Energy,Ball
 TR70,Flash,Cannon
@@ -46539,7 +46539,7 @@ TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM62,Speed,Swap
 TM71,Wonder,Room
 TM72,Magic,Room
@@ -46615,7 +46615,7 @@ TM40,Swift
 TM41,Helping,Hand
 TM44,Imprison
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM62,Speed,Swap
 TM71,Wonder,Room
 TM72,Magic,Room
@@ -47048,7 +47048,7 @@ Level,Up,Moves:
 36,Aqua,Ring
 40,Endeavor
 44,Hydro,Pump
-48,Double Edge
+48,Double-Edge
 Egg,Moves:
 Mist
 Water,Pulse
@@ -47067,7 +47067,7 @@ TM41,Helping,Hand
 TM45,Dive
 TM53,Mud,Shot
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM81,Bulldoze
 TRs:
@@ -47115,7 +47115,7 @@ Level,Up,Moves:
 36,Aqua,Ring
 40,Endeavor
 44,Hydro,Pump
-48,Double Edge
+48,Double-Edge
 Egg,Moves:
 Mist
 Water,Pulse
@@ -47134,7 +47134,7 @@ TM41,Helping,Hand
 TM45,Dive
 TM53,Mud,Shot
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM81,Bulldoze
 TRs:
@@ -47313,7 +47313,7 @@ Egg,Group:,Field
 Hatch,Cycles:,20
 Height:,01.00m,,Weight:,110.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Rock,Smash
 04,Iron,Defense
 08,Double,Kick
@@ -47327,7 +47327,7 @@ Level,Up,Moves:
 40,Mega,Kick
 44,Superpower
 Egg,Moves:
-Double Edge
+Double-Edge
 Fissure
 Smack,Down
 Roar
@@ -47382,7 +47382,7 @@ Egg,Group:,Field
 Hatch,Cycles:,20
 Height:,02.50m,,Weight:,920.0kg,,Color:,Brown
 Level,Up,Moves:
-01,Mud Slap
+01,Mud-Slap
 01,Rock,Smash
 01,Iron,Defense
 01,Double,Kick
@@ -47495,7 +47495,7 @@ TR27,Sleep,Talk
 TR32,Crunch
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR84,Scald
 TR98,Liquidation
@@ -47562,7 +47562,7 @@ TR27,Sleep,Talk
 TR32,Crunch
 TR46,Iron,Defense
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR84,Scald
 TR98,Liquidation
@@ -47592,7 +47592,7 @@ Level,Up,Moves:
 15,Razor,Leaf
 20,Sweet,Scent
 25,Slash
-30,X Scissor
+30,X-Scissor
 35,Synthesis
 40,Leaf,Blade
 45,Sunny,Day
@@ -47627,7 +47627,7 @@ TR27,Sleep,Talk
 TR50,Leaf,Blade
 TR57,Poison,Jab
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR65,Energy,Ball
 TR71,Leaf,Storm
 TR77,Grass,Knot
@@ -47663,7 +47663,7 @@ Level,Up,Moves:
 15,Razor,Leaf
 20,Sweet,Scent
 25,Slash
-30,X Scissor
+30,X-Scissor
 37,Synthesis
 44,Leaf,Blade
 51,Sunny,Day
@@ -47703,7 +47703,7 @@ TR39,Superpower
 TR50,Leaf,Blade
 TR57,Poison,Jab
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR65,Energy,Ball
 TR71,Leaf,Storm
 TR77,Grass,Knot
@@ -47873,7 +47873,7 @@ Egg,Moves:
 Belch
 Sand,Attack
 Fake,Out
-Mud Slap
+Mud-Slap
 TMs:
 TM14,Thunder,Wave
 TM21,Rest
@@ -47882,7 +47882,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -47962,7 +47962,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -48019,7 +48019,7 @@ Height:,00.50m,,Weight:,006.8kg,,Color:,Pink
 Level,Up,Moves:
 01,Tackle
 01,Leer
-04,Baby Doll,Eyes
+04,Baby-Doll,Eyes
 08,Payback
 12,Brutal,Swing
 16,Endure
@@ -48029,7 +48029,7 @@ Level,Up,Moves:
 32,Hammer,Arm
 36,Thrash
 40,Pain,Split
-44,Double Edge
+44,Double-Edge
 48,Superpower
 Egg,Moves:
 Force,Palm
@@ -48092,7 +48092,7 @@ Level,Up,Moves:
 01,Bind
 01,Tackle
 01,Leer
-01,Baby Doll,Eyes
+01,Baby-Doll,Eyes
 01,Payback
 12,Brutal,Swing
 16,Endure
@@ -48102,7 +48102,7 @@ Level,Up,Moves:
 36,Hammer,Arm
 42,Thrash
 48,Pain,Split
-54,Double Edge
+54,Double-Edge
 60,Superpower
 TMs:
 TM00,Mega,Punch
@@ -48334,7 +48334,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM41,Helping,Hand
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM59,Fling
 TM75,Low,Sweep
@@ -48414,7 +48414,7 @@ TM34,Sunny,Day
 TM39,Facade
 TM41,Helping,Hand
 TM50,Bullet,Seed
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM70,Trick,Room
 TM76,Round
@@ -48552,7 +48552,7 @@ Level,Up,Moves:
 30,Fling
 35,Bulk,Up
 40,Thrash
-45,Double Edge
+45,Double-Edge
 50,Close,Combat
 55,Reversal
 60,Giga,Impact
@@ -48583,7 +48583,7 @@ TM39,Facade
 TM42,Revenge
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -48749,7 +48749,7 @@ TR48,Bulk,Up
 TR53,Close,Combat
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR64,Focus,Blast
 TR74,Iron,Head
@@ -48979,10 +48979,10 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Iron,Head
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
@@ -49000,7 +49000,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM76,Round
@@ -49013,7 +49013,7 @@ TR26,Endure
 TR27,Sleep,Talk
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR74,Iron,Head
 TR85,Work,Up
 Armor,Tutors:
@@ -49034,8 +49034,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49052,16 +49052,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49076,7 +49076,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49103,7 +49103,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49126,8 +49126,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49144,16 +49144,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49168,7 +49168,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49195,7 +49195,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49218,8 +49218,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49236,16 +49236,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49260,7 +49260,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49287,7 +49287,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49310,8 +49310,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49328,16 +49328,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49352,7 +49352,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49379,7 +49379,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49402,8 +49402,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49420,16 +49420,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49444,7 +49444,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49471,7 +49471,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49494,8 +49494,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49512,16 +49512,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49536,7 +49536,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49563,7 +49563,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49586,8 +49586,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49604,16 +49604,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49628,7 +49628,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49655,7 +49655,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49678,8 +49678,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49696,16 +49696,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49720,7 +49720,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49747,7 +49747,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49770,8 +49770,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49788,16 +49788,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49812,7 +49812,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49839,7 +49839,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49862,8 +49862,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49880,16 +49880,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49904,7 +49904,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -49931,7 +49931,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -49954,8 +49954,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -49972,16 +49972,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -49996,7 +49996,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50023,7 +50023,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50046,8 +50046,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -50064,16 +50064,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -50088,7 +50088,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50115,7 +50115,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50138,8 +50138,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -50156,16 +50156,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -50180,7 +50180,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50207,7 +50207,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50230,8 +50230,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -50248,16 +50248,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -50272,7 +50272,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50299,7 +50299,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50322,8 +50322,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -50340,16 +50340,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -50364,7 +50364,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50391,7 +50391,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50414,8 +50414,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -50432,16 +50432,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -50456,7 +50456,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50483,7 +50483,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50506,8 +50506,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -50524,16 +50524,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -50548,7 +50548,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50575,7 +50575,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50598,8 +50598,8 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.30m,,Weight:,100.5kg,,Color:,Gray
 Level,Up,Moves:
-00,Multi Attack
-01,Multi Attack
+00,Multi-Attack
+01,Multi-Attack
 01,Explosion
 01,Thunder,Fang
 01,Ice,Fang
@@ -50616,16 +50616,16 @@ Level,Up,Moves:
 25,Crush,Claw
 30,Air,Slash
 35,Tri,Attack
-40,X Scissor
+40,X-Scissor
 45,Crunch
 50,Take,Down
-55,Double Edge
+55,Double-Edge
 60,Parting,Shot
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -50640,7 +50640,7 @@ TM35,Hail
 TM39,Facade
 TM40,Swift
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -50667,7 +50667,7 @@ TR36,Heat,Wave
 TR42,Hyper,Voice
 TR46,Iron,Defense
 TR47,Dragon,Claw
-TR60,X Scissor
+TR60,X-Scissor
 TR69,Zen,Headbutt
 TR70,Flash,Cannon
 TR74,Iron,Head
@@ -50724,7 +50724,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM42,Revenge
 TM48,Rock,Tomb
@@ -50820,7 +50820,7 @@ TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -50874,7 +50874,7 @@ Level,Up,Moves:
 01,Copycat
 06,Shadow,Sneak
 12,Double,Team
-18,Baby Doll,Eyes
+18,Baby-Doll,Eyes
 24,Mimic
 30,Hone,Claws
 36,Slash
@@ -50901,7 +50901,7 @@ TM28,Giga,Drain
 TM29,Charm
 TM31,Attract
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM57,Payback
 TM59,Fling
@@ -50927,7 +50927,7 @@ TR37,Taunt
 TR38,Trick
 TR48,Bulk,Up
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR85,Work,Up
 TR90,Play,Rough
 TR92,Dazzling,Gleam
@@ -50955,7 +50955,7 @@ Level,Up,Moves:
 01,Copycat
 06,Shadow,Sneak
 12,Double,Team
-18,Baby Doll,Eyes
+18,Baby-Doll,Eyes
 24,Mimic
 30,Hone,Claws
 36,Slash
@@ -50982,7 +50982,7 @@ TM28,Giga,Drain
 TM29,Charm
 TM31,Attract
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM57,Payback
 TM59,Fling
@@ -51008,7 +51008,7 @@ TR37,Taunt
 TR38,Trick
 TR48,Bulk,Up
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR85,Work,Up
 TR90,Play,Rough
 TR92,Dazzling,Gleam
@@ -51262,7 +51262,7 @@ TR46,Iron,Defense
 TR47,Dragon,Claw
 TR48,Bulk,Up
 TR51,Dragon,Dance
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR64,Focus,Blast
 TR74,Iron,Head
@@ -51342,7 +51342,7 @@ TR47,Dragon,Claw
 TR48,Bulk,Up
 TR51,Dragon,Dance
 TR53,Close,Combat
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR64,Focus,Blast
 TR74,Iron,Head
@@ -51441,7 +51441,7 @@ TR51,Dragon,Dance
 TR53,Close,Combat
 TR56,Aura,Sphere
 TR57,Poison,Jab
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR64,Focus,Blast
 TR70,Flash,Cannon
@@ -51502,7 +51502,7 @@ TM30,Steel,Wing
 TM33,Rain,Dance
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM60,Power,Swap
 TM76,Round
@@ -51970,7 +51970,7 @@ TM25,Protect
 TM26,Scary,Face
 TM27,Icy,Wind
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
@@ -52100,7 +52100,7 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,02.40m,,Weight:,333.6kg,,Color:,Red
 Level,Up,Moves:
-01,Power Up,Punch
+01,Power-Up,Punch
 01,Harden
 05,Taunt
 10,Fell,Stinger
@@ -52204,7 +52204,7 @@ TM39,Facade
 TM40,Swift
 TM43,Brick,Break
 TM52,Bounce
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM62,Speed,Swap
@@ -52329,14 +52329,14 @@ Level,Up,Moves:
 50,Iron,Defense
 55,Leech,Seed
 60,Heavy,Slam
-65,Double Edge
+65,Double-Edge
 70,Skull,Bash
 TMs:
 TM06,Fly
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -52426,7 +52426,7 @@ TR27,Sleep,Talk
 TR46,Iron,Defense
 TR49,Calm,Mind
 TR50,Leaf,Blade
-TR60,X Scissor
+TR60,X-Scissor
 Armor,Tutors:
 None!
 ======
@@ -52591,7 +52591,7 @@ TR49,Calm,Mind
 TR51,Dragon,Dance
 TR52,Gyro,Ball
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR63,Power,Gem
 TR67,Earth,Power
@@ -52682,7 +52682,7 @@ TR49,Calm,Mind
 TR51,Dragon,Dance
 TR52,Gyro,Ball
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR63,Power,Gem
 TR67,Earth,Power
@@ -52773,7 +52773,7 @@ TR49,Calm,Mind
 TR51,Dragon,Dance
 TR52,Gyro,Ball
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR63,Power,Gem
 TR67,Earth,Power
@@ -52826,7 +52826,7 @@ TM11,Solar,Beam
 TM14,Thunder,Wave
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -52909,7 +52909,7 @@ TM11,Solar,Beam
 TM14,Thunder,Wave
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -52999,7 +52999,7 @@ TM22,Rock,Slide
 TM23,Thief
 TM24,Snore
 TM25,Protect
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM42,Revenge
@@ -53147,7 +53147,7 @@ TM29,Charm
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM73,Cross,Poison
@@ -53178,7 +53178,7 @@ TR51,Dragon,Dance
 TR54,Toxic,Spikes
 TR57,Poison,Jab
 TR58,Dark,Pulse
-TR60,X Scissor
+TR60,X-Scissor
 TR62,Dragon,Pulse
 TR68,Nasty,Plot
 TR73,Gunk,Shot
@@ -53219,7 +53219,7 @@ Level,Up,Moves:
 55,Iron,Head
 60,Take,Down
 65,Stealth,Rock
-70,Double Edge
+70,Double-Edge
 TMs:
 TM01,Mega,Kick
 TM09,Giga,Impact
@@ -53291,7 +53291,7 @@ Level,Up,Moves:
 40,Mystical,Fire
 45,Shadow,Ball
 50,Calm,Mind
-55,Will O Wisp
+55,Will-O-Wisp
 60,Trick
 65,Fire,Blast
 70,Mind,Blown
@@ -53301,13 +53301,13 @@ TM08,Hyper,Beam
 TM11,Solar,Beam
 TM13,Fire,Spin
 TM17,Light,Screen
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM23,Thief
 TM24,Snore
 TM25,Protect
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM54,Rock,Blast
 TM57,Payback
@@ -53352,7 +53352,7 @@ Egg,Group:,Undiscovered
 Hatch,Cycles:,120
 Height:,01.50m,,Weight:,044.5kg,,Color:,Yellow
 Level,Up,Moves:
-01,Power Up,Punch
+01,Power-Up,Punch
 01,Fake,Out
 01,Scratch
 01,Quick,Attack
@@ -53508,7 +53508,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM11,Solar,Beam
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -53588,7 +53588,7 @@ TM31,Attract
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM63,Drain,Punch
@@ -53653,7 +53653,7 @@ TM31,Attract
 TM34,Sunny,Day
 TM39,Facade
 TM40,Swift
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM63,Drain,Punch
@@ -53728,7 +53728,7 @@ TM40,Swift
 TM43,Brick,Break
 TM50,Bullet,Seed
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM59,Fling
 TM63,Drain,Punch
@@ -53790,7 +53790,7 @@ Level,Up,Moves:
 24,Headbutt
 28,Counter
 32,Bounce
-36,Double Edge
+36,Double-Edge
 Egg,Moves:
 High,Jump,Kick
 Sand,Attack
@@ -53807,7 +53807,7 @@ TM39,Facade
 TM40,Swift
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM68,Fire,Fang
 TM75,Low,Sweep
@@ -53860,7 +53860,7 @@ Level,Up,Moves:
 30,Headbutt
 36,Counter
 42,Bounce
-48,Double Edge
+48,Double-Edge
 TMs:
 TM01,Mega,Kick
 TM21,Rest
@@ -53872,7 +53872,7 @@ TM39,Facade
 TM40,Swift
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM68,Fire,Fang
 TM75,Low,Sweep
@@ -53930,7 +53930,7 @@ Level,Up,Moves:
 30,Headbutt
 38,Counter
 46,Bounce
-54,Double Edge
+54,Double-Edge
 62,Court,Change
 TMs:
 TM01,Mega,Kick
@@ -53949,7 +53949,7 @@ TM41,Helping,Hand
 TM42,Revenge
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM68,Fire,Fang
 TM75,Low,Sweep
@@ -54006,7 +54006,7 @@ Level,Up,Moves:
 12,Water,Pulse
 17,Tearful,Look
 20,Sucker,Punch
-24,U turn
+24,U-turn
 28,Liquidation
 32,Soak
 36,Rain,Dance
@@ -54034,7 +54034,7 @@ TM45,Dive
 TM46,Weather,Ball
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TRs:
 TR04,Surf
@@ -54070,7 +54070,7 @@ Level,Up,Moves:
 12,Water,Pulse
 19,Tearful,Look
 24,Sucker,Punch
-30,U turn
+30,U-turn
 36,Liquidation
 42,Soak
 48,Rain,Dance
@@ -54090,7 +54090,7 @@ TM45,Dive
 TM46,Weather,Ball
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM76,Round
 TRs:
@@ -54130,7 +54130,7 @@ Level,Up,Moves:
 12,Water,Pulse
 19,Tearful,Look
 24,Sucker,Punch
-30,U turn
+30,U-turn
 38,Liquidation
 46,Soak
 54,Rain,Dance
@@ -54155,7 +54155,7 @@ TM46,Weather,Ball
 TM51,Icicle,Spear
 TM52,Bounce
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM59,Fling
 TM76,Round
 TM78,Acrobatics
@@ -54369,7 +54369,7 @@ TM39,Facade
 TM40,Swift
 TM42,Revenge
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM76,Round
@@ -54427,7 +54427,7 @@ TM39,Facade
 TM40,Swift
 TM42,Revenge
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM76,Round
@@ -54495,7 +54495,7 @@ TM39,Facade
 TM40,Swift
 TM42,Revenge
 TM47,Fake,Tears
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM76,Round
@@ -54664,7 +54664,7 @@ TM31,Attract
 TM39,Facade
 TM41,Helping,Hand
 TM44,Imprison
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM60,Power,Swap
 TM61,Guard,Swap
@@ -54802,7 +54802,7 @@ TM39,Facade
 TM40,Swift
 TM47,Fake,Tears
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM65,Shadow,Claw
 TM66,Thunder,Fang
@@ -54977,7 +54977,7 @@ Level,Up,Moves:
 28,Guard,Swap
 32,Reversal
 36,Cotton,Guard
-40,Double Edge
+40,Double-Edge
 Egg,Moves:
 Stomp
 Swagger
@@ -55029,7 +55029,7 @@ Level,Up,Moves:
 32,Guard,Swap
 38,Reversal
 44,Cotton,Guard
-50,Double Edge
+50,Double-Edge
 56,Last,Resort
 TMs:
 TM01,Mega,Kick
@@ -55233,7 +55233,7 @@ Level,Up,Moves:
 40,Wild,Charge
 45,Play,Rough
 Egg,Moves:
-Double Edge
+Double-Edge
 Sand,Attack
 Flame,Charge
 Discharge
@@ -55361,19 +55361,19 @@ Level,Up,Moves:
 40,Rock,Blast
 Egg,Moves:
 Explosion
-Mud Slap
+Mud-Slap
 Block
 TMs:
 TM15,Dig
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
 TM25,Protect
 TM31,Attract
 TM32,Sandstorm
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM48,Rock,Tomb
 TM49,Sand,Tomb
@@ -55425,14 +55425,14 @@ TMs:
 TM13,Fire,Spin
 TM15,Dig
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
 TM25,Protect
 TM31,Attract
 TM32,Sandstorm
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM48,Rock,Tomb
 TM49,Sand,Tomb
@@ -55501,14 +55501,14 @@ TM11,Solar,Beam
 TM13,Fire,Spin
 TM15,Dig
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
 TM25,Protect
 TM31,Attract
 TM32,Sandstorm
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM48,Rock,Tomb
 TM49,Sand,Tomb
@@ -55618,7 +55618,7 @@ TM31,Attract
 TM34,Sunny,Day
 TM39,Facade
 TM50,Bullet,Seed
-TM56,U turn
+TM56,U-turn
 TM76,Round
 TM78,Acrobatics
 TM95,Air,Slash
@@ -55738,7 +55738,7 @@ Level,Up,Moves:
 50,Sand,Tomb
 Egg,Moves:
 Dragon,Rush
-Mud Slap
+Mud-Slap
 Last,Resort
 Belch
 Poison,Tail
@@ -56079,7 +56079,7 @@ Level,Up,Moves:
 30,Laser,Focus
 36,Crunch
 42,Liquidation
-48,Double Edge
+48,Double-Edge
 Egg,Moves:
 Thrash
 Acupressure
@@ -56143,7 +56143,7 @@ Level,Up,Moves:
 32,Laser,Focus
 40,Crunch
 48,Liquidation
-56,Double Edge
+56,Double-Edge
 TMs:
 TM08,Hyper,Beam
 TM09,Giga,Impact
@@ -56206,7 +56206,7 @@ Level,Up,Moves:
 Egg,Moves:
 Endeavor
 Metal,Sound
-Power Up,Punch
+Power-Up,Punch
 TMs:
 TM21,Rest
 TM24,Snore
@@ -56493,7 +56493,7 @@ TM24,Snore
 TM25,Protect
 TM31,Attract
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM66,Thunder,Fang
 TM68,Fire,Fang
@@ -56512,7 +56512,7 @@ TR32,Crunch
 TR36,Heat,Wave
 TR43,Overheat
 TR55,Flare,Blitz
-TR60,X Scissor
+TR60,X-Scissor
 TR61,Bug,Buzz
 TR72,Power,Whip
 TR84,Scald
@@ -56552,7 +56552,7 @@ Soak
 Sucker,Punch
 Circle,Throw
 Seismic,Toss
-Power Up,Punch
+Power-Up,Punch
 TMs:
 TM00,Mega,Punch
 TM04,Ice,Punch
@@ -56616,7 +56616,7 @@ Level,Up,Moves:
 35,Taunt
 40,Reversal
 45,Superpower
-50,Topsy Turvy
+50,Topsy-Turvy
 TMs:
 TM00,Mega,Punch
 TM04,Ice,Punch
@@ -56693,7 +56693,7 @@ TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM57,Payback
@@ -56751,7 +56751,7 @@ TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM57,Payback
@@ -56813,12 +56813,12 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM57,Payback
@@ -56879,12 +56879,12 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
 TM28,Giga,Drain
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM44,Imprison
 TM57,Payback
@@ -57265,7 +57265,7 @@ Level,Up,Moves:
 01,Spirit,Break
 01,False,Surrender
 01,Bulk,Up
-01,Power Up,Punch
+01,Power-Up,Punch
 01,Fake,Out
 01,Confide
 01,Bite
@@ -57361,7 +57361,7 @@ Level,Up,Moves:
 01,Night,Slash
 01,Switcheroo
 01,Pin,Missile
-01,Baby Doll,Eyes
+01,Baby-Doll,Eyes
 01,Tackle
 01,Leer
 01,Sand,Attack
@@ -57375,7 +57375,7 @@ Level,Up,Moves:
 35,Scary,Face
 42,Counter
 49,Taunt
-56,Double Edge
+56,Double-Edge
 TMs:
 TM00,Mega,Punch
 TM01,Mega,Kick
@@ -57436,7 +57436,7 @@ TR46,Iron,Defense
 TR48,Bulk,Up
 TR53,Close,Combat
 TR59,Seed,Bomb
-TR60,X Scissor
+TR60,X-Scissor
 TR73,Gunk,Shot
 TR77,Grass,Knot
 TR85,Work,Up
@@ -57490,7 +57490,7 @@ TM31,Attract
 TM33,Rain,Dance
 TM34,Sunny,Day
 TM39,Facade
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -57566,7 +57566,7 @@ TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -57579,7 +57579,7 @@ TM33,Rain,Dance
 TM34,Sunny,Day
 TM35,Hail
 TM36,Whirlpool
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM42,Revenge
 TM48,Rock,Tomb
@@ -57730,7 +57730,7 @@ Level,Up,Moves:
 32,Hypnosis
 36,Mirror,Coat
 40,Sucker,Punch
-44,Freeze Dry
+44,Freeze-Dry
 48,Psychic
 52,Teeter,Dance
 TMs:
@@ -57854,7 +57854,7 @@ TM26,Scary,Face
 TM31,Attract
 TM32,Sandstorm
 TM33,Rain,Dance
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM42,Revenge
 TM44,Imprison
@@ -57928,7 +57928,7 @@ Level,Up,Moves:
 45,Misty,Terrain
 50,Entrainment
 Egg,Moves:
-Baby Doll,Eyes
+Baby-Doll,Eyes
 Last,Resort
 TMs:
 TM21,Rest
@@ -58693,7 +58693,7 @@ Sucker,Punch
 TMs:
 TM07,Pin,Missile
 TM14,Thunder,Wave
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -58818,7 +58818,7 @@ TM41,Helping,Hand
 TM44,Imprison
 TM46,Weather,Ball
 TM51,Icicle,Spear
-TM56,U turn
+TM56,U-turn
 TM64,Avalanche
 TM76,Round
 TM78,Acrobatics
@@ -58875,7 +58875,7 @@ TM01,Mega,Kick
 TM08,Hyper,Beam
 TM09,Giga,Impact
 TM19,Safeguard
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM22,Rock,Slide
 TM24,Snore
@@ -58931,7 +58931,7 @@ Level,Up,Moves:
 18,Icy,Wind
 24,Headbutt
 30,Amnesia
-36,Freeze Dry
+36,Freeze-Dry
 42,Hail
 48,Aurora,Veil
 54,Surf
@@ -58940,7 +58940,7 @@ Egg,Moves:
 Soak
 Aqua,Ring
 Belly,Drum
-Double Edge
+Double-Edge
 Icicle,Crash
 Head,Smash
 TMs:
@@ -59000,7 +59000,7 @@ Level,Up,Moves:
 18,Icy,Wind
 24,Headbutt
 30,Amnesia
-36,Freeze Dry
+36,Freeze-Dry
 42,Hail
 48,Aurora,Veil
 54,Surf
@@ -59009,7 +59009,7 @@ Egg,Moves:
 Soak
 Aqua,Ring
 Belly,Drum
-Double Edge
+Double-Edge
 Icicle,Crash
 Head,Smash
 TMs:
@@ -59400,7 +59400,7 @@ Level,Up,Moves:
 50,High,Horsepower
 55,Superpower
 Egg,Moves:
-Double Edge
+Double-Edge
 Belch
 Curse
 Slam
@@ -59626,7 +59626,7 @@ Level,Up,Moves:
 21,Ancient,Power
 28,Pluck
 35,Avalanche
-42,Freeze Dry
+42,Freeze-Dry
 49,Slam
 56,Discharge
 63,Bolt,Beak
@@ -59771,7 +59771,7 @@ Level,Up,Moves:
 21,Ancient,Power
 28,Bite
 35,Aurora,Veil
-42,Freeze Dry
+42,Freeze-Dry
 49,Super,Fang
 56,Crunch
 63,Fishious,Rend
@@ -59958,17 +59958,17 @@ Level,Up,Moves:
 01,Infestation
 01,Quick,Attack
 01,Bite
-06,Lock On
+06,Lock-On
 12,Assurance
 18,Hex
 24,Agility
 30,Double,Hit
-36,U turn
+36,U-turn
 42,Dragon,Dance
 48,Phantom,Force
 54,Take,Down
 61,Dragon,Rush
-66,Double Edge
+66,Double-Edge
 72,Last,Resort
 TMs:
 TM14,Thunder,Wave
@@ -59979,13 +59979,13 @@ TM25,Protect
 TM30,Steel,Wing
 TM31,Attract
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM45,Dive
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM76,Round
 TM77,Hex
@@ -60037,17 +60037,17 @@ Level,Up,Moves:
 01,Infestation
 01,Quick,Attack
 01,Bite
-06,Lock On
+06,Lock-On
 12,Assurance
 18,Hex
 24,Agility
 30,Double,Hit
-36,U turn
+36,U-turn
 42,Dragon,Dance
 48,Phantom,Force
 54,Take,Down
 63,Dragon,Rush
-70,Double Edge
+70,Double-Edge
 78,Last,Resort
 TMs:
 TM06,Fly
@@ -60064,13 +60064,13 @@ TM25,Protect
 TM30,Steel,Wing
 TM31,Attract
 TM37,Beat,Up
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand
 TM45,Dive
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM58,Assurance
 TM76,Round
 TM77,Hex
@@ -60591,7 +60591,7 @@ TM39,Facade
 TM41,Helping,Hand
 TM42,Revenge
 TM43,Brick,Break
-TM56,U turn
+TM56,U-turn
 TM75,Low,Sweep
 TM76,Round
 TM78,Acrobatics
@@ -60668,7 +60668,7 @@ TM41,Helping,Hand
 TM42,Revenge
 TM43,Brick,Break
 TM48,Rock,Tomb
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -60765,7 +60765,7 @@ TM43,Brick,Break
 TM45,Dive
 TM48,Rock,Tomb
 TM55,Brine
-TM56,U turn
+TM56,U-turn
 TM63,Drain,Punch
 TM75,Low,Sweep
 TM76,Round
@@ -60822,7 +60822,7 @@ Level,Up,Moves:
 30,Scary,Face
 36,Grass,Knot
 42,Bite
-48,U turn
+48,U-turn
 54,Swagger
 60,Energy,Ball
 66,Synthesis
@@ -60854,7 +60854,7 @@ TM43,Brick,Break
 TM48,Rock,Tomb
 TM50,Bullet,Seed
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -60914,7 +60914,7 @@ Level,Up,Moves:
 30,Scary,Face
 36,Grass,Knot
 42,Bite
-48,U turn
+48,U-turn
 54,Swagger
 60,Energy,Ball
 66,Synthesis
@@ -60946,7 +60946,7 @@ TM43,Brick,Break
 TM48,Rock,Tomb
 TM50,Bullet,Seed
 TM53,Mud,Shot
-TM56,U turn
+TM56,U-turn
 TM57,Payback
 TM58,Assurance
 TM59,Fling
@@ -61008,7 +61008,7 @@ Level,Up,Moves:
 42,Thunderbolt
 48,Magnet,Rise
 54,Thrash
-60,Lock On
+60,Lock-On
 66,Zap,Cannon
 72,Hyper,Beam
 78,Explosion
@@ -61019,7 +61019,7 @@ TM14,Thunder,Wave
 TM16,Screech
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -61081,7 +61081,7 @@ TM08,Hyper,Beam
 TM09,Giga,Impact
 TM17,Light,Screen
 TM18,Reflect
-TM20,Self Destruct
+TM20,Self-Destruct
 TM21,Rest
 TM24,Snore
 TM25,Protect
@@ -61131,7 +61131,7 @@ Level,Up,Moves:
 48,Iron,Defense
 54,Thrash
 60,Taunt
-66,Double Edge
+66,Double-Edge
 72,Swords,Dance
 TMs:
 TM08,Hyper,Beam
@@ -61202,7 +61202,7 @@ Level,Up,Moves:
 48,Agility
 54,Thrash
 60,Disable
-66,Double Edge
+66,Double-Edge
 72,Nasty,Plot
 TMs:
 TM08,Hyper,Beam
@@ -61211,7 +61211,7 @@ TM21,Rest
 TM24,Snore
 TM25,Protect
 TM26,Scary,Face
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM53,Mud,Shot
@@ -61353,7 +61353,7 @@ Level,Up,Moves:
 01,Iron,Defense
 01,Thrash
 01,Taunt
-01,Double Edge
+01,Double-Edge
 01,Swords,Dance
 01,Pound
 01,Mega,Drain
@@ -61482,7 +61482,7 @@ Level,Up,Moves:
 01,Agility
 01,Thrash
 01,Disable
-01,Double Edge
+01,Double-Edge
 01,Nasty,Plot
 01,Pound
 01,Mega,Drain
@@ -61515,7 +61515,7 @@ TM25,Protect
 TM26,Scary,Face
 TM28,Giga,Drain
 TM34,Sunny,Day
-TM38,Will O Wisp
+TM38,Will-O-Wisp
 TM39,Facade
 TM40,Swift
 TM41,Helping,Hand

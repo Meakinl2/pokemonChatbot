@@ -33,8 +33,8 @@ class Battle:
 
     # The basic battle loop that runs every turn
     def battleLoop(self):
-        battleOngoing = True
-        while battleOngoing:
+        self.battleOngoing = True
+        while self.battleOngoing:
             for i in range(len(self.playerActive)):
                 self.player.party[self.playerActive[i]].turnAction = user_inputs.userBattleMain(self.player,self.playerActive[i],self.playerActive,self.opponent,self.opponentActive)
 
@@ -51,9 +51,9 @@ class Battle:
                 elif action[2] == "Item":
                     self.useItem(pokemon,action)
                 elif action[2] == "Switch":
-                    self.switchOut(pokemon,action)
+                    self.switchOut(action)
                 elif action[2] == "Flee":
-                    self.checkFleeBattle(pokemon,action)
+                    self.checkFleeBattle(pokemon)
 
             self.victoryOrDefeat()
 
@@ -82,7 +82,6 @@ class Battle:
             self.actionQueue.append(action)
         
         
-        
         # Reorders moves based on priority, it is bubble sort and it is very inefficent, but there will be six items max, so it's good enough
         ordered = False
         while not ordered:
@@ -101,6 +100,7 @@ class Battle:
     # Use a named move an inflicts relavant effects
     def useMove(self,pokemon,action):
         print(self.actionQueue[0][0].turnAction)
+        
         if action[4] == "Player":
             target = self.player.party[self.playerActive[action[5]]]
         elif action[4] == "Opponent":
@@ -109,8 +109,17 @@ class Battle:
         move = pokemon.knownMoves[action[3]]
         moveDamage,appliedMultipliers = calculateDamage(pokemon,target,move)
 
+        #  To keep in line with regular pokemon
+        if moveDamage ==  0 and "Nullified" not in appliedMultipliers and move.damageClass != "Status":
+            moveDamage = 1
+
+        target.actualStats[0] -= moveDamage
+        if target.actualStats[0] < 0:
+            target.actualStats[0] = 0
         
         print(f"{pokemon.nickname} used {pokemon.knownMoves[action[3]].name} on {target.nickname}.")
+        print(f"{target.nickname} took {moveDamage} damage and now has {target.actualStats[0]}/{target.adjustedStats[0]}")
+
         if "Nullified" in appliedMultipliers:
             print("It had no effect.")
         elif "Supereffective" in appliedMultipliers and "Ineffective" not in appliedMultipliers:
@@ -121,25 +130,27 @@ class Battle:
         if "Critical" in appliedMultipliers:
             print("It was a Critical Hit.")
 
-        #  To keep in line with regular pokemon
-        if moveDamage ==  0 and "Nullified"  not in appliedMultipliers:
-            moveDamage = 1
-
 
     # Use a specified item and inflict 
     def useItem(self,pokemon,action):
-        print(self.actionQueue[0][0].turnAction)
         print("Item")
 
+
     # Switches out to a desired Pokemon
-    def switchOut(self,pokemon,action):
-        print(self.actionQueue[0][0].turnAction)
+    def switchOut(self,action):
+        if action[0] == "Player":
+            index = self.playerActive.index[action[1]]
+            self.playerActve[index] = self.player.party[action[3]]
+        elif action[0] == "Opponent":
+            index = self.opponentActive.index[action[1]]
+            self.oppponentActve[index] = self.opponent.party[action[3]]
         print("Switch")
 
-    def checkFleeBattle(self,pokemon,action):
-        print(f"{pokemon.nickname} attempts to flee.")
 
-        print("Flee")
+    # Checks if a the battle can be fled, and then acts accordingly
+    def checkFleeBattle(self,pokemon):
+        self.battleOngoing = False
+        print(f"{pokemon.nickname} attempts to flee.")
 
 
     # --------------------------------------------------------------

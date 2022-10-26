@@ -4,8 +4,8 @@ from dictonaries import *
 # Assigns all realted information to a move, for a given pokemon.
 class Move:
     def __init__(self,moveName):
-        movesFile  = selectFile(["DataTables"],"moveInformation.txt")
-        moveFileLines = readFile(movesFile,",")
+        movesFile = selectFile(["DataTables"],"full_move_data.txt")
+        moveFileLines = readFile(movesFile,"\t")
         for line in moveFileLines:
             if moveName in line:
                 moveInformation = line
@@ -16,33 +16,33 @@ class Move:
         try: 
             self.name = moveName
             self.moveID = moveInformation[0]
-            self.typing = type_IDs[int(moveInformation[2])]
-            self.pp = int(moveInformation[4])
-            self.priority = int(moveInformation[6])
-            self.damageClass = move_damage_classes[int(moveInformation[8])]
-            self.baseCritStage = int(moveInformation[19])
+            self.typing = type_IDs[int(moveInformation[5]) + 1]
+            self.pp = int(moveInformation[10])
+            self.priority = int(moveInformation[11])
+            self.damageClass = move_damage_classes[int(moveInformation[7]) + 1]
+            self.critStage = int(moveInformation[19])
         except UnboundLocalError:
                 print(f"Error. {moveName} could not be found.")
                 exit()
 
         # Some boxes are blank in the table and so this assign appropriate integer values in their place
         try: 
-            self.power = int(moveInformation[3])
+            self.power = int(moveInformation[8])
         except ValueError:
             self.power = 0
 
         try: 
-            self.accuracy = int(moveInformation[5])
+            self.accuracy = int(moveInformation[9])
         except  ValueError:
             self.accuracy = 100
 
         try: 
-            self.hitAmount = [int(moveInformation[13]),int(moveInformation[14])]
+            self.hitAmount = [int(moveInformation[12]),int(moveInformation[13])]
         except ValueError:
             self.hitAmount = [1,1]
 
         try:
-            self.turnAmount = [int(moveInformation[15]),int(moveInformation[16])]
+            self.turnAmount = [int(moveInformation[17]),int(moveInformation[18])]
         except ValueError:
             self.turnAmount = [1,1]
 

@@ -44,17 +44,12 @@ def calculateDamage(attacker,defender,move):
             appliedMultipliers.append("Nullified")
 
     # Randomly applies critical hits
-    if random.randint(1,16) == 1:
+    if random.randint(1,critStages[move.critStage]) == 1:
         damageMultipliers.append(2)
         appliedMultipliers.append("Critical")
-    else:
-        print("Not Critical")
 
     for multiplier in damageMultipliers:
         damage *= multiplier
-
-    print(appliedMultipliers)
-    print(damage)
-
+        
     return int(damage // 1),appliedMultipliers
 
