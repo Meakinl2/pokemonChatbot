@@ -55,6 +55,9 @@ class Trainer:
     def battleTurn(self,pokemon,activePokemon,oppActivePokemon):
         return ["Opponent",0 ,"Move", 0,"Player",0]
 
+
+    def pokemonFainted(self):
+        pass
     # ---------------------------------------------------------------------------------
 
     # Just print relevant information about the trainers attributes

@@ -55,8 +55,31 @@ class Battle:
                 elif action[2] == "Flee":
                     self.checkFleeBattle(pokemon)
 
-            self.victoryOrDefeat()
+            for activePokemon in self.playerActive:
+                if pokemon.actualStats[0] <= 0:
+                    print(f"{pokemon.nickname} has fainted.")
+                    pokemon.isFainted = True
+                    remainingPokemon = False
+                    for pokemon in self.playerParty:
+                        if pokemon.isFainted == False:
+                            remainingPokemon == True
 
+                    if remainingPokemon == True:
+                            switchIn = user_inputs.userBattleSelectPokemon(self.player.party)
+                            self.playerActive[self.playerActive.index[activePokemon]] = self.player.party[switchIn]
+
+
+            for pokemon in self.opponentActive:
+                if pokemon.actualStats[0] <= 0:
+                    pokemon.isFainted = True
+                    self.opponent.pokemonFainted() 
+
+
+            self.endBattle()
+        
+        self.victoryOrDefeat()
+
+        
 
     # Determines in what order each action should occur.
     def determineActionOrder(self):
@@ -156,6 +179,10 @@ class Battle:
     # --------------------------------------------------------------
 
     # Functions that run at the end of the battle
+
+    def endBattle(self):
+        pass
+
 
     def victoryOrDefeat(self):
         pass
