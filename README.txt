@@ -29,7 +29,7 @@ GitHub - itsjavi/swordshield-data
 Large amount of move data in csv form
 https://github.com/itsjavi/swordshield-data
 
-Bulbapedia in general
+Bulbapedia
 Contains lots of very detailed information on how various things work 
 https://bulbapedia.bulbagarden.net/wiki/Main_Page
 

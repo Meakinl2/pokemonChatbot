@@ -184,7 +184,7 @@ def userBattleMove(player,playerPokemon):
         except ValueError:
             print(f"Sorry {player.name}, but I don't know what it is you mean. Could you try again, please?")
 
-        return moveIndex
+    return moveIndex
         
 
 # To pick and use an item in battle
@@ -242,7 +242,11 @@ def userBattleSelectPokemon(affectablePokemon,action = ""):
         
         if action == "switch" and affectablePokemon[pokemonIndex].isFainted:
             print(f"{affectablePokemon[pokemonIndex].nickname} is passed out and cannot be switched to.")
-            validInput = "False"
+            validInput = False
+
+        if action == "switch" and affectablePokemon[pokemonIndex].isActive:
+            print(f"{affectablePokemon[pokemonIndex].nickname} is already active and cannot be switched to.")
+            validInput = False
 
     return pokemonIndex
 

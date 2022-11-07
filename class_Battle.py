@@ -9,21 +9,19 @@ class Battle:
         self.player = player
         self.opponent = opponent
                 
-        maxActive = {
-            "1v1": 1,
-            "2v2": 2,
-            "3v3": 3,
-            "Wild": 1
-        }
+        maxActive = {"1v1": 1,"2v2": 2,"3v3": 3,"Wild": 1}
 
         self.playerActive = []
         for i in range(0,len(player.party)):
             if not player.party[i].isFainted and len(self.playerActive) < maxActive[battleType]:
+                player.party[i].isActive = True
                 self.playerActive.append(i)
                 
         self.opponentActive = []
         for i in range(0,maxActive[battleType]):
+            opponent.party[i].isActive = True
             self.opponentActive.append(i)
+            
     
         self.battleLoop()
         
@@ -42,7 +40,8 @@ class Battle:
                 self.opponent.party[self.opponentActive[i]].turnAction = self.opponent.battleTurn(self.opponent.party[self.opponentActive[i]],self.opponentActive,self.playerActive)
             
             self.determineActionOrder()
-
+            
+            # Executes all currently items in the action queue, different funnctions called for different action types
             for i in range(len(self.actionQueue)):
                 pokemon = self.actionQueue[i][0]
                 action = self.actionQueue[i][0].turnAction
@@ -55,31 +54,47 @@ class Battle:
                 elif action[2] == "Flee":
                     self.checkFleeBattle(pokemon)
 
+
+            # Checking to see if player pokemon are still conscious and if not who they should be swapped with
             for activePokemon in self.playerActive:
+                pokemon = self.player.party[activePokemon]
                 if pokemon.actualStats[0] <= 0:
                     print(f"{pokemon.nickname} has fainted.")
                     pokemon.isFainted = True
-                    remainingPokemon = False
-                    for pokemon in self.playerParty:
-                        if pokemon.isFainted == False:
-                            remainingPokemon == True
+                    pokemon.isActive = False
+                    playerRemainingPokemon = False
+                    for pokemon in self.player.party:
+                        if not pokemon.isFainted:
+                            playerRemainingPokemon == True
 
-                    if remainingPokemon == True:
+                    if playerRemainingPokemon:
                             switchIn = user_inputs.userBattleSelectPokemon(self.player.party)
+                            self.player.party[switchIn].isActive = True
                             self.playerActive[self.playerActive.index[activePokemon]] = self.player.party[switchIn]
+                    else:
+                        self.defeat("Blackout")
 
-
-            for pokemon in self.opponentActive:
+            # Repeat last step for opponent pokemon
+            for activePokemon in self.opponentActive:
+                pokemon = self.opponent.party[activePokemon]
                 if pokemon.actualStats[0] <= 0:
+                    print(f"Opponent's {pokemon.nickname} has fainted.")
                     pokemon.isFainted = True
-                    self.opponent.pokemonFainted() 
+                    pokemon.isActive = False
+                    oppRemainingPokemon = False
+                    for pokemon in self.opponent.party:
+                        if not pokemon.isFainted:
+                            oppRemainingPokemon = True
+                        
+                    if oppRemainingPokemon:
+                        switchIn = self.opponent.pokemonFainted()
+                        self.opponent.party[switchIn].isActive = True
+                        self.opponentActive[self.opponentActive.index[activePokemon]] = self.opponent.party[switchIn]
+                    else:
+                        self.victory("Blackout")
 
 
             self.endBattle()
-        
-        self.victoryOrDefeat()
-
-        
 
     # Determines in what order each action should occur.
     def determineActionOrder(self):
@@ -162,18 +177,22 @@ class Battle:
     # Switches out to a desired Pokemon
     def switchOut(self,action):
         if action[0] == "Player":
-            index = self.playerActive.index[action[1]]
-            self.playerActve[index] = self.player.party[action[3]]
+            index = self.playerActive.index(action[1])
+            self.playerActive[index] = action[3]
         elif action[0] == "Opponent":
-            index = self.opponentActive.index[action[1]]
-            self.oppponentActve[index] = self.opponent.party[action[3]]
+            index = self.opponentActive.index(action[1])
+            self.oppponentActve[index] = action[3]
         print("Switch")
 
 
     # Checks if a the battle can be fled, and then acts accordingly
     def checkFleeBattle(self,pokemon):
-        self.battleOngoing = False
+        
         print(f"{pokemon.nickname} attempts to flee.")
+        if pokemon.actualStats[5] > self.opponentParty[self.opponentActive[0]].actualStats[5]:
+            self.defeat("Flee")
+            print(f"{pokemon.nickname} got away.")
+
 
 
     # --------------------------------------------------------------
@@ -188,10 +207,19 @@ class Battle:
         pass
 
 
-    def victory(self):
-        pass
+    def victory(self,reason):
+        print("You have won!")
+        self.battleOngoing = False
 
 
-    def defeat(self):
-        pass
+    def defeat(self,reason):
+        print("You have lost!")
+        if reason ==  "Blackout":
+            print("You have no more Pokémon that can fight.")
+            print("You ")
+
+        elif reason == "Flee":
+            pass
+        
+        self.battleOngoing = False
 
