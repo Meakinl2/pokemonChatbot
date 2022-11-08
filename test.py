@@ -9,10 +9,12 @@ from class_Player import Player
 from class_Trainer import Trainer
 from class_Battle import Battle
 
+list = ["I don't care","Tackle"]
 
+for move in list:
+    print("Move: " + " ".join(map(str,move)))
 
 exit()
-
 
 pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"YEBBV0IIZ2")
 with open(pickleFilePath, "rb") as pickleFile:

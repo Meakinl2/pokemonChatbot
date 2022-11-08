@@ -208,18 +208,20 @@ class Battle:
 
 
     def victory(self,reason):
-        print("You have won!")
+        if reason == "Blackout":
+            print(f"{self.opponent.title} {self.opponent.name} has no more pokemon left.")
         self.battleOngoing = False
 
 
     def defeat(self,reason):
-        print("You have lost!")
         if reason ==  "Blackout":
             print("You have no more Pokémon that can fight.")
-            print("You ")
+
 
         elif reason == "Flee":
-            pass
+            print("You managed to successfully flee.")
         
+        else:
+            print("You have lost!")
         self.battleOngoing = False
 
