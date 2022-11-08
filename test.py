@@ -14,20 +14,20 @@ list = ["I don't care","Tackle"]
 for move in list:
     print("Move: " + " ".join(map(str,move)))
 
-exit()
+def testBattle(playerCode):
+    pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],playerCode)
+    with open(pickleFilePath, "rb") as pickleFile:
+        pickleInfo = pickleFile.read()
+        pickleFile.close()
+        
+    player = pickle.loads(pickleInfo)
 
-pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],"YEBBV0IIZ2")
-with open(pickleFilePath, "rb") as pickleFile:
-    pickleInfo = pickleFile.read()
-    pickleFile.close()
-    
-player = pickle.loads(pickleInfo)
+    for pokemon in player.party:
+        pokemon.resetBattleValues()
 
-for pokemon in player.party:
-    pokemon.resetBattleValues()
+    trainer = Trainer(player)
 
-trainer = Trainer(player)
+    Battle(player,trainer,"1v1")
 
-Battle(player,trainer,"1v1")
-
+testBattle("YEBBV0IIZ2")
 
