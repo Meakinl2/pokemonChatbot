@@ -6,35 +6,38 @@ class Move:
     def __init__(self,moveName):
         movesFile = selectFile(["DataTables"],"full_move_data.txt")
         moveFileLines = readFile(movesFile,"\t")
+
         for line in moveFileLines:
             if moveName in line:
                 moveInformation = line
 
-
         # As I am using two different sources for moves and pokemon, sometimes names don't quite line up
-        # I will look for a better solution, but this will help for now.
+        # Try function is only necessary while I am testing.
         try: 
             self.name = moveName
-            self.moveID = moveInformation[0]
-            self.typing = type_IDs[int(moveInformation[5]) + 1]
-            self.pp = int(moveInformation[10])
-            self.priority = int(moveInformation[11])
-            self.damageClass = move_damage_classes[int(moveInformation[7]) + 1]
-            self.critStage = int(moveInformation[19])
         except UnboundLocalError:
                 print(f"Error. {moveName} could not be found.")
                 exit()
 
-        # Some boxes are blank in the table and so this assign appropriate integer values in their place
-        try: 
-            self.power = int(moveInformation[8])
-        except ValueError:
-            self.power = 0
+        self.moveID = moveInformation[0]
+        self.typing = type_IDs[int(moveInformation[5]) + 1]
+        self.damageClass = move_damage_classes[int(moveInformation[7]) + 1]
+        self.power = int(moveInformation[8])
+        self.accuracy = int(moveInformation[9])
+        self.pp = int(moveInformation[10])
+        self.priority = int(moveInformation[11])
+        self.critStage = int(moveInformation[19])
+        self.recoilChance = int(moveInformation[20])
+        self.flinchChance = int(moveInformation[22])
 
-        try: 
-            self.accuracy = int(moveInformation[9])
-        except  ValueError:
-            self.accuracy = 100
+        self.statChanges = [[],[],[]]
+        for i in range(9):
+            self.statChanges[i % 3].append(moveInformation[25 + i])
+
+        
+        
+
+        # Some boxes are blank in the table and so this assign appropriate integer values in their place
 
         try: 
             self.hitAmount = [int(moveInformation[12]),int(moveInformation[13])]
@@ -48,7 +51,7 @@ class Move:
 
 
 
-    # Prints move values to terminal, mainly just for checkin geverythin is working
+    # Prints move values to terminal, mainly just for checking everything is working
     def printMoveValues(self):
         print(f"Move ID: {self.moveID}")
         print(f"Move Name: {self.name}")

@@ -21,6 +21,42 @@ def yes_or_no():
         else:
             print("Not a valid affirmation nor negation. Please try again. ")
 
+
+# Checking if input matches valid options.
+# Will include passing input through functions that work as autocorrect for spelling mistakes or synonyms
+def selectOption(options):
+    options_lower = []
+    for option in options:
+        
+        if type(option) == list:
+            print(f" - " + " ".join(map(str,option)))
+        else:
+            print(f" - {option}")
+
+        options_lower.append(option.lower())
+    
+    while True:
+        user_input = input(" > ")
+        
+        if user_input.lower() in options_lower:
+            index = options_lower.index(user_input.lower())
+            print(f"You want to select {options[index]}?")
+
+            if yes_or_no():
+                return options[index]
+        
+        try:
+            
+            if 0 < int(user_input) <= len(options):
+                print(f"You want to select {options[int(user_input) - 1]}? ")
+
+                if yes_or_no():
+                    return options[int(user_input) - 1]
+
+        except:
+            pass
+
+
 # ---------------------------------------------------------------------------------
 
 # Inital setup functions, only runs once, doesn't need too much interpretation
@@ -39,6 +75,7 @@ def pickPlayerName(player):
             namePicked = True
         else:
             print(f"I suppose you should give it another try then.")
+    
     print(f"Hello {player.name}. It's nice to meet you.")
 
 
@@ -87,6 +124,12 @@ I assure you they will grow to be among the powerful Pokémon to ever live. """)
                 nickname = input(" > ")
 
     return starting_pokemon[starter.lower()], nickname
+
+# ---------------------------------------------------------------------------------
+
+# Roaming functions
+
+
 
 # ---------------------------------------------------------------------------------
 
@@ -287,3 +330,10 @@ def learnLevelMove(pokemon,newMove):
 
     else:
         print(f"{pokemon.nickname} did not learn {newMove}.")
+
+# ---------------------------------------------------------------------------------
+
+# 
+    
+
+# ---------------------------------------------------------------------------------

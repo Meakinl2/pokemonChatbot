@@ -5,14 +5,10 @@ import os,random,pickle,math
 
 from ProjectDataCleaning.fileControl import *
 from input_interpretation import *
+from class_Main import *
 from class_Player import Player
 from class_Trainer import Trainer
 from class_Battle import Battle
-
-list = ["I don't care","Tackle"]
-
-for move in list:
-    print("Move: " + " ".join(map(str,move)))
 
 def testBattle(playerCode):
     pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],playerCode)
@@ -29,5 +25,6 @@ def testBattle(playerCode):
 
     Battle(player,trainer,"1v1")
 
-testBattle("YEBBV0IIZ2")
+Main()
+
 

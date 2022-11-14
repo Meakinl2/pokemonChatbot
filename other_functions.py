@@ -53,3 +53,33 @@ def calculateDamage(attacker,defender,move):
         
     return int(damage // 1),appliedMultipliers
 
+# Generates a unique string of length 10 to identify pokemon and player objects
+# There is absolutely no need for it to be done this way, I just prefer it to straight up numbering them
+def generateUniqueReference(existing_instances_path):
+   with open(existing_instances_path,"r") as file:
+      existingInstances = file.readlines()
+      file.close()
+   
+   uniqueString = False
+   while not uniqueString:
+    string = ""
+
+    for i in range(10):
+        string += random.choice("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890")
+    string += "\n"
+
+    if string not in existingInstances:
+        existingInstances.append(string)
+        uniqueString = True
+   
+    with open(existing_instances_path,"w") as file:
+        for line in existingInstances:
+            file.writelines(line)
+        file.close()
+
+   return string[0:-1]
+
+
+# To be run at any point to break out of current game and return to start
+def gameBreak(player_instance):
+    print(f"Are you sure that you want to exit?")

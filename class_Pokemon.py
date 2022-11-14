@@ -7,7 +7,7 @@ from random import randint
 # My own functions adn classes
 from class_Move import Move
 from ProjectDataCleaning.fileControl import *
-from formulae import *
+from other_functions import *
 from dictonaries import *
 import user_inputs
 

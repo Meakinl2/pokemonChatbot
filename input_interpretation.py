@@ -61,20 +61,8 @@ def checkInput(availableWords,user_input):
             accuracy = 0
             print(f"Checking {uWord} against {aWord}.")
 
-    for uWord in userWords:
-    
-        for aWord in availableWords:
-            accuracy = 0
-            print(f"Checking {uWord} against {aWord}.")
-
-            for i in range(0,len(uWord) - 1):
             for i in range(0,len(uWord) - 1):
 
-                try:
-                    if uWord[i] == aWord[i - 1]:
-                        accuracy += 1
-                except IndexError:
-                    pass
                 try:
                     if uWord[i] == aWord[i - 1]:
                         accuracy += 1
@@ -86,17 +74,7 @@ def checkInput(availableWords,user_input):
                         accuracy += 1
                 except IndexError:
                     pass
-                try:
-                    if uWord[i] == aWord[i]:
-                        accuracy += 1
-                except IndexError:
-                    pass
 
-                try:
-                    if uWord[i] == aWord[i + 1]:
-                        accuracy += 1
-                except IndexError:
-                    pass
                 try:
                     if uWord[i] == aWord[i + 1]:
                         accuracy += 1
@@ -106,14 +84,10 @@ def checkInput(availableWords,user_input):
             if len(aWord) - accuracy <= 3:
                 usedWords.append(aWord)
 
-            if len(aWord) - accuracy <= 3:
-                usedWords.append(aWord)
-    
     return usedWords
 
 
 #see if it maches with the keywords
-
 def cheak_input (avablewords,user_Input):
     user_Words = user_Input.split(" ")
     user_Words = []

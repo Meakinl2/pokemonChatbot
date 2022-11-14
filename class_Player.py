@@ -3,6 +3,7 @@ import pickle
 
 from ProjectDataCleaning.fileControl import *
 from class_Pokemon import Pokemon
+from other_functions import *
 import user_inputs
 
 class Player:
@@ -19,33 +20,35 @@ class Player:
         self.party[0].nickname = nickname
         self.party[0].picklePokemonObject()
 
+        self.picklePlayerObject()
+
     # ---------------------------------------------------------------------------------
 
     # "Behind the Scenes" Admin functions
 
     # Creates the Unique ID for identifing a specific Player class instance
     def createUniqueID(self):
-        playerCodesPath = os.path.join(format(os.getcwd()),"SavedObjects","PlayerInstances","player_instance_codes.txt")
-        self.uniqueID = generateUniqueReference(playerCodesPath)
+        player_codes_path = os.path.join(format(os.getcwd()),"SavedObjects","PlayerInstances","player_instance_codes.txt")
+        self.uniqueID = generateUniqueReference(player_codes_path)
 
 
     # Creates a new Folder in the pokemon Storage Folder for all of pokemon belonging to this player instance
     def createStorageFolder(self):
-        playerPokemonStorage = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage",self.uniqueID)
-        if not os.path.exists(playerPokemonStorage):
-            os.makedirs(playerPokemonStorage)
+        player_pokemon_storage = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage",self.uniqueID)
+        if not os.path.exists(player_pokemon_storage):
+            os.makedirs(player_pokemon_storage)
             
 
     # Pickles pokemon data to the relevant file adn directory
     # This also saves all data for the pokemon in the the players party, which is rather handy
     def picklePlayerObject(self):
-        playerPicklePath = os.path.join(format(os.getcwd()),"SavedObjects","PlayerInstances",self.uniqueID)
-        if not os.path.exists(playerPicklePath):
-            with open(playerPicklePath,"x") as file:
+        player_pickle_path = os.path.join(format(os.getcwd()),"SavedObjects","PlayerInstances",self.uniqueID)
+        if not os.path.exists(player_pickle_path):
+            with open(player_pickle_path,"x") as file:
                 file.close()
-        with open(playerPicklePath,"wb") as pickleFile:
-            pickle.dump(self,pickleFile)
-            pickleFile.close()
+        with open(player_pickle_path,"wb") as pickle_file:
+            pickle.dump(self,pickle_file)
+            pickle_file.close()
     
     # ---------------------------------------------------------------------------------
 
@@ -71,10 +74,10 @@ class Player:
 
 
     # Reset relevant values and move pokemon out of party to pokemon storage
-    def moveToStorage(self,pokemonObj):
-        pokemonObj.resetBattleValues()
-        pokemonObj.picklePokemonObject()
-        self.party.remove(pokemonObj)
+    def moveToStorage(self,pokemon_object):
+        pokemon_object.resetBattleValues()
+        pokemon_object.picklePokemonObject()
+        self.party.remove(pokemon_object)
 
     # ---------------------------------------------------------------------------------
 
@@ -87,8 +90,8 @@ class Player:
         pokemon.context = "Player"
         if len(self.party) < 6:
             self.party.append(pokemon)
-        pokemonInstancesPath = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage","pokemon_instance_codes.txt")
-        pokemon.uniqueID = generateUniqueReference(pokemonInstancesPath)
+        pokemon_instances_path = os.path.join(format(os.getcwd()),"SavedObjects","PokemonStorage","pokemon_instance_codes.txt")
+        pokemon.uniqueID = generateUniqueReference(pokemon_instances_path)
         pokemon.picklePokemonObject()
 
 

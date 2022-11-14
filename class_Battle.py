@@ -1,9 +1,8 @@
 from ProjectDataCleaning.fileControl import *
 from dictonaries import *
-from formulae import *
+from other_functions import *
 import user_inputs
 
-# Not sure if this will be good as a class or not, but it seems like it'll work from my most unexperienced point of view
 class Battle:
     def __init__(self,player,opponent,battleType):
         self.player = player

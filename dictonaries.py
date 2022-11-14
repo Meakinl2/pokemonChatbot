@@ -146,6 +146,7 @@ battleStageMultipliers = {
     5: 8/3,
     6: 9/3
 }
+
 critStages = {
     0: 24,
     1: 8,
@@ -153,6 +154,7 @@ critStages = {
     3: 3,
     4: 2
 }
+
 # Integer IDs for the different types from the PokeAPI and itsJavi datasets
 type_IDs = {
     1: "Normal",
@@ -278,8 +280,11 @@ move_meta_ailment_name = {
     "42": "Tar Shot"
 }
 
-# Theres a lot more to weather than I first thought. Might add at a later point.
-weather = {}
-
+# Gives the relative likelihood of a given enocounter types happening
+# Trainer, Wild Pokemon, Find Item
+encounter_type_ratios = {
+    "Index": ["Trainer","Wild","Item"],
+    "Route 001": [5,5,1]
+}
 
 

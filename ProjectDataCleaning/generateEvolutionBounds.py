@@ -1,3 +1,5 @@
+# This file is completely redundant after having 
+
 # As I can't find evolution data in a form that I can use, I will generate appropriate bounds for all evolvable pokemon
 # These will not accurately match the main series and will likely be changed later on if I have extra time
 # They will however suffice as a basic system to allow me to move on to other aspects of the game
