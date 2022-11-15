@@ -9,44 +9,19 @@ oppnent_party = {
     "Growlithe": ["Ember", "Flamethrower", "Roar"],
     "machomp": ["Take Down", "Gust", "Combat Punch"]
 }
+#------------------------------------------------------------------------------------------------
+def battleInput(player,oppent):
+    while True:
+        users_input = input("> ").split(" ")
 
-# sees if user input matches with the dictonary for moves
-def pokemon(user_party, oppent_party, user_input):
-    user_words = user_input.split(" ")
-    
-    for word in user_words:
+        if all(item, move, target_pokemon) == None:
 
-        print ("word: " + word)
 
-        for entry in user_party:
-            if word.lower() == entry.lower():
-                user_words.append(entry)
-                print ("\nselected Attacker: " + move)
+            for word in users_input:
+                item = checkInput
+                move = checkInput
 
-            for move in user_party[entry]:
-                print("move: " + " ". join(map(str,move)))
-
-                if word.lower() == move.lower:
-                    user_words.append(move)
-                    print("Slected Move: " + move)
-
-# -----------------------------------------------------------------------------------
-# sees if user input matches with the dictonary for pokemon
-        for pokemon in user_words:
-            print ("pokemon is: " + pokemon)
-
-            for Poke_mon in user_party:
-                if word.lower() == Poke_mon.lower():
-                    user_words.append(Poke_mon)
-                    print("\nChosen op_pokemon: " + Poke_mon)
-                
-                for Poke_mon in user_party[Poke_mon]:
-                    print ("pokenon: " + Poke_mon)
-
-                    if word.lower() == pokemon.lower:
-                        user_words.append(pokemon)
-                        print("Selected pokmon: " + " ". join(map(str,pokemon)))
-
+                target_pokemon = checkInput
 
 
 #spliting the users input & check is the inputed word is one of the keywords
@@ -57,6 +32,12 @@ def checkInput(availableWords,user_input):
  #checks the letters of each word from the users input to see if they match 
     for uWord in userWords:
 
+        for aWord in availableWords:
+            accuracy = 0
+            print(f"Checking {uWord} against {aWord}.")
+
+    for uWord in userWords:
+    
         for aWord in availableWords:
             accuracy = 0
             print(f"Checking {uWord} against {aWord}.")
@@ -83,11 +64,12 @@ def checkInput(availableWords,user_input):
 
             if len(aWord) - accuracy <= 3:
                 usedWords.append(aWord)
-
+    
     return usedWords
 
 
 #see if it maches with the keywords
+
 def cheak_input (avablewords,user_Input):
     user_Words = user_Input.split(" ")
     user_Words = []
@@ -96,4 +78,57 @@ def cheak_input (avablewords,user_Input):
             user_Words.append(words) 
             cheak_input(words=avablewords)
         
- 
+
+# spliting the user input for words
+def input_checker(user_party, oppent_party, user_input):
+    user_words = user_input.split(" ")
+    
+# sees if user input matches with the dictonary for moves
+    for word in user_words:
+
+        print ("word: " + word)
+
+        for entry in user_party:
+            if word.lower() == entry.lower():
+                user_words.append(entry)
+                print ("\nselected Attacker: " + move)
+
+            for move in user_party[entry]:
+                print("move: " + " ". join(map(str,move)))
+
+                if word.lower() == move.lower:
+                    user_words.append(move)
+                    print("Slected Move: " + move)
+
+
+# sees if user input matches with the dictonary for pokemon
+
+            for animal in user_party:
+                if word.lower() == animal.lower():
+                    user_words.append(animal)
+                    print("\nChosen pokemon: " + pokemon)
+                
+                for pokemon in user_party[pokemon]:
+                    print ("pokenon: " + pokemon)
+
+                    if word.lower() == pokemon.lower:
+                        user_words.append(pokemon)
+                        print("Selected pokmon: " + " ". join(map(str,pokemon)))
+
+# sees if user input matches with the dictonary for oppent pokemon
+
+            for op_pokemon in oppent_party:
+                if word.lower() == op_pokemon.lower():
+                    user_words.append(op_pokemon)
+                    print ("\n oppent pokemon is: " + oppent)
+
+                for oppent in oppent_party[oppent]:
+                    print("oppent pokemon: " + oppent)
+
+                    if word.lower() == oppent.lower:
+                        user_words.append(oppent)
+                        print("Selected oppent pokemon: " + " ". join(map(str,oppent)))
+input_checker(users_party,oppnent_party,users_party)
+
+#checking for requirments:
+
