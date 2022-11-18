@@ -127,12 +127,12 @@ class Main:
                 if i < selected_encounter:
                     index += 1
                 elif i >= selected_encounter:
-                    encounter_type = encounter_type_ratios[location][index]
+                    encounter_type = encounter_type_ratios["Index"][index]
                     break
 
             # For running correct battle type on battle-related encounters
 
-            if encounter_type in ["Trainer"]:
+            if encounter_type == "Trainer":
                 
                 trainer = Trainer(self.player)
                 Battle(self.player,trainer,"1v1")
@@ -142,8 +142,11 @@ class Main:
             elif encounter_type == "Wild":
                 print("Wild Pokemon Encounter")
 
-            elif encounter_type in ["Item"]:
+            elif encounter_type == "Item":
                 print("Item")
+
+            else:
+                print("I'm not sure that this is supposed to be happening.")
 
  
 

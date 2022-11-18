@@ -67,6 +67,7 @@ class Pokemon:
     def resetBattleValues(self):
         self.effects = []
         self.isFainted = False
+        # Evasion, Accuracy
         self.battleStatStages = [0,0]
         self.baseStatStages = [0,0,0,0,0,0]
         self.actualStats = []
@@ -227,6 +228,7 @@ class Pokemon:
         self.natureMultipliers[natureInfo[1] - 1] = 1.1
         self.natureMultipliers[natureInfo[2] - 1] = 0.9
 
+
     # Trainer pokemon are given EVs based on their difficulty to make them more challenging than wild pokemon
     def setTrainerEVs(self):
         pass
@@ -246,10 +248,12 @@ class Pokemon:
             statID += 1
             isHP = False
 
+
     # Just increase the pokemons experience by a given amount and runs levelUp check
     def addExperience(self,newExperience):
         self.experience += newExperience
         self.levelUp()
+
 
     # Runs whenever experience gained , to detetmine if levelUp should occur
     def levelUp(self):
@@ -285,7 +289,6 @@ class Pokemon:
         pass
             
     # ---------------------------------------------------------------------------------
-
 
     # Prints pokemons stats to terminal.
     def printStats(self):

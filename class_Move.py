@@ -25,6 +25,7 @@ class Move:
         self.power = int(moveInformation[8])
         self.accuracy = int(moveInformation[9])
         self.pp = int(moveInformation[10])
+        self.maxpp = int(moveInformation[10])
         self.priority = int(moveInformation[11])
         self.critStage = int(moveInformation[19])
         self.recoilChance = int(moveInformation[20])

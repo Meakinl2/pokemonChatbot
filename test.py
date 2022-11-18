@@ -1,7 +1,7 @@
 # If this is still in by accident upon submission, know that this is just a file for testing function before they are integrated
 # It just makes them a bit easier to work with an cuts down on general clutter. Although I don't really use it all that much.
 
-import os,random,pickle,math
+import os,random,pickle,math,numpy
 
 from ProjectDataCleaning.fileControl import *
 from input_interpretation import *
@@ -23,8 +23,17 @@ def testBattle(playerCode):
 
     trainer = Trainer(player)
 
+    print(f"\nTrainer: {trainer.title} {trainer.name}")
+    print(f"Party:")
+    for pokemon in trainer.party:
+        print(f"\n - Lvl {pokemon.level} {pokemon.species}")
+        for move in pokemon.knownMoves:
+            print(f"   > {move.name}")
+
     Battle(player,trainer,"1v1")
 
-Main()
+# Main()
+testBattle("XK484TPH5U")
+# Player()
 
-
+exit()

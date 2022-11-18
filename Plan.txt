@@ -56,8 +56,8 @@ ToDo:
     - Accquire context from connective words (maybe)
 
 
-
-
 - Maybe add discord functionality, if time allows
+
+
 
 

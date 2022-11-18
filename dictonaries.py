@@ -180,6 +180,7 @@ type_IDs = {
 type_matching = {
     # StrongTowards, WeakTowards, StrongAgainst, WeakAgainst, Nullifies, NullifiedBy
     # (2x damage to),(0.5x damages to),(0.5x damage from),(2x damage from),(0x damage from),(0x damage to)
+    "": [[],[],[],[],[],[]],
     "Normal": [[],["Rock","Steel"],[],["Fighting"],[],["Ghost"]],
     "Fire": [["Grass","Ice","Bug","Steel"],["Fire","Water","Rock","Dragon"],["Fire","Grass","Ice","Bug","Steel","Fairy"],["Water","Ground","Rock"],[],[]],
     "Water": [["Fire","Ground","Rock"],["Water","Grass","Dragon"],["Fire","Water","Ice","Steel"],["Grass","Electric"],[],[]],
@@ -287,4 +288,39 @@ encounter_type_ratios = {
     "Route 001": [5,5,1]
 }
 
+# Base cash payout for average team level mod 10
+base_payout = {
+    0: 200,
+    1: 400,
+    2: 600,
+    3: 900,
+    4: 1200,
+    5: 1600,
+    6: 2000,
+    7: 2500,
+    8: 3000,
+    9: 3600,
+    10: 4200,
+}
 
+# How much health a potion will heal
+medicine_stats = {
+    "Potion": [20,"None"],
+    "Super Potion": [60,"None"],
+    "Hyper Potion": [120,"None"],
+    "Max Potion": [1000,"None"],
+    "Full Restore": [1000,"All"],
+
+    "Antidote": [0,"Poison"],
+    "Burn Heal": [0,"Burning"],
+    "Ice Heal": [0,"Frozen"],
+    "Awakening": [0,"Sleep"],
+    "Paralyze Heal": [0,"Paralysis"],
+    "Full Heal": [0,"All"],
+}
+
+
+
+pokeball_capture_chance = {
+
+}

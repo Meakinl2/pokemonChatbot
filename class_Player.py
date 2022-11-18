@@ -49,6 +49,10 @@ class Player:
         with open(player_pickle_path,"wb") as pickle_file:
             pickle.dump(self,pickle_file)
             pickle_file.close()
+
+        for pokemon in self.party:
+            pokemon.picklePokemonObject()
+
     
     # ---------------------------------------------------------------------------------
 
@@ -98,6 +102,10 @@ class Player:
     # Chooses and processes the move the player will make on any given battle turn
     def chooseBattleAction(self):
         user_inputs.userBattleTurn()
+
+    def pokemonFainted(self,player_active):
+        return user_inputs.userBattleSelectPokemon(self.party)
+
 
 
     # ---------------------------------------------------------------------------------

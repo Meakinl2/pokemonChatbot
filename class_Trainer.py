@@ -15,6 +15,7 @@ class Trainer:
         self.title = "Trainer"
         self.name = "Dummy"
         self.party = []
+        self.opponent = opponent
 
         self.generateParty(opponent)
 
@@ -24,40 +25,77 @@ class Trainer:
     
     # Makes Trainer party length similar to that of the opponent that is being faced
     def generateParty(self,opponent):
-        partySize = len(opponent.party) + randint(-1,1)
-        if partySize > 6:
-            partySize = 6
-        if partySize < 1:
-            partySize = 1
+        party_size = len(opponent.party) + randint(-1,1)
+        if party_size > 6: 
+            party_size = 6
+        if party_size < 1: 
+            party_size = 1
 
     # Makes trainers pokemon a level that should make the fight relatively fair, definetley room for improvent though
-        totalPlayerScore =  0
+        total_player_score =  0
         for pokemon in opponent.party:
-            totalPlayerScore += pokemon.level ** 2
-        baseLvl = sqrt(totalPlayerScore / partySize) // 1
+            total_player_score += pokemon.level ** 2
+        baseLvl = sqrt(total_player_score / party_size) // 1
 
     # Generate a random party for the trainer, that is relatively well balanced level-wise with the player
         available_species_path = selectFile(["DataTables"],"available_species.txt")
-        availableSpecies = readFile(available_species_path," ")
+        available_species = readFile(available_species_path," ")
 
-        minLvl = int(baseLvl - 3 - (baseLvl * 0.1) // 1)
+        minLvl = int(baseLvl - 3 - (baseLvl * 0.1) // 1) if int(baseLvl - 3 - (baseLvl * 0.1) // 1) > 0 else 1
         maxLvl = int(baseLvl + 3 + (baseLvl * 0.1) // 1)
-        for i in range(partySize):
-            item = randint(0,len(availableSpecies)-1)
-            chosenSpecies = availableSpecies[item][0]
-            self.party.append(Pokemon(chosenSpecies,minLvl,maxLvl,"Trainer"))
+        for i in range(party_size):
+            item = randint(0,len(available_species)-1)
+            chosen_species = available_species[item][0]
+            self.party.append(Pokemon(chosen_species,minLvl,maxLvl,"Trainer"))
 
     # ---------------------------------------------------------------------------------
 
     # Gameplay Functions (pretty much just battles though)
     # This'll be the trainers AI, I doubt it'll be too much, just some simple rules.
+    
+    def battleTurn(self,pokemon,active_pokemon,opp_active_pokemon):
+        target_index = opp_active_pokemon[randint(0,len(opp_active_pokemon) - 1)]
+        target = self.opponent.party[target_index]
 
-    def battleTurn(self,pokemon,activePokemon,oppActivePokemon):
-        return ["Opponent",0 ,"Move", 0,"Player",0]
+        # Finding relative effectiveness of each move
+        move_effectiveness = []
+        for move in pokemon.knownMoves:
+            multiplier = 1
+            for i in range(2):
+                if move.typing in type_matching[pokemon.types[i]][2]:
+                    multiplier *= 0.5
+                elif move.typing in type_matching[pokemon.types[i]][3]:
+                    multiplier *= 2
+                elif move.typing in type_matching[pokemon.types[i]][4]:
+                    multiplier *= 0
+
+                if move.pp == 0:
+                    multiplier = -1
+            move_effectiveness.append(multiplier)
+
+        # Finding moves with the best 
+        most_effective_moves = [0]
+        for i in range(1,len(move_effectiveness)):
+            if move_effectiveness[most_effective_moves[0]] < move_effectiveness[i]:
+                most_effective_moves = [i]
+            elif move_effectiveness[most_effective_moves[0]] == move_effectiveness[i]:
+                most_effective_moves.append(i)
+        
+        if len(most_effective_moves) > 1:
+            most_effective_moves = [most_effective_moves[randint(0,len(most_effective_moves) - 1)]]
+            
+        return ["Opponent",self.party.index(pokemon),"Move",most_effective_moves[0],"Player",target_index]
 
 
-    def pokemonFainted(self):
-        pass
+    # Allows the trainer AI to pick a new pokemon should an active one faint
+    def pokemonFainted(self,active_pokemon):
+        available_pokemon = []
+        for i in range(len(self.party)):
+            if not self.party[i].isFainted and i not in active_pokemon:
+                available_pokemon.append(i)
+        return available_pokemon[randint(0,len(available_pokemon) - 1)]
+
+
     # ---------------------------------------------------------------------------------
 
     # Just print relevant information about the trainers attributes

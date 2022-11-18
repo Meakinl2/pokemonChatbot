@@ -21,14 +21,14 @@ def pokemon(user_party, oppent_party, user_input):
         for entry in user_party:
             if word.lower() == entry.lower():
                 user_words.append(entry)
-                print ("\nselected Attacker: " + move)
+                print ("\nselected Attacker: " + entry)
 
             for move in user_party[entry]:
                 print("move: " + " ". join(map(str,move)))
 
                 if word.lower() == move.lower:
                     user_words.append(move)
-                    print("Slected Move: " + move)
+                    print("Selected Move: " + move)
 
 # -----------------------------------------------------------------------------------
 # sees if user input matches with the dictonary for pokemon
@@ -59,7 +59,6 @@ def checkInput(availableWords,user_input):
 
         for aWord in availableWords:
             accuracy = 0
-            print(f"Checking {uWord} against {aWord}.")
 
             for i in range(0,len(uWord) - 1):
 

@@ -206,14 +206,14 @@ def userBattleMain(player,playerPokemonIndex,playerInPlay,opponent,opponentInPla
 
 # To pick a move to use from the available moveset
 def userBattleMove(player,playerPokemon):
-    print(f"{playerPokemon.nickname} has available, moves: ")
+    print(f"\n{playerPokemon.nickname} has available, moves: ")
     validInput = False
 
     while not validInput:
         for i in range(0,len(playerPokemon.knownMoves)):
-            print(f" {i + 1}. {playerPokemon.knownMoves[i].name} Power: {playerPokemon.knownMoves[i].power} PP: {playerPokemon.knownMoves[i].pp} ")
+            print(f" {i + 1}. {playerPokemon.knownMoves[i].name} Power: {playerPokemon.knownMoves[i].power} PP: {playerPokemon.knownMoves[i].pp}/{playerPokemon.knownMoves[i].maxpp} ")
 
-        print(f"What move should {playerPokemon.nickname} use?")
+        print(f"\nWhat move should {playerPokemon.nickname} use?")
         user_input = input(" > ")
         
         try:
@@ -222,7 +222,7 @@ def userBattleMove(player,playerPokemon):
                 validInput = True
 
             else:
-                print(f"Sorry {player.name}, but {playerPokemon.name} doesn't have a move with at that index.")
+                print(f"Sorry {player.name}, but {playerPokemon.nickname} doesn't have a move with at that index.")
 
         except ValueError:
             print(f"Sorry {player.name}, but I don't know what it is you mean. Could you try again, please?")
@@ -262,14 +262,14 @@ def userBattleSelectPokemon(affectablePokemon,action = ""):
     validInput = False
 
     while not validInput:
-        print("Affectable Pokémon: ")
+        print("\nAffectable Pokémon: ")
         for i in range(len(affectablePokemon)) :
             print(f" - {i + 1}. {affectablePokemon[i].nickname}")
 
         if action != "switch":
-            print(f"On which Pokémon do you want to use {action}? ")
+            print(f"\nOn which Pokémon do you want to use {action}? ")
         else:
-            print(f"Who should switch in?")
+            print(f"\nWho should switch in?")
         user_input = input(" > ")
 
         try:
@@ -278,17 +278,17 @@ def userBattleSelectPokemon(affectablePokemon,action = ""):
                 validInput = True
 
             else:
-                print("There isn't a Pokémon at the given index. Please re-enter.")
+                print("\nThere isn't a Pokémon at the given index. Please re-enter.")
 
         except ValueError:
-            print(f"Sorry, but I don't know what it is you mean. Could you try again, please?")
+            print(f"\nSorry, but I don't know what it is you mean. Could you try again, please?")
         
         if action == "switch" and affectablePokemon[pokemonIndex].isFainted:
-            print(f"{affectablePokemon[pokemonIndex].nickname} is passed out and cannot be switched to.")
+            print(f"\n{affectablePokemon[pokemonIndex].nickname} is passed out and cannot be switched to.")
             validInput = False
 
         if action == "switch" and affectablePokemon[pokemonIndex].isActive:
-            print(f"{affectablePokemon[pokemonIndex].nickname} is already active and cannot be switched to.")
+            print(f"\n{affectablePokemon[pokemonIndex].nickname} is already active and cannot be switched to.")
             validInput = False
 
     return pokemonIndex
