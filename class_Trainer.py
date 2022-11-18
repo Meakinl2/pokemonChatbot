@@ -54,8 +54,8 @@ class Trainer:
     # This'll be the trainers AI, I doubt it'll be too much, just some simple rules.
     
     def battleTurn(self,pokemon,active_pokemon,opp_active_pokemon):
-        target_index = opp_active_pokemon[randint(0,len(opp_active_pokemon) - 1)]
-        target = self.opponent.party[target_index]
+        target_index = randint(0,len(opp_active_pokemon) - 1)
+        target = self.opponent.party[opp_active_pokemon[target_index]]
 
         # Finding relative effectiveness of each move
         move_effectiveness = []

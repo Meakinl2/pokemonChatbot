@@ -211,7 +211,8 @@ def userBattleMove(player,playerPokemon):
 
     while not validInput:
         for i in range(0,len(playerPokemon.knownMoves)):
-            print(f" {i + 1}. {playerPokemon.knownMoves[i].name} Power: {playerPokemon.knownMoves[i].power} PP: {playerPokemon.knownMoves[i].pp}/{playerPokemon.knownMoves[i].maxpp} ")
+            move= playerPokemon.knownMoves[i]
+            print(f" {i + 1}. {move.name} Type: {move.typing} Power: {move.power} PP: {move.pp}/{move.maxpp} ")
 
         print(f"\nWhat move should {playerPokemon.nickname} use?")
         user_input = input(" > ")
@@ -293,7 +294,7 @@ def userBattleSelectPokemon(affectablePokemon,action = ""):
 
     return pokemonIndex
 
- 
+
 # ---------------------------------------------------------------------------------
 
 # Pokemon Events

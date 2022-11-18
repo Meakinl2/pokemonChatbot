@@ -11,7 +11,7 @@ class Player:
         self.createUniqueID()
         self.createStorageFolder()
         self.money = 0
-        self.inventory = []
+        self.inventory = {}
         self.party = []
 
         user_inputs.pickPlayerName(self)
@@ -104,9 +104,7 @@ class Player:
         user_inputs.userBattleTurn()
 
     def pokemonFainted(self,player_active):
-        return user_inputs.userBattleSelectPokemon(self.party)
-
-
+        return user_inputs.userBattleSelectPokemon(self.party,"switch")
 
     # ---------------------------------------------------------------------------------
 
@@ -114,9 +112,12 @@ class Player:
         print(f"Name: {self.name}")
         print(f"Unique ID: {self.uniqueID}")
         print(f"Money: {self.money}")
-        print(f"Current Party: ")
+        print(f"\nCurrent Party: ")
+
         for pokemon in self.party:
-            print(f" - {pokemon.nickname} the Lvl {pokemon.level} {pokemon.species} ")
+            pokemon.printStats()
+            print("")
+
 
     # ---------------------------------------------------------------------------------
 

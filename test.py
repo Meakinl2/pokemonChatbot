@@ -10,13 +10,17 @@ from class_Player import Player
 from class_Trainer import Trainer
 from class_Battle import Battle
 
-def testBattle(playerCode):
-    pickleFilePath = selectFile(["SavedObjects","PlayerInstances"],playerCode)
-    with open(pickleFilePath, "rb") as pickleFile:
-        pickleInfo = pickleFile.read()
-        pickleFile.close()
+def testBattle(player_code):
+    pickle_file_path = selectFile(["SavedObjects","PlayerInstances"],player_code)
+    with open(pickle_file_path, "rb") as pickle_file:
+        pickle_info = pickle_file.read()
+        pickle_file.close()
         
-    player = pickle.loads(pickleInfo)
+    player = pickle.loads(pickle_info)
+
+    player.printStats()
+
+    print("--------------------------------------------")
 
     for pokemon in player.party:
         pokemon.resetBattleValues()
@@ -32,8 +36,33 @@ def testBattle(playerCode):
 
     Battle(player,trainer,"1v1")
 
-# Main()
-testBattle("XK484TPH5U")
-# Player()
 
+def givePokemon(player_code,pokemon_id):
+    pickle_file_path = selectFile(["SavedObjects","PlayerInstances"],player_code)
+    with open(pickle_file_path, "rb") as pickle_file:
+        pickle_info = pickle_file.read()
+        pickle_file.close()
+        
+    player = pickle.loads(pickle_info)
+    player.party.append(Pokemon(pokemon_id,5,5,"Player",player_code))
+
+    player.picklePlayerObject()
+
+
+
+# Main()
+# Player()
+# givePokemon("FS6UF3ADV1","001")
+# givePokemon("FS6UF3ADV1","007")
+
+testBattle("FS6UF3ADV1")
+
+pickle_file_path = selectFile(["SavedObjects","PlayerInstances"],"FS6UF3ADV1")
+with open(pickle_file_path, "rb") as pickle_file:
+    pickle_info = pickle_file.read()
+    pickle_file.close()
+    
+player = pickle.loads(pickle_info)
+
+trainer = Trainer(player)
 exit()

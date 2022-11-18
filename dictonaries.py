@@ -303,7 +303,7 @@ base_payout = {
     10: 4200,
 }
 
-# How much health a potion will heal
+# How much health and what defbuffswill be cured by a given medicine
 medicine_stats = {
     "Potion": [20,"None"],
     "Super Potion": [60,"None"],

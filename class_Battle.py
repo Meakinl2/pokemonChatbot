@@ -14,6 +14,7 @@ class Battle:
 
         self.playerActive = []
         for i in range(0,len(player.party)):
+            player.party[i].resetBattleValues()
             if not player.party[i].isFainted and len(self.playerActive) < maxActive[battleType]:
                 player.party[i].isActive = True
                 self.playerActive.append(i)
@@ -54,7 +55,8 @@ class Battle:
             for i in range(len(self.actionQueue)):
                 pokemon = self.actionQueue[i][0]
                 action = self.actionQueue[i][0].turnAction
-                if action[2] == "Move":
+                
+                if action[2] == "Move" and not pokemon.isFainted:
                     self.useMove(pokemon,action)
                 elif action[2] == "Item":
                     self.useItem(pokemon,action)
@@ -62,6 +64,9 @@ class Battle:
                     self.switchOut(action)
                 elif action[2] == "Flee":
                     self.checkFleeBattle(pokemon)
+                
+                if not self.battleOngoing:
+                        break
 
             switch_in = self.pokemonUnconcious(self.playerActive,self.player)
             if switch_in not in ["Blackout",None]:
@@ -75,14 +80,13 @@ class Battle:
             elif switch_in == "Blackout":
                 self.victory("Blackout")
 
-            self.endBattle()
 
     # Checks if any active pokemon become unconcious and then prompts the correct side for a switch in
     def pokemonUnconcious(self,active_list,trainer):
         for active_pokemon in active_list:
             pokemon = trainer.party[active_pokemon]
             if pokemon.actualStats[0] <= 0:
-                print(f"{pokemon.nickname} has fainted.")
+                print(f"\n{pokemon.nickname} has fainted.")
                 pokemon.isFainted = True
                 pokemon.isActive = False
                 remaining_pokemon = False
@@ -150,16 +154,16 @@ class Battle:
         print(f"\n{pokemon.nickname} used {pokemon.knownMoves[action[3]].name} on {target.nickname}.")
 
         # TODO Add in chance to miss
-        
-
-
+ 
         moveDamage,appliedMultipliers = calculateDamage(pokemon,target,move)
         if moveDamage ==  0 and "Nullified" not in appliedMultipliers and move.damageClass != "Status":
             moveDamage = 1
 
         target.actualStats[0] -= moveDamage
-        if target.actualStats[0] < 0:
+        if target.actualStats[0] <= 0:
             target.actualStats[0] = 0
+            for i in range(6):
+                pokemon.EVs[i] += target.evYield[i]
         
         
         print(f"{target.nickname} took {moveDamage} damage and now has {target.actualStats[0]}/{target.adjustedStats[0]}")
@@ -200,10 +204,8 @@ class Battle:
         print(f"{pokemon.nickname} attempts to flee.")
         if pokemon.actualStats[5] > self.opponent.party[self.opponentActive[0]].actualStats[5]:
             self.defeat("Flee")
-            print(f"{pokemon.nickname} got away.")
         else:
             print(f"{pokemon.nickname} did not escape.")
-
 
     # --------------------------------------------------------------
 
@@ -224,12 +226,14 @@ class Battle:
             print(f"You win {payout}₽")
             self.player.money += payout
 
-        if reason == "Capture":
+        elif reason == "Flee":
+            print("Flee")
+
+        elif reason == "Capture":
             print("Capture")
         
-        self.player.picklePlayerObject()
+        # self.player.picklePlayerObject()
         self.battleOngoing = False
-
 
 
     def defeat(self,reason):
@@ -237,13 +241,11 @@ class Battle:
             print("You have no more Pokémon that can fight.")
 
 
-
         elif reason == "Flee":
             print("You managed to successfully flee.")
         
         else:
             print("You have lost!")
+        
+        # self.player.picklePlayerObject()
         self.battleOngoing = False
-
-    
-

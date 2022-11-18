@@ -6,10 +6,10 @@ import user_inputs
 # Stats are based on this formula and I think it is redone every levelup, based on experience
 # Level: 1-100; IV: 0 - 31 per Stat; EV: 0 - 255 per stat, 510 across all stats cumulatively (Wild Pokemon have none)
 # Nature Modifier for health should always be just one and will be either 0.9,1 or 1.1 for all other stats
-def calculateStat(base,level,IV,EV,isHP,natureModifier,stage = 1):
+def calculateStat(base,level,IV,EV,isHP,natureModifier,stage = 0):
     stat = ((2 * base + IV + (EV//4)) * level) // 100
     if isHP:
-        stat += (level + 5)
+        stat += level + 5
     stat += 5
     stat *= statStageMultiplers[stage]
     stat *= natureModifier

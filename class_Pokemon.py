@@ -3,7 +3,6 @@
 import pickle
 from random import randint
 
-
 # My own functions adn classes
 from class_Move import Move
 from ProjectDataCleaning.fileControl import *
@@ -67,6 +66,7 @@ class Pokemon:
     def resetBattleValues(self):
         self.effects = []
         self.isFainted = False
+        self.isActive = False
         # Evasion, Accuracy
         self.battleStatStages = [0,0]
         self.baseStatStages = [0,0,0,0,0,0]
@@ -295,7 +295,7 @@ class Pokemon:
         print(f"Species: {self.species} of nature {self.nature}")
         print(f"Typing: {self.types[0]}  {self.types[1]} ")
         print(f"Lvl: {self.level} from Exp: {self.experience} ")
-        print(f"Base Stats: HP:{self.baseStats[0]}  ATK:{self.baseStats[1]} DEF:{self.baseStats[2]} SPA:{self.baseStats[3]} SPD:{self.baseStats[4]} SPE:{self.baseStats[5]}")
+        print(f"Base Stats: HP:{self.baseStats[0]} ATK:{self.baseStats[1]} DEF:{self.baseStats[2]} SPA:{self.baseStats[3]} SPD:{self.baseStats[4]} SPE:{self.baseStats[5]}")
         print(f"IVs: HP:{self.IVs[0]} ATK:{self.IVs[1]} DEF:{self.IVs[2]} SPA:{self.IVs[3]} SPD:{self.IVs[4]} SPE:{self.IVs[5]}")
         print(f"EV Yield: HP:{self.evYield[0]} ATK:{self.evYield[1]} DEF:{self.evYield[2]} SPA:{self.evYield[3]} SPD:{self.evYield[4]} SPE:{self.evYield[5]}")
         print(f"Adjusted Stats: HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
@@ -303,11 +303,6 @@ class Pokemon:
         for i in range(0,len(self.knownMoves)):
             print(f"- {self.knownMoves[i].name}")
         print("Learns Naturally, Moves:")
-        for i in range(0,len(self.leveledMoves)):
-            print(f"- {self.leveledMoves[i][1]} at Lvl {self.leveledMoves[i][0]}")
-        print("Allowed Moves: ")
-        for i in range(0,len(self.allowedMoves)):
-            print(f"- {self.allowedMoves[i][0]}: {self.allowedMoves[i][1]}")
 
     def printBattleStats(self):
         print(f"Lvl. {self.level} {self.species}")

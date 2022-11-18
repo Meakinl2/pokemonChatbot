@@ -61,3 +61,11 @@ ToDo:
 
 
 
+
+
+player.inventory
+
+for i in range(len(active_pokemon))
+    trainer.party[i].name
+
+pokemon.knownMoves[i].name
