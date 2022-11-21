@@ -35,19 +35,13 @@ class Move:
         for i in range(9):
             self.statChanges[i % 3].append(moveInformation[25 + i])
 
-        
-        
 
-        # Some boxes are blank in the table and so this assign appropriate integer values in their place
-
-        try: 
-            self.hitAmount = [int(moveInformation[12]),int(moveInformation[13])]
-        except ValueError:
+        self.hitAmount = [int(moveInformation[13]),int(moveInformation[12])]
+        if self.hitAmount == [0,0]:
             self.hitAmount = [1,1]
 
-        try:
-            self.turnAmount = [int(moveInformation[17]),int(moveInformation[18])]
-        except ValueError:
+        self.turnAmount = [int(moveInformation[17]),int(moveInformation[18])]
+        if self.turnAmount == [0,0]:
             self.turnAmount = [1,1]
 
 

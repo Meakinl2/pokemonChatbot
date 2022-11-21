@@ -149,7 +149,7 @@ def userBattleMain(player,playerPokemonIndex,playerInPlay,opponent,opponentInPla
 
     while not validInput:
         turnAction = ["Player",playerPokemonIndex]
-        print(f"Choose an action for {playerPokemon.nickname}:")
+        print(f"\nChoose an action for {playerPokemon.nickname}:")
         print(" 1. Move \n 2. Item \n 3. Switch \n 4. Check \n 5. Flee")
         user_input = input(" > ")
 
@@ -157,20 +157,35 @@ def userBattleMain(player,playerPokemonIndex,playerInPlay,opponent,opponentInPla
         if user_input.lower() in ["1","move"]:
             turnAction.append("Move")
             moveIndex = userBattleMove(player,playerPokemon)
-            turnAction.append(moveIndex)
-            turnAction.append("Opponent")
-            pokemonIndex = userBattleSelectPokemon(opponentActive,playerPokemon.knownMoves[moveIndex].name)
-            turnAction.append(pokemonIndex)
-            print(f"You want to use {playerPokemon.knownMoves[moveIndex].name} against {opponentActive[pokemonIndex].nickname}? ")
-            validInput = yes_or_no()
+            
+            if moveIndex != "":
+                turnAction.append(moveIndex)
+                turnAction.append("Opponent")
+                pokemonIndex = userBattleSelectPokemon(opponentActive,playerPokemon.knownMoves[moveIndex].name)
+                turnAction.append(pokemonIndex)
+                print(f"You want to use {playerPokemon.knownMoves[moveIndex].name} against {opponentActive[pokemonIndex].nickname}? ")
+                validInput = yes_or_no()
 
         # If user wants to use an item
         elif user_input.lower() in ["2","item"]:
             turnAction.append("Item")
             item = userBattleItem(player.inventory)
+            turnAction.append(item)
             
-            if item != "":
-                turnAction.append(item,"Player")
+            if item in ["Poke Ball","Great Ball","Ultra Ball","Master Ball"]:
+                
+                if opponent.context in ["Wild"]:
+                    pokemonIndex = userBattleSelectPokemon(opponentActive)
+                    turnAction.append("Opponent")
+                    turnAction.append(pokemonIndex)
+                    print(f"You want to use {item} on {opponent.party[pokemonIndex].nickname}?")
+                    validInput = yes_or_no()
+                    
+                else:
+                    print("You cannot catch pokemon in a trainer battle.")
+            
+            elif item != "":
+                turnAction.append("Player")
                 pokemonIndex = userBattleSelectPokemon(player.party,item)
                 turnAction.append(pokemonIndex)
                 print(f"You want to use {item} on {player.party[pokemonIndex].nickname}?")
@@ -180,17 +195,19 @@ def userBattleMain(player,playerPokemonIndex,playerInPlay,opponent,opponentInPla
         elif user_input.lower() in ["3","switch"]:
             turnAction.append("Switch")
             pokemonIndex = userBattleSelectPokemon(player.party)
-            turnAction.append(pokemonIndex)
-            print(f"Switch out {playerPokemon.nickname} and switch in {player.party[pokemonIndex].nickname}?")
-            validInput = yes_or_no()
+            
+            if pokemonIndex != "":
+                turnAction.append(pokemonIndex)
+                print(f"Switch out {playerPokemon.nickname} and switch in {player.party[pokemonIndex].nickname}?")
+                validInput = yes_or_no()
 
         # If user wants to check the stats of a pokemon on the battlefield
         elif user_input.lower() in ["4","check"]:
-            turnAction.append("Check")
             checkablePokemon = playerActive + opponentActive
             pokemonIndex = userBattleSelectPokemon(checkablePokemon)
-            turnAction.append(pokemonIndex)
-            checkablePokemon[pokemonIndex].printBattleStats()
+            
+            if pokemonIndex != "":
+                checkablePokemon[pokemonIndex].printBattleStats()
 
         # If user want to flee from the battle
         elif user_input.lower() in ["5","flee"]:
@@ -216,6 +233,9 @@ def userBattleMove(player,playerPokemon):
 
         print(f"\nWhat move should {playerPokemon.nickname} use?")
         user_input = input(" > ")
+
+        if user_input.lower() == "cancel":
+            return ""
         
         try:
             if int(user_input) in range(1,len(playerPokemon.knownMoves) + 1):
@@ -233,28 +253,27 @@ def userBattleMove(player,playerPokemon):
 
 # To pick and use an item in battle
 def userBattleItem(Inventory):
-    
-    if Inventory == {}:
-        print("Sorry, you're inventory appears to be empty")
-        return ""
-    
     validInput = False
     
     while not validInput:
         print("Available Items:")
-        
         for item in Inventory:
             print(f" - {item}: {Inventory[item]}")
+        
         print("Which item would you like to use? ")
         user_input = input(" > ")
         
-        if user_input[0].upper() + user_input[1:-1].lower() in Inventory:
-            item = user_input
-            validInput = True
-        
-        else:
-            print(f"Sorry, you don't have any {user_input} to use. Try again?")
-    
+        if user_input.lower() == "cancel":
+            return ""
+
+        for entry in Inventory:
+            if entry.lower() == user_input.lower():
+                if Inventory[entry] > 0:
+                    item = entry
+                    validInput = True
+                else:
+                    print(f"You don't have any {entry}s to use.")
+
     return item
 
         
@@ -271,7 +290,11 @@ def userBattleSelectPokemon(affectablePokemon,action = ""):
             print(f"\nOn which Pokémon do you want to use {action}? ")
         else:
             print(f"\nWho should switch in?")
+        
         user_input = input(" > ")
+
+        if user_input.lower() == "cancel":
+            return ""
 
         try:
             if int(user_input) in range(1,len(affectablePokemon) + 1):
@@ -331,10 +354,5 @@ def learnLevelMove(pokemon,newMove):
 
     else:
         print(f"{pokemon.nickname} did not learn {newMove}.")
-
-# ---------------------------------------------------------------------------------
-
-# 
-    
 
 # ---------------------------------------------------------------------------------

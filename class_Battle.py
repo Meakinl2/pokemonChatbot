@@ -9,6 +9,8 @@ class Battle:
     def __init__(self,player,opponent,battleType):
         self.player = player
         self.opponent = opponent
+
+        self.player_escapes = 0
                 
         maxActive = {"1v1": 1,"2v2": 2,"3v3": 3,"Wild": 1}
 
@@ -34,14 +36,31 @@ class Battle:
 
     # Functions that run during the course of the battle
 
+    # Prints relevatnt info at the start of each turn
+    def printTurnInfo(self):
+        self.turn += 1
+        print("----------------------------------------------------------") 
+        print(f"Turn {self.turn}")
+        print("----------------------------------------------------------") 
+
+        print("\nPlayer Active: ")
+        for index in self.playerActive:
+            pokemon = self.player.party[index]
+            pokemon.printBattleStats()
+
+        print("\nOpponent Active: ")
+        for index in self.opponentActive:
+            pokemon = self.opponent.party[index]
+            pokemon.printBattleStats()
+
+        print("\n----------------------------------------------------------") 
+
     # The basic battle loop that runs every turn
     def battleLoop(self):
         self.battleOngoing = True
-        turn = 0
+        self.turn = 0
         while self.battleOngoing:
-            turn += 1
-            print("----------------------------------------------------------") 
-            print(f"Turn {turn}")
+            self.printTurnInfo()
 
             for i in range(len(self.playerActive)):
                 self.player.party[self.playerActive[i]].turnAction = user_inputs.userBattleMain(self.player,self.playerActive[i],self.playerActive,self.opponent,self.opponentActive)
@@ -132,9 +151,7 @@ class Battle:
             moves = 0
             for i in range(1,len(self.actionQueue)):
                 if self.actionQueue[i][1] > self.actionQueue[i - 1][1]:
-                    temp = self.actionQueue[i]
-                    self.actionQueue[i] = self.actionQueue[i - 1]
-                    self.actionQueue[i - 1] = temp
+                    self.actionQueue[i],self.actionQueue[i - 1] = self.actionQueue[i - 1],self.actionQueue[i]
                     moves += 1
 
             if moves == 0:
@@ -150,23 +167,44 @@ class Battle:
         
         move = pokemon.knownMoves[action[3]]
         move.pp -= 1
-
-        print(f"\n{pokemon.nickname} used {pokemon.knownMoves[action[3]].name} on {target.nickname}.")
-
-        # TODO Add in chance to miss
- 
         moveDamage,appliedMultipliers = calculateDamage(pokemon,target,move)
-        if moveDamage ==  0 and "Nullified" not in appliedMultipliers and move.damageClass != "Status":
-            moveDamage = 1
 
-        target.actualStats[0] -= moveDamage
-        if target.actualStats[0] <= 0:
-            target.actualStats[0] = 0
-            for i in range(6):
-                pokemon.EVs[i] += target.evYield[i]
+        hit_amount = random.randint(move.hitAmount[0],move.hitAmount[1])
         
+        for change in move.statChanges:
+            pass
         
-        print(f"{target.nickname} took {moveDamage} damage and now has {target.actualStats[0]}/{target.adjustedStats[0]}")
+        actual_hit_amount = 0
+        for i in range(hit_amount):
+            actual_hit_amount += 1
+            print(f"\n{pokemon.nickname} used {pokemon.knownMoves[action[3]].name} on {target.nickname}.")
+            
+            accuracy = battleStageMultipliers[pokemon.battleStatStages[0]] * battleStageMultipliers[target.battleStatStages[1]] * (move.accuracy / 100)
+            if random.random() > accuracy:
+                print("But it missed!")
+                break
+
+            if moveDamage ==  0 and "Nullified" not in appliedMultipliers and move.damageClass != "Status":
+                moveDamage = 1
+
+            target.actualStats[0] -= moveDamage
+            if target.actualStats[0] <= 0:
+                target.actualStats[0] = 0
+                target.isFainted = True
+                break
+
+            print(f"{target.nickname} took {moveDamage} damage and now has {target.actualStats[0]}/{target.adjustedStats[0]}")
+
+            
+        if hit_amount > 1:
+            print(f"It hit {actual_hit_amount} times.")
+
+
+        if action[0] == "Player" and target.actualStats[0] == 0:
+                for i in range(6):
+                    pokemon.addEVs(target.evYield)
+                    self.exp_gain = calulateExperience(pokemon,target)
+                    pokemon.addExperience(self.exp_gain)
 
         if "Nullified" in appliedMultipliers:
             print("It had no effect.")
@@ -178,15 +216,48 @@ class Battle:
         if "Critical" in appliedMultipliers:
             print("It was a Critical Hit.")
 
-    def useItem(self):
-        print("Item")
+
+    def useItem(self,pokemon,action):
+        if action[3] in ["Poke Ball","Great Ball","Ultra Ball","Master Ball"]:
+            self.usePokeball(action)
+        else:
+            self.useMedicine(action)
 
     # Use a specified item and inflict 
-    def usePotion(self,pokemon,action):
-        print("Potion")
+    def useMedicine(self,action):
+        target = self.player.party[action[5]]
+        target_inital_health = target.actualStats[0]
+        
+        target.actualStats[0] += medicine_stats[action[3]][0]
+        if target.actualStats[0] > target.adjustedStats[0]:
+            target.actualStats[0] = target.adjustedStats[0]
 
-    def userPokeball(self,pokemon,action):
-        print("Pokeball")
+        heal_amount = target.actualStats[0] - target_inital_health
+        if heal_amount > 0:
+            print(f"{target.nickname} recovered {heal_amount} health.")
+            print(f"{target.nickname} now has {target.actualStats[0]}/{target.adjustedStats[0]}")
+        
+        for effect in target.effects:
+            if effect in medicine_stats[action[3]]:
+                target.effects.remove(effect)
+                print(f"{target.nickname} recovered from {effect}.")
+
+
+    # Determines if a target pokemon should be captured when a pokeball is thrown at them
+    def usePokeball(self,action):
+        target = self.opponent.party[action[5]]
+        shake_check = captureRate(target,action[3])
+
+        for i in range(3):
+            print("*shake* *shake*")
+            if shake_check <= random.randint(0,65535):
+                print(f"{target.nicknmae} broke free.")
+                return
+        
+        self.player.captureNewPokemon(target)
+        print(f"{target.nickname} successfully caught.")
+        self.victory("Capture")
+
 
     # Switches out to a desired Pokemon
     def switchOut(self,action):
@@ -200,9 +271,11 @@ class Battle:
 
     # Checks if a the battle can be fled, and then acts accordingly
     def checkFleeBattle(self,pokemon):
-        
         print(f"{pokemon.nickname} attempts to flee.")
+        self.player_escapes += 1
         if pokemon.actualStats[5] > self.opponent.party[self.opponentActive[0]].actualStats[5]:
+            self.defeat("Flee")
+        elif escapeOdds(pokemon,self.opponent.party[self.opponentActive[0]],self.player_escapes) < random.randint(0,255):
             self.defeat("Flee")
         else:
             print(f"{pokemon.nickname} did not escape.")
@@ -211,6 +284,7 @@ class Battle:
 
     # Functions that run at the end of the battle
 
+    # For all the conditions under which the playe rwins the battle
     def victory(self,reason):
 
         if reason == "Blackout":
@@ -222,30 +296,31 @@ class Battle:
                 total_score += pokemon.level
                 party_size += 1
 
-            payout = (base_payout[total_score % 10 * party_size] * random.randint(-30,30) / 100) // 1
+            payout = (base_payout[total_score % (10 * party_size)] * random.randint(-30,30) / 100) // 1
             print(f"You win {payout}₽")
             self.player.money += payout
 
-        elif reason == "Flee":
-            print("Flee")
 
         elif reason == "Capture":
             print("Capture")
         
-        # self.player.picklePlayerObject()
-        self.battleOngoing = False
+        self.endBattle()
 
 
+    # For all the conditions under which the player loses the battle
     def defeat(self,reason):
         if reason ==  "Blackout":
             print("You have no more Pokémon that can fight.")
 
-
         elif reason == "Flee":
             print("You managed to successfully flee.")
         
-        else:
-            print("You have lost!")
-        
-        # self.player.picklePlayerObject()
+        self.endBattle()
+
+
+    # The stuff that always has to run at the end of the battle
+    def endBattle(self):
+        for pokemon in self.player.party:
+            pokemon.isActive = False
+        self.player.picklePlayerObject()
         self.battleOngoing = False

@@ -59,13 +59,3 @@ ToDo:
 - Maybe add discord functionality, if time allows
 
 
-
-
-
-
-player.inventory
-
-for i in range(len(active_pokemon))
-    trainer.party[i].name
-
-pokemon.knownMoves[i].name

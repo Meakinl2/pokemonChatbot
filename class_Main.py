@@ -48,8 +48,11 @@ class Main:
                 if user_inputs.yes_or_no():
                     self.deletePlayerInstance(self.selected_instance)
 
-            elif choice == "Return":
+            elif choice == "Return" and self.player != "":
                 pass
+
+            elif choice == "Return":
+                print("You cannot return without selecting a Player Instance.")
                 
 
     # Load all valid instance codes of players
@@ -119,7 +122,7 @@ class Main:
                 total += i
                 cumulative_ratios.append(total)
 
-            selected_encounter = random.randint(1,total )
+            selected_encounter = random.randint(1,total)
 
             index = 0
             for i in cumulative_ratios:
@@ -134,24 +137,20 @@ class Main:
 
             if encounter_type == "Trainer":
                 
-                trainer = Trainer(self.player)
+                trainer = Trainer(self.player,"Trainer")
                 Battle(self.player,trainer,"1v1")
 
-            # For non-battle encounter types
-
             elif encounter_type == "Wild":
-                print("Wild Pokemon Encounter")
+
+                trainer = Trainer(self.player,"Wild")
+                Battle(self.player,trainer,"Wild")
 
             elif encounter_type == "Item":
-                print("Item")
+                all_items = list(self.player.inventory.key())
+                item = random.choice(all_items)
+                self.player.inventory[item] += 1
+                print(f"You found a {item} on the ground. Nice.")
 
             else:
                 print("I'm not sure that this is supposed to be happening.")
-
- 
-
-
-
-
-
 

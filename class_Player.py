@@ -11,7 +11,10 @@ class Player:
         self.createUniqueID()
         self.createStorageFolder()
         self.money = 0
-        self.inventory = {}
+        self.inventory = {
+            "Potion": 0,"Super Potion": 0,"Hyper Potion": 0,"Max Potion": 0,"Full Restore": 0,
+            "Antidote": 0,"Burn Heal": 0,"Ice Heal": 0,"Awakening": 0,"Paralyze Heal": 0,"Full Heal": 0,
+            "Poke Ball": 0,"Great Ball": 0,"Ultra Ball": 0,"Master Ball": 0}
         self.party = []
 
         user_inputs.pickPlayerName(self)
@@ -103,6 +106,8 @@ class Player:
     def chooseBattleAction(self):
         user_inputs.userBattleTurn()
 
+
+    # Necessary so that a function in Battle class works for both the player and the trainer classes
     def pokemonFainted(self,player_active):
         return user_inputs.userBattleSelectPokemon(self.party,"switch")
 

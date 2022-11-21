@@ -2,7 +2,14 @@
 # Might not work as ajoining functions may also have been rewritten
 # A lot of the inital ones are because I discovered the csv library
 
+import os,random,pickle,math,numpy
+
 from ProjectDataCleaning.fileControl import *
+from input_interpretation import *
+from class_Main import *
+from class_Player import Player
+from class_Trainer import Trainer
+from class_Battle import Battle
 
 # -----------------------------------------------------------------------------------------------------
 
@@ -131,5 +138,19 @@ player.party[1].printStats()
 with open(pickleFilePath, "wb") as pickleFile:
     pickle.dump(player,pickleFile)
     pickleFile.close()
+
+
+# Generates random Test pokemon to check pokemon generation is working
+def generateTestPokemon(amount,minLvl,maxLvl):
+    available_species_path = selectFile(["DataTables"],"available_species.txt")
+    availableSpecies = readFile(available_species_path," ")
+    for i in range(0,amount):
+        item = randint(0,len(availableSpecies)-1)
+        chosenSpecies = availableSpecies[item][0]
+        mypokemon = Pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
+        print(f"Generated Pokemon {i  +  1}")
+        mypokemon.printStats()
+        print("-----------------------------------------------")
+        mypokemon.testLeveling()
 
 # -----------------------------------------------------------------------------------------------------

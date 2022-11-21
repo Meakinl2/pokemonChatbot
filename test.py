@@ -10,22 +10,22 @@ from class_Player import Player
 from class_Trainer import Trainer
 from class_Battle import Battle
 
-def testBattle(player_code):
+def loadPlayerInstance(player_code):
     pickle_file_path = selectFile(["SavedObjects","PlayerInstances"],player_code)
     with open(pickle_file_path, "rb") as pickle_file:
         pickle_info = pickle_file.read()
         pickle_file.close()
         
-    player = pickle.loads(pickle_info)
+    return pickle.loads(pickle_info)
 
-    player.printStats()
-
-    print("--------------------------------------------")
+def testBattle(player_code):
+    player = loadPlayerInstance(player_code)
 
     for pokemon in player.party:
         pokemon.resetBattleValues()
+        pokemon.update()
 
-    trainer = Trainer(player)
+    trainer = Trainer(player,"Trainer")
 
     print(f"\nTrainer: {trainer.title} {trainer.name}")
     print(f"Party:")
@@ -36,33 +36,11 @@ def testBattle(player_code):
 
     Battle(player,trainer,"1v1")
 
-
-def givePokemon(player_code,pokemon_id):
-    pickle_file_path = selectFile(["SavedObjects","PlayerInstances"],player_code)
-    with open(pickle_file_path, "rb") as pickle_file:
-        pickle_info = pickle_file.read()
-        pickle_file.close()
-        
-    player = pickle.loads(pickle_info)
-    player.party.append(Pokemon(pokemon_id,5,5,"Player",player_code))
-
-    player.picklePlayerObject()
-
-
-
 # Main()
-# Player()
-# givePokemon("FS6UF3ADV1","001")
-# givePokemon("FS6UF3ADV1","007")
 
-testBattle("FS6UF3ADV1")
+# instance_code = Player().uniqueID
+# givePokemon(instance_code,"001")
+# givePokemon(instance_code,"007")
 
-pickle_file_path = selectFile(["SavedObjects","PlayerInstances"],"FS6UF3ADV1")
-with open(pickle_file_path, "rb") as pickle_file:
-    pickle_info = pickle_file.read()
-    pickle_file.close()
-    
-player = pickle.loads(pickle_info)
+testBattle("D65W5KV85H")
 
-trainer = Trainer(player)
-exit()

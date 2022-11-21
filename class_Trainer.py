@@ -11,21 +11,27 @@ from class_Pokemon import Pokemon
 from dictonaries import *
 
 class Trainer:
-    def __init__(self,opponent):
+    def __init__(self,opponent,context):
+        self.context = context
         self.title = "Trainer"
         self.name = "Dummy"
         self.party = []
         self.opponent = opponent
 
-        self.generateParty(opponent)
+        if context == "Trainer":
+            self.generateParty()
+        
+        elif context == "Wild":
+            self.generateWildPokemon()
+            
 
     # ---------------------------------------------------------------------------------
 
     # Generating Tainer and their party
     
     # Makes Trainer party length similar to that of the opponent that is being faced
-    def generateParty(self,opponent):
-        party_size = len(opponent.party) + randint(-1,1)
+    def generateParty(self):
+        party_size = len(self.opponent.party) + randint(-1,1)
         if party_size > 6: 
             party_size = 6
         if party_size < 1: 
@@ -33,7 +39,7 @@ class Trainer:
 
     # Makes trainers pokemon a level that should make the fight relatively fair, definetley room for improvent though
         total_player_score =  0
-        for pokemon in opponent.party:
+        for pokemon in self.opponent.party:
             total_player_score += pokemon.level ** 2
         baseLvl = sqrt(total_player_score / party_size) // 1
 
@@ -47,6 +53,24 @@ class Trainer:
             item = randint(0,len(available_species)-1)
             chosen_species = available_species[item][0]
             self.party.append(Pokemon(chosen_species,minLvl,maxLvl,"Trainer"))
+
+
+    # Generates a pokemon for a wild encounter
+    def generateWildPokemon(self):
+        total_level = 0
+        for pokemon in self.opponent.party:
+            total_level += pokemon.level
+        average_level = total_level // len(self.opponent.party)
+
+        available_species_path = selectFile(["DataTables"],"available_species.txt")
+        available_species = readFile(available_species_path," ")
+
+        minLvl = int(average_level * 0.85)
+        maxLvl = int(average_level * 1.15)
+
+        item = randint(0,len(available_species)-1)
+        chosen_species = available_species[item][0]
+        self.party.append(Pokemon(chosen_species,minLvl,maxLvl,"Wild"))
 
     # ---------------------------------------------------------------------------------
 
@@ -71,9 +95,13 @@ class Trainer:
 
                 if move.pp == 0:
                     multiplier = -1
+                
+                if move.damageClass == "Status":
+                    multiplier *= 0.5
+
             move_effectiveness.append(multiplier)
 
-        # Finding moves with the best 
+        # Finding moves with the best effectiveness
         most_effective_moves = [0]
         for i in range(1,len(move_effectiveness)):
             if move_effectiveness[most_effective_moves[0]] < move_effectiveness[i]:

@@ -305,22 +305,27 @@ base_payout = {
 
 # How much health and what defbuffswill be cured by a given medicine
 medicine_stats = {
-    "Potion": [20,"None"],
-    "Super Potion": [60,"None"],
-    "Hyper Potion": [120,"None"],
-    "Max Potion": [1000,"None"],
-    "Full Restore": [1000,"All"],
+    "Potion": [20,0,"None"],
+    "Super Potion": [60,0,"None"],
+    "Hyper Potion": [120,0,"None"],
+    "Max Potion": [1000,0,"None"],
+    "Full Restore": [1000,0,"Poison","Burning","Frozen","Sleep","Paralysis"],
 
-    "Antidote": [0,"Poison"],
-    "Burn Heal": [0,"Burning"],
-    "Ice Heal": [0,"Frozen"],
-    "Awakening": [0,"Sleep"],
-    "Paralyze Heal": [0,"Paralysis"],
-    "Full Heal": [0,"All"],
+    "Antidote": [0,0,"Poison"],
+    "Burn Heal": [0,0,"Burning"],
+    "Ice Heal": [0,0,"Frozen"],
+    "Awakening": [0,0,"Sleep"],
+    "Paralyze Heal": [0,0,"Paralysis"],
+    "Full Heal": [0,0,"Poison","Burning","Frozen","Sleep","Paralysis"],
+
+    "Ether": [],
+    "Max Ether":[]
 }
 
-
-
-pokeball_capture_chance = {
-
+# How much each type of pokeball increases 
+pokeball_catch_multiplier = {
+    "Poke Ball": 1,
+    "Great Ball": 1.5,
+    "Ultra Ball": 2,
+    "Master Ball": 255,
 }

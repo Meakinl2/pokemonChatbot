@@ -28,15 +28,14 @@ class Pokemon:
         self.allowedEvolve = True
         self.inParty = False
 
-        # Generate all semi-random attributes
         self.level = randint(minLvl,maxLvl)
         self.experience = levelingBounds[self.level]
         self.assignRandomNature()
         self.EVs = [0,0,0,0,0,0]
         self.IVs = []
         for each in range(6):
-            IV = randint(0,31)
-            self.IVs.append(IV)
+            iv = randint(0,31)
+            self.IVs.append(iv)
 
         # Apply all context specfic attribute alterations
         if context == "Wild":
@@ -62,20 +61,13 @@ class Pokemon:
     # ---------------------------------------------------------------------------------
 
     # "Admin" Functions
+    def update(self):
+        total_base_stats = 0
+        for stat in self.baseStats:
+            total_base_stats += int(stat)
+        self.base_exp = total_base_stats // 2
 
-    def resetBattleValues(self):
-        self.effects = []
-        self.isFainted = False
-        self.isActive = False
-        # Evasion, Accuracy
-        self.battleStatStages = [0,0]
-        self.baseStatStages = [0,0,0,0,0,0]
-        self.actualStats = []
-        for value in self.adjustedStats:
-            self.actualStats.append(value)
-        self.turnAction = []
 
-        
     # Pickles the pokemon to save all it's attributes
     # This will only really be called by the parent Player class.
     def picklePokemonObject(self):
@@ -134,7 +126,11 @@ class Pokemon:
             self.types.append("")
         self.baseStats = self.speciesData[1][2].split(".")
         self.evYield = self.speciesData[2][2].split(".")
-        
+        total_base_stats = 0
+        for stat in self.baseStats:
+            total_base_stats += int(stat)
+        self.base_exp = total_base_stats // 2
+        self.base_catch_chance = self.speciesData[4][2]
 
     # Find and assign moves learnt by leveling up.
     def assignLeveledMoves(self):
@@ -249,6 +245,38 @@ class Pokemon:
             isHP = False
 
 
+    # Resets all values used in a battle. Run when pokemon is haeled
+    def resetBattleValues(self):
+        self.effects = []
+        self.isFainted = False
+        self.isActive = False
+        # Evasion, Accuracy
+        self.battleStatStages = [0,0]
+        self.baseStatStages = [0,0,0,0,0,0]
+        self.actualStats = self.adjustedStats.copy()
+        self.turnAction = []
+
+
+    # Adds EVs gained from beating other pokemon in battle
+    def addEVs(self,evs):
+        total_new_evs = 0
+        for ev in evs:
+            total_new_evs += int(ev)
+        
+        total_self_evs = 0
+        for ev in self.EVs:
+            total_self_evs += ev
+
+        if total_new_evs + total_self_evs > 255:
+            return
+        
+        for i in range(6):
+            if self.EVs[i] < 31:
+                self.EVs[i] += int(evs[i])
+            if self.EVs[i] > 31:
+                self.EVs[i] = 31
+
+
     # Just increase the pokemons experience by a given amount and runs levelUp check
     def addExperience(self,newExperience):
         self.experience += newExperience
@@ -266,7 +294,7 @@ class Pokemon:
             else:
                 self.level += 1
                 self.calculateAdjustedStats()
-                print(f"{self.nickname} has Leveled Up.")
+                print(f"\n{self.nickname} has Leveled Up.")
                 print(f"{self.nickname} is now Level {self.level}")
                 print(f"HP:{self.adjustedStats[0]} ATK:{self.adjustedStats[1]} DEF:{self.adjustedStats[2]} SPA:{self.adjustedStats[3]} SPD:{self.adjustedStats[4]} SPE:{self.adjustedStats[5]}")
                 self.levelLearnMove()
@@ -302,13 +330,15 @@ class Pokemon:
         print("Knows Moves:")
         for i in range(0,len(self.knownMoves)):
             print(f"- {self.knownMoves[i].name}")
-        print("Learns Naturally, Moves:")
 
     def printBattleStats(self):
         print(f"Lvl. {self.level} {self.species}")
         print(f"Health: {self.actualStats[0]}/{self.adjustedStats[0]}")
         print(f"ATK: {self.actualStats[1]} DEF: {self.actualStats[2]} SPA: {self.actualStats[3]} SPD: {self.actualStats[4]} SPE: {self.actualStats[5]}")
         print(f"Type: {self.types[0]}  {self.types[1]}")
+        print("Knows Moves:")
+        for i in range(0,len(self.knownMoves)):
+            print(f"- {self.knownMoves[i].name}")
 
     # ---------------------------------------------------------------------------------
 
@@ -338,17 +368,4 @@ class Pokemon:
     # ---------------------------------------------------------------------------------
 
     # End of Pokemon class
-
-# Generates random Test pokemon to check pokemon generation is working
-def generateTestPokemon(amount,minLvl,maxLvl):
-    available_species_path = selectFile(["DataTables"],"available_species.txt")
-    availableSpecies = readFile(available_species_path," ")
-    for i in range(0,amount):
-        item = randint(0,len(availableSpecies)-1)
-        chosenSpecies = availableSpecies[item][0]
-        mypokemon = Pokemon(chosenSpecies,minLvl,maxLvl,"Wild")
-        print(f"Generated Pokemon {i  +  1}")
-        mypokemon.printStats()
-        print("-----------------------------------------------")
-        mypokemon.testLeveling()
-        
+    
