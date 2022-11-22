@@ -27,6 +27,8 @@ class Battle:
             self.opponentActive.append(i)
             
         print(f"\nYou are approached by {self.opponent.title} {self.opponent.name}.")
+        if battleType != "Wild":
+            print(f"{self.opponent.title} {self.opponent.name} has {len(self.opponent.party)} pokemon.")
         print(f"\n{self.opponent.title} {self.opponent.name} sends out {self.opponent.party[self.opponentActive[0]].nickname}.")
         print(f"Go, {self.player.party[self.playerActive[0]].nickname}.")
 
@@ -121,6 +123,7 @@ class Battle:
                 else:
                     return "Blackout"
 
+
     # Determines in what order each action should occur.
     def determineActionOrder(self):
         self.actionQueue = []
@@ -171,15 +174,12 @@ class Battle:
 
         hit_amount = random.randint(move.hitAmount[0],move.hitAmount[1])
         
-        for change in move.statChanges:
-            pass
-        
         actual_hit_amount = 0
         for i in range(hit_amount):
             actual_hit_amount += 1
             print(f"\n{pokemon.nickname} used {pokemon.knownMoves[action[3]].name} on {target.nickname}.")
             
-            accuracy = battleStageMultipliers[pokemon.battleStatStages[0]] * battleStageMultipliers[target.battleStatStages[1]] * (move.accuracy / 100)
+            accuracy = battleStageMultipliers[pokemon.baseStatStages[6]] * battleStageMultipliers[target.baseStatStages[7]] * (move.accuracy / 100)
             if random.random() > accuracy:
                 print("But it missed!")
                 break

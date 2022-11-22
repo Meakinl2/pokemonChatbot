@@ -42,5 +42,10 @@ def testBattle(player_code):
 # givePokemon(instance_code,"001")
 # givePokemon(instance_code,"007")
 
-testBattle("D65W5KV85H")
+# testBattle("D65W5KV85H")
 
+moves_file = selectFile(["DataTables"],"full_move_data.txt")
+moves_file_lines = readFile(moves_file,"\t")
+
+for line in moves_file_lines:
+    print(f"{line[1]}   {line[25]}   {line[28]}   {line[31]}")

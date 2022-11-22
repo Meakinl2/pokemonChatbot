@@ -13,16 +13,18 @@ from dictonaries import *
 class Trainer:
     def __init__(self,opponent,context):
         self.context = context
-        self.title = "Trainer"
-        self.name = "Dummy"
         self.party = []
         self.opponent = opponent
 
         if context == "Trainer":
             self.generateParty()
+            self.title = "Trainer"
+            self.name = "Dummy"
         
         elif context == "Wild":
             self.generateWildPokemon()
+            self.title = "Wild"
+            self.name = self.party[0].nickname
             
 
     # ---------------------------------------------------------------------------------

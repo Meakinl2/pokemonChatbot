@@ -250,9 +250,8 @@ class Pokemon:
         self.effects = []
         self.isFainted = False
         self.isActive = False
-        # Evasion, Accuracy
-        self.battleStatStages = [0,0]
-        self.baseStatStages = [0,0,0,0,0,0]
+        # HP,ATK,DEF,SPA,SPD,SPE,ACC,EVA
+        self.baseStatStages = [0,0,0,0,0,0,0,0]
         self.actualStats = self.adjustedStats.copy()
         self.turnAction = []
 

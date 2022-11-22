@@ -22,11 +22,11 @@ https://www.python.org/doc/
 Information/Data: 
 
 GitHub - PokeApi/PokeApi
-Contains a considerable amount of Gen 1-6  information
+Contains a considerable amount of Gen 1-6 data
 https://github.com/PokeAPI/pokeapi
 
 GitHub - itsjavi/swordshield-data
-Large amount of move data in csv form
+Large amount of move adn pokemon data in csv form for Generation VIII
 https://github.com/itsjavi/swordshield-data
 
 Bulbapedia
@@ -35,7 +35,6 @@ https://bulbapedia.bulbagarden.net/wiki/Main_Page
 
 ------------------------------------------------------------------------------------------------------------------------
 PokeAPI has a Licensing File, I haven't used any of their code and this project won't be distributed, but just in case:
-
 
 Copyright (c) © 2013–2021 Paul Hallett and PokéAPI contributors (https://github.com/PokeAPI/pokeapi#contributing). Pokémon and Pokémon character names are trademarks of Nintendo.
 All rights reserved.

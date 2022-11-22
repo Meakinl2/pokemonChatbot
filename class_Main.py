@@ -26,10 +26,11 @@ class Main:
         
         while True:
             print(f"Currently Selected Instance: ")
-            choice = user_inputs.selectOption(["Continue","New","Delete","Return"])
+            choice = user_inputs.selectOption(["Continue","New","Delete"])
             
             if choice == "Continue":
-                self.selectPlayerInstance()
+                if self.selected_instance == "":
+                    self.selectPlayerInstance()
                 self.loadPlayerInstance(self.selected_instance)
                 return
 
@@ -39,20 +40,21 @@ class Main:
                     self.player = Player()
                     self.selected_instance = self.player.uniqueID
                     return
+        
+            elif choice == "Select":
+                self.selectPlayerInstance()
 
             elif choice == "Delete":
-                self.selectPlayerInstance()
+                if self.selected_instance == "":
+                    self.selectPlayerInstance()
                 print(f"Are you sure you want to delete {self.selected_instance}?")
                 print("It cannot be undone.")
 
                 if user_inputs.yes_or_no():
                     self.deletePlayerInstance(self.selected_instance)
 
-            elif choice == "Return" and self.player != "":
-                pass
-
-            elif choice == "Return":
-                print("You cannot return without selecting a Player Instance.")
+            else:
+                print(f"Could you try that again please.")
                 
 
     # Load all valid instance codes of players

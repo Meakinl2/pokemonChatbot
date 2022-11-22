@@ -56,6 +56,7 @@ def calulateExperience(attacker,target):
     exp *= (2 * (target.level + 10) // (target.level + attacker.level + 10)) ** 2.5 + 1
     return exp
 
+
 # Calulates the relative likelihood of an escape attempt being successful
 def escapeOdds(attacker,target,escape_attempts):
     return ((attacker.actualStats[5] * 128) // target.actualStats[5] + 30 * escape_attempts) % 256
