@@ -6,17 +6,7 @@ from class_Player import Player
 from class_Trainer import Trainer
 from class_Battle import Battle
 
-#creating a function to check for key words in input (Autocorrector)
-users_party = {
-    "B":["Takckle", "overgrown", "Harden"],
-    "Charmander":["Quick attack", "Fire Punch", "Tail whip"],
-    "Squrtal":["ice punch", "water gun", "tail whip"]
-}
- 
-oppnent_party = {
-    "Growlithe": ["Ember", "Flamethrower", "Roar"],
-    "machomp": ["Take Down", "Gust", "Combat Punch"]
-}
+
 
 
 pickle_file_path = selectFile(["SavedObjects","PlayerInstances"],"YEBBV0IIZ2")
@@ -29,73 +19,8 @@ player = pickle.loads(pickle_info)
 trainer = Trainer(player)
 
 
-#for i in range(len(trainer.party)):
-#   print(trainer.party[i].nickname)
-
 pokemon = player.party[0]
 
-
-
-
-#recording certent information
-
-
-# spliting the user input for words
-def input_checker(user_party, oppent_party, user_input):
-    user_words = user_input.split(" ")
-    
-# sees if user input matches with the dictonary for moves
-    for word in user_words:
-
-        print ("word: " + word)
-
-        for entry in user_party:
-            if word.lower() == entry.lower():
-                user_words.append(entry)
-                print ("\nselected Attacker: " + move)
-
-            for move in user_party[entry]:
-                print("move: " + " ". join(map(str,move)))
-
-                if word.lower() == move.lower:
-                    user_words.append(move)
-                    print("Slected Move: " + move)
-                    return move
-
-# sees if user input matches with the dictonary for pokemon
-
-            for animal in user_party:
-                if word.lower() == animal.lower():
-                    user_words.append(animal)
-                    print("\nChosen pokemon: " + pokemon)
-                
-                for pokemon in user_party[pokemon]:
-                    print ("pokenon: " + pokemon)
-
-                    if word.lower() == pokemon.lower:
-                        user_words.append(pokemon)
-                        print("Selected pokmon: " + " ". join(map(str,pokemon)))
-                        return pokemon
-
-# sees if user input matches with the dictonary for oppent pokemon
-
-            for op_pokemon in oppent_party:
-                if word.lower() == op_pokemon.lower():
-                    user_words.append(op_pokemon)
-                    print ("\n oppent pokemon is: " + oppent)
-
-                for oppent in oppent_party[oppent]:
-                    print("oppent pokemon: " + oppent)
-
-                    if word.lower() == oppent.lower:
-                        user_words.append(oppent)
-                        print("Selected oppent pokemon: " + " ". join(map(str,oppent)))
-                        return oppent
-
-    #if word in user_words:
-       # do_something()
-
-    all(flag == 0 for (pokemon, moves, oppent, flag) in user_input)
 #spliting the users input & check is the inputed word is one of the keywords
 def checkInput(availableWords,user_input):
     userWords = user_input.split(" ")
@@ -140,7 +65,7 @@ def checkInput(availableWords,user_input):
         
 #iprovment of input matcher and prompt for clarifcation & unecessary info
 def battleInput(player,opponent,playerActive,opponentActive,pokemon):
-
+    turn_action = ["Player",player.party.index(pokemon)]
 #geting all the posibilety of list for moves, item, op pokemon, and player pokemon
     available_move = []
     for i in range(len(pokemon.knownMoves)):
@@ -155,13 +80,15 @@ def battleInput(player,opponent,playerActive,opponentActive,pokemon):
         available_items.append(entry)
 
     player_pokemon = []
-    for i in range(len(player.party)):
+    for i in range(len(playerActive.party)):
         player_pokemon.append(player.party[i].nickname)
 
 # turning the player pokemon, move, items, and oppoent pokemon back into indexs
     for i in range(player.party):
         if player.party[i].nickname:
             pass
+
+
     opptions = ["swich","check","flee"]
 
 
@@ -198,24 +125,25 @@ def battleInput(player,opponent,playerActive,opponentActive,pokemon):
         if len(move) == 1:
             has_move = True
 
+        #battle = [op_pokemon and has_move [playerPokemon and move and target_pokemon]]
+        #invotory = [has_item and p_pokemon [item and playerPokemon]]
+        #move_prompt = [op_pokemon [print("what move would you like to use?")]]
+        #error_prompt = [p_pokemon and has_move[print("error try again")],p_pokemon and op_pokemon[print("error try again")],op_pokemon and has_item[print("error try again")],has_item and has_move[print("error try again")]]
+        
         if op_pokemon and has_move:
-            return playerPokemon and move and target_pokemon
-        if has_item and p_pokemon:
-            return item and playerPokemon 
+            playerPokemon and move and target_pokemon
+        elif has_item and p_pokemon:
+            item and playerPokemon 
         elif op_pokemon:
             print("what move would you like to use?")
-        elif p_pokemon and has_item:
-            print("error try again")
         elif p_pokemon and op_pokemon:
             print("error try again")
         elif p_pokemon and has_move:
             print("error try again")
         elif op_pokemon and has_item:
             print("error try again")
-        elif op_pokemon and has_item:
-            print("error try again")
         elif has_item and has_move:
-            print("error try again")
+             print("error try again")
         
         break
 

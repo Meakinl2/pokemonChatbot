@@ -49,4 +49,9 @@ ToDo:
 - Final Polishing for AI mask
 - Maybe add discord functionality, if time allows
 
-
+- Mohit Chatbot:
+    - Make yes_or_no function better
+    - Autocorrect
+    - Checking user input for matching words
+    - Check all and only required information given
+    - Prompt for unnecessary information and clarificatio

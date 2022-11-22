@@ -133,3 +133,55 @@ with open(pickleFilePath, "wb") as pickleFile:
     pickleFile.close()
 
 # -----------------------------------------------------------------------------------------------------
+
+#Mohit code 
+# spliting the user input for words
+def input_checker(user_party, oppent_party, user_input):
+    user_words = user_input.split(" ")
+    
+# sees if user input matches with the dictonary for moves
+    for word in user_words:
+
+        print ("word: " + word)
+
+        for entry in user_party:
+            if word.lower() == entry.lower():
+                user_words.append(entry)
+                print ("\nselected Attacker: " + move)
+
+            for move in user_party[entry]:
+                print("move: " + " ". join(map(str,move)))
+
+                if word.lower() == move.lower:
+                    user_words.append(move)
+                    print("Slected Move: " + move)
+                    return move
+
+# sees if user input matches with the dictonary for pokemon
+
+            for animal in user_party:
+                if word.lower() == animal.lower():
+                    user_words.append(animal)
+                    print("\nChosen pokemon: " + pokemon)
+                
+                for pokemon in user_party[pokemon]:
+                    print ("pokenon: " + pokemon)
+
+                    if word.lower() == pokemon.lower:
+                        user_words.append(pokemon)
+                        print("Selected pokmon: " + " ". join(map(str,pokemon)))
+                        return pokemon
+
+# sees if user input matches with the dictonary for oppent pokemon
+
+            for op_pokemon in oppent_party:
+                if word.lower() == op_pokemon.lower():
+                    user_words.append(op_pokemon)
+                    print ("\n oppent pokemon is: " + oppent)
+
+                for oppent in oppent_party[oppent]:
+                    print("oppent pokemon: " + oppent)
+
+                    if word.lower() == oppent.lower:
+                        user_words.append(oppent)
+                        print("Selected oppent pokemon: " + " ". join(map(str,oppent)))
