@@ -148,7 +148,7 @@ class Main:
                 Battle(self.player,trainer,"Wild")
 
             elif encounter_type == "Item":
-                all_items = list(self.player.inventory.key())
+                all_items = list(self.player.inventory.keys())
                 item = random.choice(all_items)
                 self.player.inventory[item] += 1
                 print(f"You found a {item} on the ground. Nice.")

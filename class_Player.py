@@ -12,9 +12,9 @@ class Player:
         self.createStorageFolder()
         self.money = 0
         self.inventory = {
-            "Potion": 0,"Super Potion": 0,"Hyper Potion": 0,"Max Potion": 0,"Full Restore": 0,
+            "Potion": 10,"Super Potion": 0,"Hyper Potion": 0,"Max Potion": 0,"Full Restore": 0,
             "Antidote": 0,"Burn Heal": 0,"Ice Heal": 0,"Awakening": 0,"Paralyze Heal": 0,"Full Heal": 0,
-            "Poke Ball": 0,"Great Ball": 0,"Ultra Ball": 0,"Master Ball": 0}
+            "Poke Ball": 10,"Great Ball": 0,"Ultra Ball": 0,"Master Ball": 0}
         self.party = []
 
         user_inputs.pickPlayerName(self)
