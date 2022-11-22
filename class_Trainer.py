@@ -40,7 +40,7 @@ class Trainer:
         available_species_path = selectFile(["DataTables"],"available_species.txt")
         availableSpecies = readFile(available_species_path," ")
 
-        minLvl = int(baseLvl - 3 - (baseLvl * 0.1) // 1)
+        minLvl = int(baseLvl - 3 - (baseLvl * 0.1) // 1) if int(baseLvl - 3 - (baseLvl * 0.1) // 1) else 1
         maxLvl = int(baseLvl + 3 + (baseLvl * 0.1) // 1)
         for i in range(partySize):
             item = randint(0,len(availableSpecies)-1)
