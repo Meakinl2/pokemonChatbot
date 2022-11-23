@@ -4,6 +4,7 @@ from ProjectDataCleaning.fileControl import *
 from dictonaries import *
 from other_functions import *
 import user_inputs
+import input_interpretation
 
 class Battle:
     def __init__(self,player,opponent,battleType):
@@ -65,7 +66,7 @@ class Battle:
             self.printTurnInfo()
 
             for i in range(len(self.playerActive)):
-                self.player.party[self.playerActive[i]].turnAction = user_inputs.userBattleMain(self.player,self.playerActive[i],self.playerActive,self.opponent,self.opponentActive)
+                self.player.party[self.playerActive[i]].turnAction = input_interpretation.battleInput(self.player,self.opponent,self.opponentActive,self.player.party[self.playerActive[i]])
 
             for i in range(len(self.opponentActive)):
                 self.opponent.party[self.opponentActive[i]].turnAction = self.opponent.battleTurn(self.opponent.party[self.opponentActive[i]],self.opponentActive,self.playerActive)
@@ -78,6 +79,7 @@ class Battle:
                 action = self.actionQueue[i][0].turnAction
                 
                 if action[2] == "Move" and not pokemon.isFainted:
+                    print(action)
                     self.useMove(pokemon,action)
                 elif action[2] == "Item":
                     self.useItem(pokemon,action)
