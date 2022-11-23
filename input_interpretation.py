@@ -170,8 +170,11 @@ def battleInput(player,opponent,opponent_active,pokemon):
             continue
 
         # Make sure items are in correct order for interpretting
-        if used_words[1] in opponent_pokemon + player_pokemon:
-            used_words[0],used_words[1] = used_words[1],used_words[0]
+        try: 
+            if used_words[1] in opponent_pokemon + player_pokemon:
+                used_words[0],used_words[1] = used_words[1],used_words[0]
+        except IndexError:
+            pass
 
         # Checking for correct combination and executing accordingly
         if player_amount == 1 and item_amount == 1:
