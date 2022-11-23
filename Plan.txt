@@ -1,49 +1,49 @@
 ToDo:
 
 - Collect all necessary Data /
-    - Remove unnecessary data and format remaining data 
-    - Compile data into one file for each catagory
+    - Remove unnecessary data and format remaining data /
+    - Compile data into one file for each catagory /
 
-- Store pokemon (pickle for storage)
-    - Local party storage (should be like the main storage but smaller)
-    - Transfer between main and party storage 
+- Store pokemon (pickle for storage) /
+    - Local party storage (should be like the main storage but smaller) /
+    - Transfer between main and party storage /
 
-- Set up abilty to generate pokemon
+- Set up abilty to generate pokemon /
     - Base stats /
     - IVs, EVs, nature /
     - Add typing (as in Grass/Fire/Water etc, not on a keyboard) /
-    - Calculate Adjusted stats/
+    - Calculate Adjusted stats /
     - Assigned moves / 
     - Make sure can only learn 'allowed' moves / 
 
-- Assign Information to moves
-    - Basic Information, e.g PP, Power
+- Assign Information to moves /
+    - Basic Information, e.g PP, Power /
     - Caused Effects
 
-- Can capture pokemon
-    - Random chance
-    - Higher Levels are more difficult
+- Can capture pokemon /
+    - Random chance /
+    - Higher Levels are more difficult /
     
-- Pokemon growth/change
-    - Gain Experience/
-    - Level up/
-    - Evolve/
-    - Replace old moves
+- Pokemon growth/change /
+    - Gain Experience /
+    - Level up /
+    - Evolve 
+    - Replace old moves /
 
-- Add battling
-    - Can attack
-    - Turns
-    - Victory/Defeat conditions
-    - switch out pokemon
+- Add battling /
+    - Can attack /
+    - Turns /
+    - Victory/Defeat conditions /
+    - switch out pokemon /
 
-- Add random events 
-    - Wild pokemon
-    - Add trainers 
+- Add random events /
+    - Wild pokemon /
+    - Add trainers /
 
 
-- Add Money 
-- Add Items
-- Add shop
+- Add Money /
+- Add Items /
+- Add shop 
 
 
 - Final Polishing for AI mask

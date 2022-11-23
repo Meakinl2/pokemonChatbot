@@ -18,7 +18,6 @@ Offical Python Documentation
 For information on builtin functions and libraries
 https://www.python.org/doc/
 
-
 Information/Data: 
 
 GitHub - PokeApi/PokeApi

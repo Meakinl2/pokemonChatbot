@@ -1,6 +1,7 @@
 from ProjectDataCleaning.fileControl import *
 from dictonaries import *
 from formulae import *
+import input_interpretation
 import user_inputs
 
 # Not sure if this will be good as a class or not, but it seems like it'll work from my most unexperienced point of view
@@ -36,7 +37,7 @@ class Battle:
         self.battleOngoing = True
         while self.battleOngoing:
             for i in range(len(self.playerActive)):
-                self.player.party[self.playerActive[i]].turnAction = user_inputs.userBattleMain(self.player,self.playerActive[i],self.playerActive,self.opponent,self.opponentActive)
+                self.player.party[self.playerActive[i]].turnAction = input_interpretation.battleInput(self.player,self.playerActive[i],self.playerActive,self.opponent,self.opponentActive)
 
             for i in range(len(self.opponentActive)):
                 self.opponent.party[self.opponentActive[i]].turnAction = self.opponent.battleTurn(self.opponent.party[self.opponentActive[i]],self.opponentActive,self.playerActive)
