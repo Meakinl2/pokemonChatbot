@@ -3,6 +3,9 @@
 
 from dictonaries import *
 
+Yes = ["yep","yes","yeah","alright","certanly","absolutely","yup","ok","okay","indeed","very well","sure","roger","right","agree","aye","affimative"]
+No = ["not","no","negtive","never","nope","nay"]
+
 # ---------------------------------------------------------------------------------
 
 # Re-Occuring functions, need to be well refined
@@ -14,9 +17,9 @@ def yes_or_no():
     while True:
         user_input = input(" > ")
         
-        if user_input == "y":
+        if user_input.lower() in Yes:
             return True
-        elif user_input == "n":
+        elif user_input.lower() in No:
             return False
         else:
             print("Not a valid affirmation nor negation. Please try again. ")
